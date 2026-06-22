@@ -1,0 +1,21 @@
+{
+  "name": "@animal-island-components-sa2kit/tokens",
+  "version": "0.0.1",
+  "description": "Design tokens — Tailwind preset for animal-island-components-sa2kit",
+  "license": "MIT",
+  "files": [
+    "tailwind.preset.js",
+    "animal-plugin.js",
+    "animal-plugin-batch2.js",
+    "animal-plugin-batch3.js",
+    "animal-plugin-batch4.js",
+    "animal-plugin-batch5.js",
+    "animal-plugin-batch6.js",
+    "theme.css"
+  ],
+  "exports": {
+    "./tailwind.preset": "./tailwind.preset.js",
+    "./animal-plugin": "./animal-plugin.js",
+    "./theme.css": "./theme.css"
+  }
+}

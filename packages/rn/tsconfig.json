@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2020"],
+    "types": ["nativewind/types"]
+  },
+  "include": ["src", "src/types/assets.d.ts"]
+}

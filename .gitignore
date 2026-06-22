@@ -1,0 +1,16 @@
+node_modules
+dist
+.turbo
+*.log
+.DS_Store
+coverage
+.expo
+.env
+.env.*
+!.env.example
+apps/demo-taro/dist
+apps/demo-electron/dist
+apps/demo-electron/dist-electron
+apps/demo-taro/.swc
+apps/demo-rn/.expo
+apps/demo-web/dist

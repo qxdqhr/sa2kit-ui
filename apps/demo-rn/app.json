@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "demo-rn",
+    "slug": "demo-rn",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "platforms": ["ios", "android"],
+    "sdkVersion": "52.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@animal-island-components-sa2kit/rn",
+  "version": "0.0.1",
+  "description": "React Native components for animal-island-components-sa2kit",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "pnpm typecheck",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@animal-island-components-sa2kit/shared": "workspace:*"
+  },
+  "peerDependencies": {
+    "nativewind": "^4.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.76.0"
+  },
+  "devDependencies": {
+    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/react": "^18.3.18",
+    "nativewind": "^4.2.1",
+    "react": "^18.3.1",
+    "react-native": "^0.76.9",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "animal-island-components-sa2kit",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Animal Crossing inspired sa2kit multi-platform UI library",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "overrides": {
+      "browserslist": "4.28.2"
+    }
+  }
+}

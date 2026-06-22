@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+:root {
+  --animal-primary: #19c8b9;
+  --animal-primary-hover: #3dd4c6;
+  --animal-primary-active: #11a89b;
+  --animal-bg: #f8f8f0;
+  --animal-bg-content: rgb(247, 243, 223);
+  --animal-text: #794f27;
+  --animal-text-body: #725d42;
+  --animal-border-light: #c4b89e;
+  --animal-shadow-btn: #bdaea0;
+  --animal-focus-yellow: #ffcc00;
+  --animal-radius-pill: 50px;
+}
+
+body {
+  font-family: Nunito, 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
+  color: var(--animal-text-body);
+  background-color: var(--animal-bg);
+}

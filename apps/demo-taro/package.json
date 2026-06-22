@@ -1,0 +1,53 @@
+{
+  "name": "demo-taro",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "build": "pnpm build:weapp && pnpm build:alipay",
+    "build:weapp": "taro build --type weapp",
+    "build:alipay": "taro build --type alipay",
+    "build:h5": "taro build --type h5",
+    "dev:weapp": "taro build --type weapp --watch",
+    "dev:alipay": "taro build --type alipay --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "dependencies": {
+    "@animal-island-components-sa2kit/taro": "workspace:*",
+    "@tarojs/components": "4.1.1",
+    "@tarojs/helper": "4.1.1",
+    "@tarojs/plugin-framework-react": "4.1.1",
+    "@tarojs/plugin-platform-alipay": "4.1.1",
+    "@tarojs/plugin-platform-h5": "4.1.1",
+    "@tarojs/plugin-platform-weapp": "4.1.1",
+    "@tarojs/react": "4.1.1",
+    "@tarojs/runtime": "4.1.1",
+    "@tarojs/shared": "4.1.1",
+    "@tarojs/taro": "4.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.0",
+    "@babel/runtime": "^7.26.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+    "@tarojs/cli": "4.1.1",
+    "@tarojs/webpack5-runner": "4.1.1",
+    "@types/react": "^18.3.18",
+    "@types/webpack-env": "^1.18.5",
+    "autoprefixer": "^10.4.20",
+    "babel-preset-taro": "4.1.1",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3",
+    "weapp-tailwindcss": "^4.2.5",
+    "webpack": "5.91.0",
+    "less": "^4.2.0"
+  }
+}
