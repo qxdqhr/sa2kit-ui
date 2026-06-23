@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import type { TypewriterProps } from '@animal-island-components-sa2kit/shared';
+import type { TypewriterProps } from '@sa2kit-ui/shared';
 
 const countText = (node: React.ReactNode): number => {
   if (node == null || typeof node === 'boolean') return 0;

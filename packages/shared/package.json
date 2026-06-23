@@ -1,7 +1,7 @@
 {
-  "name": "@animal-island-components-sa2kit/shared",
+  "name": "@sa2kit-ui/shared",
   "version": "0.0.1",
-  "description": "Shared types and utilities for animal-island-components-sa2kit",
+  "description": "Shared types and utilities for sa2kit-ui",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",

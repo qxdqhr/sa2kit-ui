@@ -28,7 +28,7 @@ export {
   Wallet,
   WeddingInvitation,
   WeddingInvitationExportButton,
-} from '@animal-island-components-sa2kit/react';
+} from '@sa2kit-ui/react';
 
 export type {
   ButtonProps,
@@ -80,4 +80,4 @@ export type {
   WeddingInvitationProps,
   WeddingInvitationRef,
   WeddingInvitationExportButtonProps,
-} from '@animal-island-components-sa2kit/shared';
+} from '@sa2kit-ui/shared';

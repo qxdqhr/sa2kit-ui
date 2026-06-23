@@ -1,12 +1,12 @@
 /** Batch-5: Phone / Cursor (layout; cursor image URL in cursor.css) */
 module.exports = {
   /* ========== Phone ========== */
-  '.ai-phone-container': {
+  '.sa2-phone-container': {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  '.ai-phone': {
+  '.sa2-phone': {
     position: 'relative',
     width: '527px',
     height: '788px',
@@ -14,12 +14,12 @@ module.exports = {
     borderRadius: '136px',
     overflow: 'hidden',
   },
-  '.ai-phone-screen': {
+  '.sa2-phone-screen': {
     flex: '1',
     overflow: 'hidden',
     height: '100%',
   },
-  '.ai-phone-home': {
+  '.sa2-phone-home': {
     height: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -27,14 +27,14 @@ module.exports = {
     paddingTop: '40px',
     background: '#F8F4E8',
     backgroundSize: '100% 200%',
-    animation: 'ai-grasswave 8s ease-in-out infinite',
+    animation: 'sa2-grasswave 8s ease-in-out infinite',
   },
-  '.ai-phone-date': {
+  '.sa2-phone-date': {
     textAlign: 'center',
     width: '100%',
     padding: '0 70px 31px 70px',
   },
-  '.ai-phone-date-header': {
+  '.sa2-phone-date-header': {
     display: 'flex',
     justifyContent: 'space-between',
     width: '100%',
@@ -44,14 +44,14 @@ module.exports = {
     fontWeight: '800',
     letterSpacing: '2px',
   },
-  '.ai-phone-blink': {
+  '.sa2-phone-blink': {
     fontSize: '32px',
     fontWeight: '800',
     color: '#DDDBCC',
     verticalAlign: 'text-bottom',
-    animation: 'ai-phone-blink 1s steps(1) infinite',
+    animation: 'sa2-phone-blink 1s steps(1) infinite',
   },
-  '.ai-phone-day': {
+  '.sa2-phone-day': {
     display: 'block',
     fontSize: '48px',
     fontWeight: '800',
@@ -60,7 +60,7 @@ module.exports = {
     color: '#725C4E',
     letterSpacing: '2px',
   },
-  '.ai-phone-apps': {
+  '.sa2-phone-apps': {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gap: '32px',
@@ -69,7 +69,7 @@ module.exports = {
     alignContent: 'center',
     justifyContent: 'center',
   },
-  '.ai-phone-app': {
+  '.sa2-phone-app': {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -77,25 +77,25 @@ module.exports = {
     height: '123px',
     borderRadius: '45px',
     position: 'relative',
-    '&:hover .ai-phone-app-icon': {
-      animation: 'ai-phone-icon-bounce 0.3s ease-in-out forwards',
+    '&:hover .sa2-phone-app-icon': {
+      animation: 'sa2-phone-icon-bounce 0.3s ease-in-out forwards',
     },
-    '&:hover .ai-phone-app-icon-offset': {
-      animation: 'ai-phone-icon-bounce-offset 0.3s ease-in-out forwards',
+    '&:hover .sa2-phone-app-icon-offset': {
+      animation: 'sa2-phone-icon-bounce-offset 0.3s ease-in-out forwards',
     },
   },
-  '.ai-phone-app-offset': {
+  '.sa2-phone-app-offset': {
     overflow: 'hidden',
   },
-  '.ai-phone-app-icon': {
+  '.sa2-phone-app-icon': {
     display: 'block',
     width: '100%',
     height: '100%',
   },
-  '.ai-phone-app-icon-offset': {
+  '.sa2-phone-app-icon-offset': {
     transform: 'translateY(15px)',
   },
-  '.ai-phone-wifi': {
+  '.sa2-phone-wifi': {
     display: 'inline-block',
     width: '79px',
     height: '29px',
@@ -103,7 +103,7 @@ module.exports = {
     backgroundPosition: 'center',
     backgroundSize: 'contain',
   },
-  '.ai-phone-location': {
+  '.sa2-phone-location': {
     display: 'inline-block',
     width: '36px',
     height: '36px',
@@ -111,7 +111,7 @@ module.exports = {
     backgroundPosition: 'center',
     backgroundSize: 'contain',
   },
-  '.ai-phone-page': {
+  '.sa2-phone-page': {
     display: 'inline-block',
     width: '65px',
     height: '32px',
@@ -119,7 +119,7 @@ module.exports = {
     backgroundPosition: 'center',
     backgroundSize: 'contain',
   },
-  '.ai-phone-badge': {
+  '.sa2-phone-badge': {
     position: 'absolute',
     top: '0',
     left: '0',
@@ -129,7 +129,7 @@ module.exports = {
     backgroundColor: '#FF544A',
     border: '5px solid #F8F4E8',
   },
-  '.ai-phone-page-indicator': {
+  '.sa2-phone-page-indicator': {
     display: 'flex',
     justifyContent: 'center',
     marginTop: '74px',

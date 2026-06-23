@@ -1,10 +1,10 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CursorProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CursorProps } from '@sa2kit-ui/shared';
 import { View } from 'react-native';
 
 export function Cursor({ children, className, style }: CursorProps) {
   return (
-    <View className={cn('animal-cursor', className)} style={style as object}>
+    <View className={cn('sa2-cursor', className)} style={style as object}>
       {children}
     </View>
   );

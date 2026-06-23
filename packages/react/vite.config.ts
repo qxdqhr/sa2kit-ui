@@ -12,7 +12,7 @@ export default defineConfig({
         `${format === 'es' ? 'es' : 'cjs'}/index.${format === 'es' ? 'js' : 'cjs'}`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', '@animal-island-components-sa2kit/shared'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', '@sa2kit-ui/shared'],
       output: {
         globals: {
           react: 'React',

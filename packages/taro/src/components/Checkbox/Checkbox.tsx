@@ -1,9 +1,9 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CheckboxProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CheckboxProps } from '@sa2kit-ui/shared';
 import { Text, View } from '@tarojs/components';
 import { useCallback, useState } from 'react';
 
-const sizeClass = { small: 'ai-checkbox-sm', middle: 'ai-checkbox-md', large: 'ai-checkbox-lg' } as const;
+const sizeClass = { small: 'sa2-checkbox-sm', middle: 'sa2-checkbox-md', large: 'sa2-checkbox-lg' } as const;
 
 export function Checkbox({
   value,
@@ -35,9 +35,9 @@ export function Checkbox({
   return (
     <View
       className={cn(
-        'ai-checkbox-group',
-        direction === 'vertical' ? 'ai-checkbox-vertical' : 'ai-checkbox-horizontal',
-        disabled && 'ai-checkbox-group-disabled',
+        'sa2-checkbox-group',
+        direction === 'vertical' ? 'sa2-checkbox-vertical' : 'sa2-checkbox-horizontal',
+        disabled && 'sa2-checkbox-group-disabled',
         className,
       )}
       style={style}
@@ -49,21 +49,21 @@ export function Checkbox({
           <View
             key={String(opt.value)}
             className={cn(
-              'ai-checkbox-item',
+              'sa2-checkbox-item',
               sizeClass[size],
-              isChecked && 'ai-checkbox-checked',
-              isDisabled && 'ai-checkbox-disabled',
+              isChecked && 'sa2-checkbox-checked',
+              isDisabled && 'sa2-checkbox-disabled',
             )}
             onClick={() => !isDisabled && handleChange(opt.value, opt.disabled)}
           >
-            <View className="ai-checkbox-box">
+            <View className="sa2-checkbox-box">
               {isChecked ? (
-                <View className="ai-checkbox-mark">
+                <View className="sa2-checkbox-mark">
                   <Text className="text-xs font-bold">✓</Text>
                 </View>
               ) : null}
             </View>
-            <Text className="ai-checkbox-label">{opt.label}</Text>
+            <Text className="sa2-checkbox-label">{opt.label}</Text>
           </View>
         );
       })}

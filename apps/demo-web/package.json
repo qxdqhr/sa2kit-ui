@@ -9,12 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@animal-island-components-sa2kit/react": "workspace:*",
+    "@sa2kit-ui/react": "workspace:*",
+    "@sa2kit-ui/theme-runtime": "workspace:*",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
+    "@sa2kit-ui/tokens": "workspace:*",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",

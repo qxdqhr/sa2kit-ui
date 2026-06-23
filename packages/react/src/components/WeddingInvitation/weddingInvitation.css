@@ -1,10 +1,10 @@
-.ai-wedding-envelope {
-  --ai-wedding-lottery-h: 160px;
-  --ai-wedding-notch-r: 14px;
+.sa2-wedding-envelope {
+  --sa2-wedding-lottery-h: 160px;
+  --sa2-wedding-notch-r: 14px;
   position: relative;
   max-width: 420px;
   margin: 0 auto;
-  padding: 56px 36px var(--ai-wedding-lottery-h);
+  padding: 56px 36px var(--sa2-wedding-lottery-h);
   background:
     radial-gradient(circle at 20% 10%, rgba(248, 166, 178, 0.18), transparent 40%),
     radial-gradient(circle at 80% 90%, rgba(138, 198, 138, 0.18), transparent 40%),
@@ -19,93 +19,93 @@
   font-family: Nunito, 'Noto Sans SC', -apple-system, 'PingFang SC', sans-serif;
   -webkit-mask-image:
     radial-gradient(
-      circle var(--ai-wedding-notch-r) at 0% calc(100% - var(--ai-wedding-lottery-h)),
-      transparent calc(var(--ai-wedding-notch-r) - 0.5px),
-      #000 var(--ai-wedding-notch-r)
+      circle var(--sa2-wedding-notch-r) at 0% calc(100% - var(--sa2-wedding-lottery-h)),
+      transparent calc(var(--sa2-wedding-notch-r) - 0.5px),
+      #000 var(--sa2-wedding-notch-r)
     ),
     radial-gradient(
-      circle var(--ai-wedding-notch-r) at 100% calc(100% - var(--ai-wedding-lottery-h)),
-      transparent calc(var(--ai-wedding-notch-r) - 0.5px),
-      #000 var(--ai-wedding-notch-r)
+      circle var(--sa2-wedding-notch-r) at 100% calc(100% - var(--sa2-wedding-lottery-h)),
+      transparent calc(var(--sa2-wedding-notch-r) - 0.5px),
+      #000 var(--sa2-wedding-notch-r)
     );
   -webkit-mask-composite: source-in;
   mask-image:
     radial-gradient(
-      circle var(--ai-wedding-notch-r) at 0% calc(100% - var(--ai-wedding-lottery-h)),
-      transparent calc(var(--ai-wedding-notch-r) - 0.5px),
-      #000 var(--ai-wedding-notch-r)
+      circle var(--sa2-wedding-notch-r) at 0% calc(100% - var(--sa2-wedding-lottery-h)),
+      transparent calc(var(--sa2-wedding-notch-r) - 0.5px),
+      #000 var(--sa2-wedding-notch-r)
     ),
     radial-gradient(
-      circle var(--ai-wedding-notch-r) at 100% calc(100% - var(--ai-wedding-lottery-h)),
-      transparent calc(var(--ai-wedding-notch-r) - 0.5px),
-      #000 var(--ai-wedding-notch-r)
+      circle var(--sa2-wedding-notch-r) at 100% calc(100% - var(--sa2-wedding-lottery-h)),
+      transparent calc(var(--sa2-wedding-notch-r) - 0.5px),
+      #000 var(--sa2-wedding-notch-r)
     );
   mask-composite: intersect;
 }
 
-.ai-wedding-envelope::before {
+.sa2-wedding-envelope::before {
   content: '';
   position: absolute;
-  inset: 14px 14px calc(var(--ai-wedding-lottery-h) + 2px) 14px;
+  inset: 14px 14px calc(var(--sa2-wedding-lottery-h) + 2px) 14px;
   border-radius: 22px 20px 24px 22px / 20px 24px 22px 20px;
   background: radial-gradient(circle, rgba(114, 93, 66, 0.08) 1px, transparent 1.5px) 0 0 / 14px 14px;
   pointer-events: none;
   opacity: 0.55;
 }
 
-.ai-wedding-envelope::after {
+.sa2-wedding-envelope::after {
   content: '';
   position: absolute;
-  inset: 18px 18px calc(var(--ai-wedding-lottery-h) + 6px) 18px;
+  inset: 18px 18px calc(var(--sa2-wedding-lottery-h) + 6px) 18px;
   border: 1.5px dashed rgba(114, 93, 66, 0.35);
   border-radius: 22px 20px 24px 22px / 20px 24px 22px 20px;
   pointer-events: none;
   margin-bottom: 12px;
 }
 
-.ai-wedding-no-lottery {
-  --ai-wedding-lottery-h: 0px;
+.sa2-wedding-no-lottery {
+  --sa2-wedding-lottery-h: 0px;
   padding-bottom: 36px;
   -webkit-mask-image: none;
   mask-image: none;
 }
 
-.ai-wedding-no-lottery .ai-wedding-message {
+.sa2-wedding-no-lottery .sa2-wedding-message {
   margin-bottom: 12px;
 }
 
-.ai-wedding-no-lottery .ai-wedding-venue-card {
+.sa2-wedding-no-lottery .sa2-wedding-venue-card {
   background: rgba(253, 253, 245, 0.85);
   border-color: rgba(114, 93, 66, 0.5);
 }
 
-.ai-wedding-corner-leaf {
+.sa2-wedding-corner-leaf {
   position: absolute;
   z-index: 2;
   pointer-events: none;
   filter: drop-shadow(0 2px 3px rgba(61, 52, 40, 0.15));
 }
 
-.ai-wedding-tl { top: -10px; left: -10px; transform: rotate(-25deg); }
-.ai-wedding-tr { top: -10px; right: -10px; transform: rotate(115deg) scaleX(-1); }
-.ai-wedding-bl { bottom: -10px; left: -10px; transform: rotate(-115deg); }
-.ai-wedding-br { bottom: -10px; right: -10px; transform: rotate(25deg) scaleX(-1); }
+.sa2-wedding-tl { top: -10px; left: -10px; transform: rotate(-25deg); }
+.sa2-wedding-tr { top: -10px; right: -10px; transform: rotate(115deg) scaleX(-1); }
+.sa2-wedding-bl { bottom: -10px; left: -10px; transform: rotate(-115deg); }
+.sa2-wedding-br { bottom: -10px; right: -10px; transform: rotate(25deg) scaleX(-1); }
 
-.ai-wedding-float-item {
+.sa2-wedding-float-item {
   position: absolute;
   z-index: 3;
   pointer-events: none;
   filter: drop-shadow(0 2px 2px rgba(61, 52, 40, 0.12));
-  animation: ai-wedding-float 4.5s ease-in-out infinite;
+  animation: sa2-wedding-float 4.5s ease-in-out infinite;
 }
 
-.ai-wedding-f1 { top: 60px; right: 38px; }
-.ai-wedding-f2 { top: 130px; left: 30px; animation-delay: 0.6s; }
-.ai-wedding-f3 { bottom: calc(var(--ai-wedding-lottery-h) + 24px); right: 26px; animation-delay: 1.2s; }
-.ai-wedding-s1 { top: 100px; right: 80px; animation-delay: 0.3s; }
-.ai-wedding-s2 { bottom: calc(var(--ai-wedding-lottery-h) - 4px); left: 60px; animation-delay: 1s; }
+.sa2-wedding-f1 { top: 60px; right: 38px; }
+.sa2-wedding-f2 { top: 130px; left: 30px; animation-delay: 0.6s; }
+.sa2-wedding-f3 { bottom: calc(var(--sa2-wedding-lottery-h) + 24px); right: 26px; animation-delay: 1.2s; }
+.sa2-wedding-s1 { top: 100px; right: 80px; animation-delay: 0.3s; }
+.sa2-wedding-s2 { bottom: calc(var(--sa2-wedding-lottery-h) - 4px); left: 60px; animation-delay: 1s; }
 
-.ai-wedding-banner {
+.sa2-wedding-banner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,14 +115,14 @@
   z-index: 4;
 }
 
-.ai-wedding-banner-line {
+.sa2-wedding-banner-line {
   height: 2px;
   width: 64px;
   background: linear-gradient(to right, transparent, #725d42, transparent);
   border-radius: 2px;
 }
 
-.ai-wedding-title-en {
+.sa2-wedding-title-en {
   position: relative;
   z-index: 4;
   font-size: 14px;
@@ -133,7 +133,7 @@
   text-transform: uppercase;
 }
 
-.ai-wedding-title-zh {
+.sa2-wedding-title-zh {
   position: relative;
   z-index: 4;
   font-size: 26px;
@@ -144,28 +144,28 @@
   text-shadow: 0 2px 0 rgba(255, 255, 255, 0.6);
 }
 
-.ai-wedding-title-zh img {
+.sa2-wedding-title-zh img {
   display: block;
   margin: 0 auto;
   max-width: 80%;
   height: auto;
 }
 
-.ai-wedding-subtitle-text {
+.sa2-wedding-subtitle-text {
   display: block;
   font-size: 22px;
   font-weight: 900;
   letter-spacing: 6px;
 }
 
-.ai-wedding-couple-img {
+.sa2-wedding-couple-img {
   position: relative;
   z-index: 4;
   margin: 0 auto 12px;
   text-align: center;
 }
 
-.ai-wedding-couple-svg {
+.sa2-wedding-couple-svg {
   display: block;
   margin: 0 auto;
   max-width: 70%;
@@ -173,7 +173,7 @@
   filter: drop-shadow(0 3px 4px rgba(61, 52, 40, 0.18));
 }
 
-.ai-wedding-couple-row {
+.sa2-wedding-couple-row {
   position: relative;
   z-index: 4;
   display: flex;
@@ -183,13 +183,13 @@
   margin-bottom: 15px;
 }
 
-.ai-wedding-mascot {
+.sa2-wedding-mascot {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ai-wedding-name {
+.sa2-wedding-name {
   padding: 4px 16px;
   border-radius: 20px 18px 22px 20px / 18px 22px 20px 18px;
   font-size: 16px;
@@ -198,15 +198,15 @@
   min-width: 64px;
 }
 
-.ai-wedding-heart-col {
+.sa2-wedding-heart-col {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  animation: ai-wedding-heartbeat 1.6s ease-in-out infinite;
+  animation: sa2-wedding-heartbeat 1.6s ease-in-out infinite;
 }
 
-.ai-wedding-date-card {
+.sa2-wedding-date-card {
   position: relative;
   z-index: 4;
   margin: 0 auto 18px;
@@ -218,7 +218,7 @@
   box-shadow: 0 4px 0 rgba(114, 93, 66, 0.18), inset 0 0 0 2px rgba(114, 93, 66, 0.18);
 }
 
-.ai-wedding-date-label {
+.sa2-wedding-date-label {
   font-size: 16px;
   letter-spacing: 4px;
   font-weight: 700;
@@ -226,7 +226,7 @@
   margin-bottom: 4px;
 }
 
-.ai-wedding-date-value {
+.sa2-wedding-date-value {
   font-size: 24px;
   font-weight: 900;
   color: #725d42;
@@ -234,7 +234,7 @@
   line-height: 1.2;
 }
 
-.ai-wedding-date-meta {
+.sa2-wedding-date-meta {
   margin-top: 6px;
   font-size: 13px;
   color: #794f27;
@@ -245,9 +245,9 @@
   gap: 8px;
 }
 
-.ai-wedding-dot { color: #fc736d; font-weight: 900; }
+.sa2-wedding-dot { color: #fc736d; font-weight: 900; }
 
-.ai-wedding-venue-card {
+.sa2-wedding-venue-card {
   position: relative;
   z-index: 4;
   margin: 0 auto 22px;
@@ -262,12 +262,12 @@
   max-width: 320px;
 }
 
-.ai-wedding-venue-icon { flex-shrink: 0; display: flex; }
-.ai-wedding-venue-text { flex: 1; min-width: 0; }
-.ai-wedding-venue-name { font-size: 14px; font-weight: 700; color: #725d42; letter-spacing: 1px; }
-.ai-wedding-venue-addr { font-size: 12px; color: #9a835a; margin-top: 2px; line-height: 1.5; }
+.sa2-wedding-venue-icon { flex-shrink: 0; display: flex; }
+.sa2-wedding-venue-text { flex: 1; min-width: 0; }
+.sa2-wedding-venue-name { font-size: 14px; font-weight: 700; color: #725d42; letter-spacing: 1px; }
+.sa2-wedding-venue-addr { font-size: 12px; color: #9a835a; margin-top: 2px; line-height: 1.5; }
 
-.ai-wedding-message {
+.sa2-wedding-message {
   position: relative;
   z-index: 4;
   font-size: 13px;
@@ -278,7 +278,7 @@
   font-weight: 500;
 }
 
-.ai-wedding-signature-lottery {
+.sa2-wedding-signature-lottery {
   position: relative;
   z-index: 4;
   display: inline-flex;
@@ -295,7 +295,7 @@
   color: #9a835a;
 }
 
-.ai-wedding-signature-lottery-no {
+.sa2-wedding-signature-lottery-no {
   font-family: 'Courier New', 'SF Mono', Consolas, monospace;
   font-size: 14px;
   font-weight: 900;
@@ -306,17 +306,17 @@
   gap: 3px;
 }
 
-.ai-wedding-signature-lottery-no .ai-wedding-lottery-hash {
+.sa2-wedding-signature-lottery-no .sa2-wedding-lottery-hash {
   font-size: 10px;
   letter-spacing: 1px;
 }
 
-.ai-wedding-lottery {
+.sa2-wedding-lottery {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  height: var(--ai-wedding-lottery-h);
+  height: var(--sa2-wedding-lottery-h);
   z-index: 4;
   margin: 0;
   padding: 38px 36px 18px;
@@ -329,7 +329,7 @@
   box-shadow: inset 0 4px 6px -3px rgba(61, 52, 40, 0.18);
 }
 
-.ai-wedding-tear-hint {
+.sa2-wedding-tear-hint {
   position: absolute;
   top: 2px;
   left: 50%;
@@ -348,7 +348,7 @@
   gap: 5px;
 }
 
-.ai-wedding-lottery-title {
+.sa2-wedding-lottery-title {
   font-size: 16px;
   font-weight: 900;
   color: #725d42;
@@ -357,7 +357,7 @@
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
-.ai-wedding-lottery-label {
+.sa2-wedding-lottery-label {
   display: inline-flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -371,7 +371,7 @@
   margin-bottom: 4px;
 }
 
-.ai-wedding-lottery-number {
+.sa2-wedding-lottery-number {
   font-family: 'Courier New', 'SF Mono', Consolas, monospace;
   font-size: 26px;
   font-weight: 900;
@@ -383,21 +383,21 @@
   gap: 6px;
 }
 
-.ai-wedding-lottery-hash {
+.sa2-wedding-lottery-hash {
   font-size: 14px;
   margin-left: 3px;
   color: #9a835a;
   letter-spacing: 2px;
 }
 
-.ai-wedding-lottery-hint {
+.sa2-wedding-lottery-hint {
   margin-top: 4px;
   font-size: 10px;
   letter-spacing: 1px;
   color: #9a835a;
 }
 
-.ai-wedding-export-btn {
+.sa2-wedding-export-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -415,28 +415,28 @@
   white-space: nowrap;
 }
 
-.ai-wedding-export-btn:hover:not(:disabled) {
+.sa2-wedding-export-btn:hover:not(:disabled) {
   transform: translateY(-1px);
   box-shadow: 0 4px 0 rgba(114, 93, 66, 0.3);
   background: #fffbe6;
 }
 
-.ai-wedding-export-btn:active:not(:disabled) {
+.sa2-wedding-export-btn:active:not(:disabled) {
   transform: translateY(2px);
   box-shadow: 0 1px 0 rgba(114, 93, 66, 0.25);
 }
 
-.ai-wedding-export-btn:disabled {
+.sa2-wedding-export-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 
-@keyframes ai-wedding-float {
+@keyframes sa2-wedding-float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-6px) rotate(8deg); }
 }
 
-@keyframes ai-wedding-heartbeat {
+@keyframes sa2-wedding-heartbeat {
   0%, 100% { transform: scale(1); }
   25% { transform: scale(1.12); }
   50% { transform: scale(1); }

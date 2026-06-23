@@ -1,11 +1,11 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { InputProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { InputProps } from '@sa2kit-ui/shared';
 import { useCallback, useState, type ChangeEvent, type ChangeEventHandler } from 'react';
 
 const sizeClass = {
-  small: 'ai-input-wrap-sm',
-  middle: 'ai-input-wrap-md',
-  large: 'ai-input-wrap-lg',
+  small: 'sa2-input-wrap-sm',
+  middle: 'sa2-input-wrap-md',
+  large: 'sa2-input-wrap-lg',
 } as const;
 
 export function Input({
@@ -48,18 +48,18 @@ export function Input({
   return (
     <span
       className={cn(
-        'ai-input-wrap',
+        'sa2-input-wrap',
         sizeClass[size],
-        status === 'error' && 'ai-input-error',
-        status === 'warning' && 'ai-input-warning',
-        disabled && 'ai-input-disabled',
-        !shadow && 'ai-input-no-shadow',
+        status === 'error' && 'sa2-input-error',
+        status === 'warning' && 'sa2-input-warning',
+        disabled && 'sa2-input-disabled',
+        !shadow && 'sa2-input-no-shadow',
         className,
       )}
     >
-      {prefix ? <span className="ai-input-affix mr-1.5">{prefix}</span> : null}
+      {prefix ? <span className="sa2-input-affix mr-1.5">{prefix}</span> : null}
       <input
-        className="ai-input-field"
+        className="sa2-input-field"
         disabled={disabled}
         value={currentValue}
         onChange={handleChange}
@@ -67,7 +67,7 @@ export function Input({
       />
       {allowClear && currentValue && !disabled ? (
         <span
-          className="ai-input-clear"
+          className="sa2-input-clear"
           onClick={handleClear}
           role="button"
           tabIndex={-1}
@@ -76,7 +76,7 @@ export function Input({
           ×
         </span>
       ) : null}
-      {suffix ? <span className="ai-input-affix ml-1.5">{suffix}</span> : null}
+      {suffix ? <span className="sa2-input-affix ml-1.5">{suffix}</span> : null}
     </span>
   );
 }

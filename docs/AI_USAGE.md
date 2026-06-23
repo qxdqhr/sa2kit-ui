@@ -1,15 +1,15 @@
-# animal-island-components-sa2kit · AI Usage (v0.1.0)
+# sa2kit-ui · AI Usage (v0.1.0)
 
 > API 对齐 animal-island-ui。禁止臆造 props。
 
 ## Setup
 
 ```bash
-pnpm add @animal-island-components-sa2kit/react
+pnpm add @sa2kit-ui/react
 ```
 
 ```tsx
-import '@animal-island-components-sa2kit/react/style';
+import '@sa2kit-ui/react/style';
 ```
 
 ## Exports
@@ -23,7 +23,7 @@ import {
   Phone, Cursor,
   Wallet,
   WeddingInvitation, WeddingInvitationExportButton,
-} from '@animal-island-components-sa2kit/react';
+} from '@sa2kit-ui/react';
 import type {
   ButtonProps, ButtonType, ButtonSize,
   InputProps, InputSize,
@@ -50,10 +50,10 @@ import type {
   WalletProps, WalletSize,
   WeddingInvitationProps, WeddingInvitationRef,
   WeddingInvitationExportButtonProps,
-} from '@animal-island-components-sa2kit/react';
+} from '@sa2kit-ui/react';
 ```
 
-Electron：`@animal-island-components-sa2kit/electron`（Web 同源 API + 样式仍从 react/style 引入）
+Electron：`@sa2kit-ui/electron`（Web 同源 API + 样式仍从 react/style 引入）
 
 ## Button
 
@@ -298,8 +298,8 @@ interface MobileCardProps extends CardProps {
 ```
 
 ```tsx
-import { Button, Input, Switch, Card } from '@animal-island-components-sa2kit/rn';
-// 或 @animal-island-components-sa2kit/taro
+import { Button, Input, Switch, Card } from '@sa2kit-ui/rn';
+// 或 @sa2kit-ui/taro
 ```
 
 ## Time

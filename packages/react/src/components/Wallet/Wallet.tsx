@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { WalletProps, WalletSize } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { WalletProps, WalletSize } from '@sa2kit-ui/shared';
 import type { ReactNode } from 'react';
 
 import defaultBagSvg from '../../assets/wallet/bag-default.svg';
@@ -16,9 +16,9 @@ const formatValue = (value: WalletProps['value'], sep: string): string => {
 };
 
 const SIZE_CLASS: Record<WalletSize, string> = {
-  small: 'ai-wallet-sm',
+  small: 'sa2-wallet-sm',
   medium: '',
-  large: 'ai-wallet-lg',
+  large: 'sa2-wallet-lg',
 };
 
 function DefaultBagIcon() {
@@ -27,7 +27,7 @@ function DefaultBagIcon() {
   }
   return (
     <span
-      className="ai-wallet-bag-fallback"
+      className="sa2-wallet-bag-fallback"
       style={{ backgroundImage: `url(${defaultBagSvg})` }}
     />
   );
@@ -44,12 +44,12 @@ export function Wallet({
   const bagContent: ReactNode = icon ?? <DefaultBagIcon />;
 
   return (
-    <div className={cn('ai-wallet', SIZE_CLASS[size], className)} style={style}>
-      <div className="ai-wallet-bag-slot" aria-hidden="true">
+    <div className={cn('sa2-wallet', SIZE_CLASS[size], className)} style={style}>
+      <div className="sa2-wallet-bag-slot" aria-hidden="true">
         {bagContent}
       </div>
-      <div className="ai-wallet-pill">
-        <span className="ai-wallet-value">{formatValue(value, thousandSeparator)}</span>
+      <div className="sa2-wallet-pill">
+        <span className="sa2-wallet-value">{formatValue(value, thousandSeparator)}</span>
       </div>
     </div>
   );

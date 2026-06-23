@@ -17,4 +17,4 @@
 
 ## Token 来源
 
-`packages/tokens/tailwind.preset.js` + `animal-plugin.js`（`.ai-btn` 等组件类）
+`packages/tokens/tailwind.preset.js` + `animal-plugin.js`（`.sa2-btn` 等组件类）

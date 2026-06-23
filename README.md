@@ -1,18 +1,47 @@
-# animal-island-components-sa2kit
+# sa2Kit-UI
 
-《集合啦！动物森友会》风格 sa2kit 多平台 UI 组件库。样式从 [animal-island-ui](https://github.com/guokaigdg/animal-island-ui) 移植，技术栈为 **Tailwind CSS + sa2kit 五端 Monorepo**。
+《集合啦！动物森友会》风格 **sa2Kit-UI** 多平台组件库。样式从 [animal-island-ui](https://github.com/guokaigdg/animal-island-ui) 移植，采用 **方案 2：单仓多主题 + ThemeProvider + CSS 变量**。
 
-## 平台
+## 架构
 
-| 包 | 平台 |
+```
+packages/
+├── tokens/              # 语义 CSS 变量 + 无主题色的 Tailwind preset
+├── themes/
+│   └── animal-island/   # 动森主题 preset + plugin + theme.css
+├── theme-runtime/       # ThemeProvider + useTheme
+├── shared/ react/ rn/ taro/ electron/
+```
+
+| 包 | 说明 |
 |----|------|
-| `@animal-island-components-sa2kit/react` | Web |
-| `@animal-island-components-sa2kit/electron` | Electron 桌面 |
-| `@animal-island-components-sa2kit/rn` | React Native |
-| `@animal-island-components-sa2kit/taro` | 微信 / 支付宝小程序 |
-| `@animal-island-components-sa2kit/tokens` | 设计 token + 组件样式层 |
+| `@sa2kit-ui/tokens` | 语义设计 token（`--sa2-*` CSS 变量） |
+| `@sa2kit-ui/theme-animal-island` | 动森岛主题（Tailwind preset + 组件样式层） |
+| `@sa2kit-ui/theme-runtime` | 运行时主题切换（`data-theme`） |
+| `@sa2kit-ui/react` | Web 组件 |
+| `@sa2kit-ui/electron` | Electron 桌面 |
+| `@sa2kit-ui/rn` | React Native |
+| `@sa2kit-ui/taro` | 微信 / 支付宝小程序 |
 
-## 已实现组件（v0.1.0）
+## 多主题用法
+
+```tsx
+import '@sa2kit-ui/theme-animal-island/theme.css';
+import { ThemeProvider, useTheme } from '@sa2kit-ui/theme-runtime';
+import { Button } from '@sa2kit-ui/react';
+
+function App() {
+  return (
+    <ThemeProvider defaultTheme="animal-island">
+      <Button type="primary">动森按钮</Button>
+    </ThemeProvider>
+  );
+}
+```
+
+切换主题：`setTheme('animal-island' | 'tech')`，通过 `document.documentElement[data-theme]` 驱动 CSS 变量。
+
+## 已实现组件（24/24）
 
 **Tier 1 — 基础交互**
 - `Button` / `Input` / `Switch` / `Card`
@@ -27,19 +56,28 @@
 - `Phone` / `Cursor` / `Wallet` / `WeddingInvitation`
 
 **平台覆盖**
-- Web + Electron：**24 个组件已全部对齐 animal-island-ui**
-- RN / Taro：**24 个组件已全部实现**（与 Web API 对齐；`WeddingInvitation` 移动端导出为截图提示，完整 PNG 导出请用 Web）
+- Web + Electron：**24 个组件**，支持运行时主题切换
+- RN / Taro：**24 个组件**（API 对齐；移动端 `WeddingInvitation` 导出为截图提示）
 
-## 安装与使用
+## 组件文档（Ladle）
+
+类 Storybook 的交互式组件文档，含样式预览、变体展示与 Props 速查表。
 
 ```bash
-pnpm add @animal-island-components-sa2kit/react
+pnpm docs          # 开发：http://localhost:61000
+pnpm docs:build    # 本地构建
+pnpm docs:build:pages  # 模拟 GitHub Pages 子路径构建
 ```
 
-```tsx
-import '@animal-island-components-sa2kit/react/style';
-import { Button, Card, Input, Switch } from '@animal-island-components-sa2kit/react';
-```
+**在线文档（GitHub Pages）**：https://qxdqhr.github.io/sa2kit-ui/
+
+> 首次启用：仓库 **Settings → Pages → Build and deployment → Source** 选 **GitHub Actions**。  
+> 推送 `main` 分支后 workflow 自动构建并部署 `apps/docs` Ladle 站点。
+
+- 入口：`apps/docs/`
+- 组件索引：`src/overview.stories.tsx`
+- 各组件 Story：`src/components/*.stories.tsx`（24 个）
+- 重新生成 Story 模板：`node scripts/generate-ladle-stories.mjs`
 
 ## 开发
 

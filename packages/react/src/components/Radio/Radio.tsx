@@ -1,11 +1,11 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { RadioProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { RadioProps } from '@sa2kit-ui/shared';
 import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent } from 'react';
 
 const sizeClass = {
-  small: 'ai-radio-sm',
-  middle: 'ai-radio-md',
-  large: 'ai-radio-lg',
+  small: 'sa2-radio-sm',
+  middle: 'sa2-radio-md',
+  large: 'sa2-radio-lg',
 } as const;
 
 const CheckIcon = () => (
@@ -112,9 +112,9 @@ export function Radio({
     <div
       ref={groupRef}
       className={cn(
-        'ai-radio-group',
-        direction === 'vertical' ? 'ai-radio-vertical' : 'ai-radio-horizontal',
-        disabled && 'ai-radio-group-disabled',
+        'sa2-radio-group',
+        direction === 'vertical' ? 'sa2-radio-vertical' : 'sa2-radio-horizontal',
+        disabled && 'sa2-radio-group-disabled',
         className,
       )}
       style={style}
@@ -130,10 +130,10 @@ export function Radio({
           <label
             key={String(option.value)}
             className={cn(
-              'ai-radio-item',
+              'sa2-radio-item',
               sizeClass[size],
-              isChecked && 'ai-radio-checked',
-              isDisabled && 'ai-radio-disabled',
+              isChecked && 'sa2-radio-checked',
+              isDisabled && 'sa2-radio-disabled',
             )}
             onClick={() => {
               if (!isDisabled) {
@@ -143,7 +143,7 @@ export function Radio({
             }}
           >
             <span
-              className="ai-radio-circle"
+              className="sa2-radio-circle"
               data-radio-circle
               role="radio"
               aria-checked={isChecked}
@@ -160,12 +160,12 @@ export function Radio({
               }}
             >
               {isChecked ? (
-                <span className="ai-radio-mark">
+                <span className="sa2-radio-mark">
                   <CheckIcon />
                 </span>
               ) : null}
             </span>
-            <span className="ai-radio-label">{option.label}</span>
+            <span className="sa2-radio-label">{option.label}</span>
           </label>
         );
       })}

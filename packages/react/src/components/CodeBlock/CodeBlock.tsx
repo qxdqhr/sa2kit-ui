@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CodeBlockProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CodeBlockProps } from '@sa2kit-ui/shared';
 import type { ReactNode } from 'react';
 
 const COLORS = {
@@ -93,7 +93,7 @@ function highlightJSX(code: string): ReactNode[] {
 
 export function CodeBlock({ code, style, className }: CodeBlockProps) {
   return (
-    <pre className={cn('ai-codeblock', className)} style={style}>
+    <pre className={cn('sa2-codeblock', className)} style={style}>
       {highlightJSX(code)}
     </pre>
   );

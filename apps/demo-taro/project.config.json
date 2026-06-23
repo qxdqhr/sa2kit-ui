@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
   "projectname": "demo-taro",
-  "description": "animal-island-components-sa2kit Taro demo",
+  "description": "sa2kit-ui Taro demo",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

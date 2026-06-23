@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { IconName, PhoneProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { IconName, PhoneProps } from '@sa2kit-ui/shared';
 import { useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
 
@@ -42,52 +42,52 @@ export function Phone({ className }: PhoneProps) {
   const displayMinutes = minutes.toString().padStart(2, '0');
 
   return (
-    <div className={cn('ai-phone-container', className)}>
-      <div className="ai-phone">
-        <div className="ai-phone-screen">
-          <div className="ai-phone-home">
-            <div className="ai-phone-date">
-              <div className="ai-phone-date-header">
+    <div className={cn('sa2-phone-container', className)}>
+      <div className="sa2-phone">
+        <div className="sa2-phone-screen">
+          <div className="sa2-phone-home">
+            <div className="sa2-phone-date">
+              <div className="sa2-phone-date-header">
                 <span
-                  className="ai-phone-wifi"
+                  className="sa2-phone-wifi"
                   style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.wifi})` }}
                 />
                 <div>
                   {displayHours}
-                  <span className="ai-phone-blink">:</span>
+                  <span className="sa2-phone-blink">:</span>
                   {displayMinutes}
                   {ampm}
                 </div>
                 <span
-                  className="ai-phone-location"
+                  className="sa2-phone-location"
                   style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.location})` }}
                 />
               </div>
-              <div className="ai-phone-day">Welcome!</div>
+              <div className="sa2-phone-day">Welcome!</div>
             </div>
-            <div className="ai-phone-apps">
+            <div className="sa2-phone-apps">
               {apps.map((app) => (
                 <div
                   key={app.id}
-                  className={cn('ai-phone-app', app.offset && 'ai-phone-app-offset')}
+                  className={cn('sa2-phone-app', app.offset && 'sa2-phone-app-offset')}
                   style={{ backgroundColor: app.color }}
                 >
-                  {app.hasNewMessage ? <span className="ai-phone-badge" /> : null}
+                  {app.hasNewMessage ? <span className="sa2-phone-badge" /> : null}
                   <Icon
                     name={app.iconName}
                     size="100%"
                     className={cn(
-                      'ai-phone-app-icon',
-                      app.offset && 'ai-phone-app-icon-offset',
+                      'sa2-phone-app-icon',
+                      app.offset && 'sa2-phone-app-icon-offset',
                     )}
                     style={{ backgroundSize: '70% auto', ...app.iconStyle }}
                   />
                 </div>
               ))}
             </div>
-            <div className="ai-phone-page-indicator">
+            <div className="sa2-phone-page-indicator">
               <span
-                className="ai-phone-page"
+                className="sa2-phone-page"
                 style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.page})` }}
               />
             </div>

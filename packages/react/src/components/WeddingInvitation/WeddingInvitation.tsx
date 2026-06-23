@@ -2,8 +2,8 @@ import type {
   WeddingInvitationExportButtonProps,
   WeddingInvitationProps,
   WeddingInvitationRef,
-} from '@animal-island-components-sa2kit/shared';
-import { cn } from '@animal-island-components-sa2kit/shared';
+} from '@sa2kit-ui/shared';
+import { cn } from '@sa2kit-ui/shared';
 import { domToCanvas } from 'modern-screenshot';
 import {
   forwardRef,
@@ -114,7 +114,7 @@ function ScissorsIcon() {
 
 function BrideGroomIllustration() {
   return (
-    <svg className="ai-wedding-couple-svg" viewBox="0 0 280 120" aria-hidden>
+    <svg className="sa2-wedding-couple-svg" viewBox="0 0 280 120" aria-hidden>
       <ellipse cx="90" cy="95" rx="55" ry="18" fill="rgba(114,93,66,0.12)" />
       <ellipse cx="190" cy="95" rx="55" ry="18" fill="rgba(114,93,66,0.12)" />
       <circle cx="90" cy="52" r="28" fill="#f8a6b2" stroke="#725d42" strokeWidth="2.5" />
@@ -208,7 +208,7 @@ export const WeddingInvitation = forwardRef<WeddingInvitationRef, WeddingInvitat
       venue = '彩虹岛 · 樱花广场',
       address = '动物之森 · 无人岛 · K.K. 演奏台前',
       title = 'Wedding Invitation',
-      subtitle = <span className="ai-wedding-subtitle-text">集合啦 婚礼森友会</span>,
+      subtitle = <span className="sa2-wedding-subtitle-text">集合啦 婚礼森友会</span>,
       message = '哎呀，恭喜恭喜！我们要在小岛上举办婚礼啦~ 诚挚邀请您一同前来见证这个被花瓣和音符包围的日子！',
       showLotteryNumber = true,
       lotteryNumber = '0001',
@@ -238,105 +238,105 @@ export const WeddingInvitation = forwardRef<WeddingInvitationRef, WeddingInvitat
     return (
       <div
         ref={rootRef}
-        className={cn('ai-wedding-envelope', !showLotteryNumber && 'ai-wedding-no-lottery', className)}
+        className={cn('sa2-wedding-envelope', !showLotteryNumber && 'sa2-wedding-no-lottery', className)}
         style={style}
       >
-        <Leaf className={cn('ai-wedding-corner-leaf', 'ai-wedding-tl')} />
-        <Leaf className={cn('ai-wedding-corner-leaf', 'ai-wedding-tr')} />
-        <Leaf className={cn('ai-wedding-corner-leaf', 'ai-wedding-bl')} />
-        <Leaf className={cn('ai-wedding-corner-leaf', 'ai-wedding-br')} />
+        <Leaf className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-tl')} />
+        <Leaf className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-tr')} />
+        <Leaf className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-bl')} />
+        <Leaf className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-br')} />
 
-        <span className={cn('ai-wedding-float-item', 'ai-wedding-f1')}>
+        <span className={cn('sa2-wedding-float-item', 'sa2-wedding-f1')}>
           <Flower color="#f8a6b2" />
         </span>
-        <span className={cn('ai-wedding-float-item', 'ai-wedding-f2')}>
+        <span className={cn('sa2-wedding-float-item', 'sa2-wedding-f2')}>
           <Flower color="#ecdf52" center="#e59266" size={22} />
         </span>
-        <span className={cn('ai-wedding-float-item', 'ai-wedding-f3')}>
+        <span className={cn('sa2-wedding-float-item', 'sa2-wedding-f3')}>
           <Flower color="#b77dee" size={20} />
         </span>
-        <span className={cn('ai-wedding-float-item', 'ai-wedding-s1')}>
+        <span className={cn('sa2-wedding-float-item', 'sa2-wedding-s1')}>
           <Star color="#f7cd67" />
         </span>
-        <span className={cn('ai-wedding-float-item', 'ai-wedding-s2')}>
+        <span className={cn('sa2-wedding-float-item', 'sa2-wedding-s2')}>
           <Star color="#82d5bb" size={14} />
         </span>
 
-        <div className="ai-wedding-banner">
-          <span className="ai-wedding-banner-line" />
+        <div className="sa2-wedding-banner">
+          <span className="sa2-wedding-banner-line" />
           <Star size={16} color="#f7cd67" />
-          <span className="ai-wedding-banner-line" />
+          <span className="sa2-wedding-banner-line" />
         </div>
 
-        <div className="ai-wedding-title-en">{title}</div>
-        <div className="ai-wedding-title-zh">{subtitle}</div>
+        <div className="sa2-wedding-title-en">{title}</div>
+        <div className="sa2-wedding-title-zh">{subtitle}</div>
 
-        <div className="ai-wedding-couple-img">
+        <div className="sa2-wedding-couple-img">
           <BrideGroomIllustration />
         </div>
 
-        <div className="ai-wedding-couple-row">
-          <div className="ai-wedding-mascot">
-            <div className="ai-wedding-name">{brideName}</div>
+        <div className="sa2-wedding-couple-row">
+          <div className="sa2-wedding-mascot">
+            <div className="sa2-wedding-name">{brideName}</div>
           </div>
-          <div className="ai-wedding-heart-col">
+          <div className="sa2-wedding-heart-col">
             <Heart size={30} />
           </div>
-          <div className="ai-wedding-mascot">
-            <div className="ai-wedding-name">{groomName}</div>
+          <div className="sa2-wedding-mascot">
+            <div className="sa2-wedding-name">{groomName}</div>
           </div>
         </div>
 
-        <div className="ai-wedding-date-card">
-          <div className="ai-wedding-date-label">婚礼时间</div>
-          <div className="ai-wedding-date-value">{date}</div>
-          <div className="ai-wedding-date-meta">
+        <div className="sa2-wedding-date-card">
+          <div className="sa2-wedding-date-label">婚礼时间</div>
+          <div className="sa2-wedding-date-value">{date}</div>
+          <div className="sa2-wedding-date-meta">
             <span>{weekday}</span>
-            <span className="ai-wedding-dot">·</span>
+            <span className="sa2-wedding-dot">·</span>
             <span>{time}</span>
           </div>
         </div>
 
-        <div className="ai-wedding-venue-card">
-          <span className="ai-wedding-venue-icon">
+        <div className="sa2-wedding-venue-card">
+          <span className="sa2-wedding-venue-icon">
             <Icon name="icon-map" size={26} />
           </span>
-          <div className="ai-wedding-venue-text">
-            <div className="ai-wedding-venue-name">{venue}</div>
-            <div className="ai-wedding-venue-addr">{address}</div>
+          <div className="sa2-wedding-venue-text">
+            <div className="sa2-wedding-venue-name">{venue}</div>
+            <div className="sa2-wedding-venue-addr">{address}</div>
           </div>
         </div>
 
-        <div className="ai-wedding-message">{message}</div>
+        <div className="sa2-wedding-message">{message}</div>
 
         {showLotteryNumber ? (
-          <div className="ai-wedding-signature-lottery">
+          <div className="sa2-wedding-signature-lottery">
             <span>抽奖码</span>
-            <span className="ai-wedding-signature-lottery-no">
-              <span className="ai-wedding-lottery-hash">NO.</span>
+            <span className="sa2-wedding-signature-lottery-no">
+              <span className="sa2-wedding-lottery-hash">NO.</span>
               {lotteryNumber}
             </span>
           </div>
         ) : null}
 
         {showLotteryNumber ? (
-          <div className="ai-wedding-lottery">
-            <span className="ai-wedding-tear-hint">
+          <div className="sa2-wedding-lottery">
+            <span className="sa2-wedding-tear-hint">
               <ScissorsIcon />
               <span>沿虚线剪开</span>
               <ScissorsIcon />
             </span>
-            <div className="ai-wedding-lottery-title">婚礼抽奖券</div>
-            <div className="ai-wedding-lottery-label">
+            <div className="sa2-wedding-lottery-title">婚礼抽奖券</div>
+            <div className="sa2-wedding-lottery-label">
               <Star size={12} color="#f7cd67" />
               <span>{lotteryLabel}</span>
               <Star size={12} color="#f7cd67" />
             </div>
-            <div className="ai-wedding-lottery-number">
-              <span className="ai-wedding-lottery-hash">NO.</span>
+            <div className="sa2-wedding-lottery-number">
+              <span className="sa2-wedding-lottery-hash">NO.</span>
               {lotteryNumber}
             </div>
-            {lotteryHint ? <div className="ai-wedding-lottery-hint">{lotteryHint}</div> : null}
+            {lotteryHint ? <div className="sa2-wedding-lottery-hint">{lotteryHint}</div> : null}
           </div>
         ) : null}
       </div>
@@ -371,7 +371,7 @@ export function WeddingInvitationExportButton({
   return (
     <button
       type="button"
-      className={cn('ai-wedding-export-btn', className)}
+      className={cn('sa2-wedding-export-btn', className)}
       style={style}
       onClick={handleClick}
       disabled={exporting}

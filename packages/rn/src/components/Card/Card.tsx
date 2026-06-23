@@ -1,21 +1,21 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { MobileCardProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { MobileCardProps } from '@sa2kit-ui/shared';
 import { Pressable, View } from 'react-native';
 
 const colorClass: Record<NonNullable<MobileCardProps['color']>, string> = {
   default: '',
-  'app-pink': 'ai-card-app-pink',
-  purple: 'ai-card-purple',
-  'app-blue': 'ai-card-app-blue',
-  'app-yellow': 'ai-card-app-yellow',
-  'app-orange': 'ai-card-app-orange',
-  'app-teal': 'ai-card-app-teal',
-  'app-green': 'ai-card-app-green',
-  'app-red': 'ai-card-app-red',
-  'lime-green': 'ai-card-lime-green',
-  'yellow-green': 'ai-card-yellow-green',
-  brown: 'ai-card-brown',
-  'warm-peach-pink': 'ai-card-warm-peach-pink',
+  'app-pink': 'sa2-card-app-pink',
+  purple: 'sa2-card-purple',
+  'app-blue': 'sa2-card-app-blue',
+  'app-yellow': 'sa2-card-app-yellow',
+  'app-orange': 'sa2-card-app-orange',
+  'app-teal': 'sa2-card-app-teal',
+  'app-green': 'sa2-card-app-green',
+  'app-red': 'sa2-card-app-red',
+  'lime-green': 'sa2-card-lime-green',
+  'yellow-green': 'sa2-card-yellow-green',
+  brown: 'sa2-card-brown',
+  'warm-peach-pink': 'sa2-card-warm-peach-pink',
 };
 
 export function Card({
@@ -29,8 +29,8 @@ export function Card({
   const body = (
     <View
       className={cn(
-        'ai-card ai-font',
-        type === 'dashed' && 'ai-card-dashed',
+        'sa2-card sa2-font',
+        type === 'dashed' && 'sa2-card-dashed',
         color !== 'default' && colorClass[color],
         className,
       )}

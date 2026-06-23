@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { IconName, PhoneProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { IconName, PhoneProps } from '@sa2kit-ui/shared';
 import { useEffect, useState } from 'react';
 import { Image, Text, View } from 'react-native';
 
@@ -41,37 +41,37 @@ export function Phone({ className }: PhoneProps) {
   const displayMinutes = minutes.toString().padStart(2, '0');
 
   return (
-    <View className={cn('ai-phone-container', className)}>
-      <View className="ai-phone">
-        <View className="ai-phone-screen">
-          <View className="ai-phone-home">
-            <View className="ai-phone-date">
-              <View className="ai-phone-date-header">
-                <Image source={PHONE_STATUS_ICONS.wifi} className="ai-phone-wifi" resizeMode="contain" />
+    <View className={cn('sa2-phone-container', className)}>
+      <View className="sa2-phone">
+        <View className="sa2-phone-screen">
+          <View className="sa2-phone-home">
+            <View className="sa2-phone-date">
+              <View className="sa2-phone-date-header">
+                <Image source={PHONE_STATUS_ICONS.wifi} className="sa2-phone-wifi" resizeMode="contain" />
                 <Text>
                   {displayHours}
-                  <Text className="ai-phone-blink">:</Text>
+                  <Text className="sa2-phone-blink">:</Text>
                   {displayMinutes}
                   {ampm}
                 </Text>
-                <Image source={PHONE_STATUS_ICONS.location} className="ai-phone-location" resizeMode="contain" />
+                <Image source={PHONE_STATUS_ICONS.location} className="sa2-phone-location" resizeMode="contain" />
               </View>
-              <Text className="ai-phone-day">Welcome!</Text>
+              <Text className="sa2-phone-day">Welcome!</Text>
             </View>
-            <View className="ai-phone-apps">
+            <View className="sa2-phone-apps">
               {apps.map((app) => (
                 <View
                   key={app.id}
-                  className={cn('ai-phone-app', app.offset && 'ai-phone-app-offset')}
+                  className={cn('sa2-phone-app', app.offset && 'sa2-phone-app-offset')}
                   style={{ backgroundColor: app.color }}
                 >
-                  {app.hasNewMessage ? <View className="ai-phone-badge" /> : null}
-                  <Icon name={app.iconName} size="70%" className={cn('ai-phone-app-icon', app.offset && 'ai-phone-app-icon-offset')} />
+                  {app.hasNewMessage ? <View className="sa2-phone-badge" /> : null}
+                  <Icon name={app.iconName} size="70%" className={cn('sa2-phone-app-icon', app.offset && 'sa2-phone-app-icon-offset')} />
                 </View>
               ))}
             </View>
-            <View className="ai-phone-page-indicator">
-              <Image source={PHONE_STATUS_ICONS.page} className="ai-phone-page" resizeMode="contain" />
+            <View className="sa2-phone-page-indicator">
+              <Image source={PHONE_STATUS_ICONS.page} className="sa2-phone-page" resizeMode="contain" />
             </View>
           </View>
         </View>

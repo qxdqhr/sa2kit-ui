@@ -1,47 +1,47 @@
 /* ============ force 模式（默认）：全覆盖所有后代 ============ */
-.animal-cursor--force,
-.animal-cursor--force * {
+.sa2-cursor--force,
+.sa2-cursor--force * {
   cursor: url('../../assets/cursor/cursor-icon.svg') 4 0, default !important;
 }
 
 /* ============ scoped 模式：保留交互语义 ============ */
-.animal-cursor.animal-cursor--scoped {
+.sa2-cursor.sa2-cursor--scoped {
   cursor: url('../../assets/cursor/cursor-icon.svg') 4 0, default !important;
 }
 
-.animal-cursor--scoped *,
-.animal-cursor.animal-cursor--scoped * {
+.sa2-cursor--scoped *,
+.sa2-cursor.sa2-cursor--scoped * {
   cursor: auto !important;
 }
 
-.animal-cursor--scoped a[href],
-.animal-cursor--scoped button,
-.animal-cursor--scoped [role='button'],
-.animal-cursor--scoped [role='link'],
-.animal-cursor--scoped label[for],
-.animal-cursor--scoped select,
-.animal-cursor--scoped summary,
-.animal-cursor--scoped input[type='button'],
-.animal-cursor--scoped input[type='submit'],
-.animal-cursor--scoped input[type='reset'],
-.animal-cursor--scoped input[type='checkbox'],
-.animal-cursor--scoped input[type='radio'],
-.animal-cursor--scoped [data-cursor='pointer'] {
+.sa2-cursor--scoped a[href],
+.sa2-cursor--scoped button,
+.sa2-cursor--scoped [role='button'],
+.sa2-cursor--scoped [role='link'],
+.sa2-cursor--scoped label[for],
+.sa2-cursor--scoped select,
+.sa2-cursor--scoped summary,
+.sa2-cursor--scoped input[type='button'],
+.sa2-cursor--scoped input[type='submit'],
+.sa2-cursor--scoped input[type='reset'],
+.sa2-cursor--scoped input[type='checkbox'],
+.sa2-cursor--scoped input[type='radio'],
+.sa2-cursor--scoped [data-cursor='pointer'] {
   cursor: pointer !important;
 }
 
-.animal-cursor--scoped input[type='text'],
-.animal-cursor--scoped input[type='search'],
-.animal-cursor--scoped input[type='email'],
-.animal-cursor--scoped input[type='password'],
-.animal-cursor--scoped input[type='number'],
-.animal-cursor--scoped input[type='tel'],
-.animal-cursor--scoped input[type='url'],
-.animal-cursor--scoped textarea {
+.sa2-cursor--scoped input[type='text'],
+.sa2-cursor--scoped input[type='search'],
+.sa2-cursor--scoped input[type='email'],
+.sa2-cursor--scoped input[type='password'],
+.sa2-cursor--scoped input[type='number'],
+.sa2-cursor--scoped input[type='tel'],
+.sa2-cursor--scoped input[type='url'],
+.sa2-cursor--scoped textarea {
   cursor: text !important;
 }
 
-.animal-cursor--scoped [disabled],
-.animal-cursor--scoped [aria-disabled='true'] {
+.sa2-cursor--scoped [disabled],
+.sa2-cursor--scoped [aria-disabled='true'] {
   cursor: not-allowed !important;
 }

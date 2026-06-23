@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { TableColumn, TableProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { TableColumn, TableProps } from '@sa2kit-ui/shared';
 import type { HTMLAttributes, ReactNode } from 'react';
 
 export function Table<T extends Record<string, unknown> = Record<string, unknown>>({
@@ -25,8 +25,8 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
 
   const getRowClassName = (record: T, index: number): string => {
     return cn(
-      'ai-table-row',
-      striped && index % 2 === 1 && 'ai-table-row-striped',
+      'sa2-table-row',
+      striped && index % 2 === 1 && 'sa2-table-row-striped',
       typeof rowClassName === 'function' ? rowClassName(record, index) : rowClassName,
     );
   };
@@ -49,17 +49,17 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
 
   return (
     <div
-      className={cn('ai-table-wrap', scroll && 'ai-table-scrollable', className)}
+      className={cn('sa2-table-wrap', scroll && 'sa2-table-scrollable', className)}
       style={wrapperStyle}
     >
-      <table className={cn('ai-table', loading && 'ai-table-loading')}>
+      <table className={cn('sa2-table', loading && 'sa2-table-loading')}>
         {showHeader ? (
-          <thead className="ai-table-thead">
-            <tr className="ai-table-header-row">
+          <thead className="sa2-table-thead">
+            <tr className="sa2-table-header-row">
               {columns.map((column, index) => (
                 <th
                   key={index}
-                  className="ai-table-header-cell"
+                  className="sa2-table-header-cell"
                   style={{
                     width: column.width,
                     textAlign: column.align || 'left',
@@ -72,12 +72,12 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
             </tr>
           </thead>
         ) : null}
-        <tbody className="ai-table-tbody">
+        <tbody className="sa2-table-tbody">
           {dataSource.length === 0 ? (
             <tr>
-              <td colSpan={columns.length} className="ai-table-empty-cell">
-                <div className="ai-table-empty-content">
-                  <svg className="ai-table-empty-icon" viewBox="0 0 24 24" width="48" height="48">
+              <td colSpan={columns.length} className="sa2-table-empty-cell">
+                <div className="sa2-table-empty-content">
+                  <svg className="sa2-table-empty-icon" viewBox="0 0 24 24" width="48" height="48">
                     <path
                       fill="currentColor"
                       d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"
@@ -95,7 +95,7 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
                   {columns.map((column, colIndex) => (
                     <td
                       key={colIndex}
-                      className="ai-table-cell"
+                      className="sa2-table-cell"
                       style={{
                         textAlign: column.align || 'left',
                         ...column.style,
@@ -111,8 +111,8 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
         </tbody>
       </table>
       {loading ? (
-        <div className="ai-table-loading-overlay">
-          <div className="ai-table-loading-spinner">
+        <div className="sa2-table-loading-overlay">
+          <div className="sa2-table-loading-spinner">
             <svg viewBox="0 0 50 50" width="40" height="40">
               <circle
                 cx="25"

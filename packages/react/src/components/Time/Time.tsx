@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { TimeProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { TimeProps } from '@sa2kit-ui/shared';
 import { useEffect, useState } from 'react';
 
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -14,16 +14,16 @@ export function Time({ className }: TimeProps) {
   }, []);
 
   return (
-    <div className={cn('ai-time', className)}>
-      <div className="ai-time-date">
-        <span className="ai-time-weekday">{weekdays[currentTime.getDay()]}</span>
-        <span className="ai-time-monthday">
+    <div className={cn('sa2-time', className)}>
+      <div className="sa2-time-date">
+        <span className="sa2-time-weekday">{weekdays[currentTime.getDay()]}</span>
+        <span className="sa2-time-monthday">
           {months[currentTime.getMonth()]} {currentTime.getDate()}
         </span>
       </div>
-      <div className="ai-time-clock">
+      <div className="sa2-time-clock">
         {currentTime.getHours().toString().padStart(2, '0')}
-        <span className="ai-time-colon">:</span>
+        <span className="sa2-time-colon">:</span>
         {currentTime.getMinutes().toString().padStart(2, '0')}
       </div>
     </div>

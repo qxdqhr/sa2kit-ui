@@ -1,12 +1,12 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { MobileInputProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { MobileInputProps } from '@sa2kit-ui/shared';
 import { useCallback, useState } from 'react';
 import { Pressable, Text, TextInput, View } from 'react-native';
 
 const sizeClass = {
-  small: 'ai-input-wrap-sm',
-  middle: 'ai-input-wrap-md',
-  large: 'ai-input-wrap-lg',
+  small: 'sa2-input-wrap-sm',
+  middle: 'sa2-input-wrap-md',
+  large: 'sa2-input-wrap-lg',
 } as const;
 
 export function Input({
@@ -45,18 +45,18 @@ export function Input({
   return (
     <View
       className={cn(
-        'ai-input-wrap flex-row items-center',
+        'sa2-input-wrap flex-row items-center',
         sizeClass[size],
-        status === 'error' && 'ai-input-error',
-        status === 'warning' && 'ai-input-warning',
-        disabled && 'ai-input-disabled',
-        !shadow && 'ai-input-no-shadow',
+        status === 'error' && 'sa2-input-error',
+        status === 'warning' && 'sa2-input-warning',
+        disabled && 'sa2-input-disabled',
+        !shadow && 'sa2-input-no-shadow',
         className,
       )}
     >
-      {prefix ? <View className="ai-input-affix mr-1.5">{prefix}</View> : null}
+      {prefix ? <View className="sa2-input-affix mr-1.5">{prefix}</View> : null}
       <TextInput
-        className="ai-input-field flex-1 bg-transparent p-0"
+        className="sa2-input-field flex-1 bg-transparent p-0"
         editable={!disabled}
         value={currentValue}
         placeholder={placeholder}
@@ -65,10 +65,10 @@ export function Input({
       />
       {allowClear && currentValue && !disabled ? (
         <Pressable onPress={handleClear} accessibilityLabel="clear" hitSlop={8}>
-          <Text className="ai-input-clear">×</Text>
+          <Text className="sa2-input-clear">×</Text>
         </Pressable>
       ) : null}
-      {suffix ? <View className="ai-input-affix ml-1.5">{suffix}</View> : null}
+      {suffix ? <View className="sa2-input-affix ml-1.5">{suffix}</View> : null}
     </View>
   );
 }

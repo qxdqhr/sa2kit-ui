@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { SelectProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { SelectProps } from '@sa2kit-ui/shared';
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
@@ -20,28 +20,28 @@ export function Select({
   };
 
   return (
-    <View className={cn('ai-select', disabled && 'ai-select-disabled', className)}>
+    <View className={cn('sa2-select', disabled && 'sa2-select-disabled', className)}>
       <Pressable
-        className={cn('ai-select-trigger', open && 'ai-select-trigger-open')}
+        className={cn('sa2-select-trigger', open && 'sa2-select-trigger-open')}
         disabled={disabled}
         onPress={() => !disabled && setOpen((prev) => !prev)}
       >
-        <Text className={value ? 'ai-select-value' : 'ai-select-placeholder'}>{currentLabel}</Text>
-        <Text className="ai-select-arrow">▼</Text>
+        <Text className={value ? 'sa2-select-value' : 'sa2-select-placeholder'}>{currentLabel}</Text>
+        <Text className="sa2-select-arrow">▼</Text>
       </Pressable>
       {open ? (
-        <View className="ai-select-dropdown">
+        <View className="sa2-select-dropdown">
           {options.map((option) => {
             const isActive = value === option.key;
             return (
               <Pressable
                 key={option.key}
-                className={cn('ai-select-option', isActive && 'ai-select-option-active')}
+                className={cn('sa2-select-option', isActive && 'sa2-select-option-active')}
                 onPress={() => handleSelect(option.key)}
               >
-                <Text className="ai-select-option-dot">●</Text>
+                <Text className="sa2-select-option-dot">●</Text>
                 <Text>{option.label}</Text>
-                {isActive ? <View className="ai-select-pill-bar" /> : null}
+                {isActive ? <View className="sa2-select-pill-bar" /> : null}
               </Pressable>
             );
           })}

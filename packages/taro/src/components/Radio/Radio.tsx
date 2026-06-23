@@ -1,9 +1,9 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { RadioProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { RadioProps } from '@sa2kit-ui/shared';
 import { Text, View } from '@tarojs/components';
 import { useCallback, useState } from 'react';
 
-const sizeClass = { small: 'ai-radio-sm', middle: 'ai-radio-md', large: 'ai-radio-lg' } as const;
+const sizeClass = { small: 'sa2-radio-sm', middle: 'sa2-radio-md', large: 'sa2-radio-lg' } as const;
 
 export function Radio({
   value,
@@ -32,9 +32,9 @@ export function Radio({
   return (
     <View
       className={cn(
-        'ai-radio-group',
-        direction === 'vertical' ? 'ai-radio-vertical' : 'ai-radio-horizontal',
-        disabled && 'ai-radio-group-disabled',
+        'sa2-radio-group',
+        direction === 'vertical' ? 'sa2-radio-vertical' : 'sa2-radio-horizontal',
+        disabled && 'sa2-radio-group-disabled',
         className,
       )}
       style={style}
@@ -46,21 +46,21 @@ export function Radio({
           <View
             key={String(option.value)}
             className={cn(
-              'ai-radio-item',
+              'sa2-radio-item',
               sizeClass[size],
-              isChecked && 'ai-radio-checked',
-              isDisabled && 'ai-radio-disabled',
+              isChecked && 'sa2-radio-checked',
+              isDisabled && 'sa2-radio-disabled',
             )}
             onClick={() => !isDisabled && handleChange(option.value, option.disabled)}
           >
-            <View className="ai-radio-circle">
+            <View className="sa2-radio-circle">
               {isChecked ? (
-                <View className="ai-radio-mark">
+                <View className="sa2-radio-mark">
                   <Text className="text-xs font-bold">✓</Text>
                 </View>
               ) : null}
             </View>
-            <Text className="ai-radio-label">{option.label}</Text>
+            <Text className="sa2-radio-label">{option.label}</Text>
           </View>
         );
       })}

@@ -10,7 +10,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 960,
     height: 640,
-    title: 'animal-island-components-sa2kit · Electron',
+    title: 'sa2kit-ui · Electron',
     webPreferences: {
       contextIsolation: true,
       nodeIntegration: false,

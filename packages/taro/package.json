@@ -1,7 +1,7 @@
 {
-  "name": "@animal-island-components-sa2kit/taro",
+  "name": "@sa2kit-ui/taro",
   "version": "0.0.1",
-  "description": "Taro components for animal-island-components-sa2kit",
+  "description": "Taro components for sa2kit-ui",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -16,11 +16,11 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external @tarojs/components --external @tarojs/taro --external @animal-island-components-sa2kit/shared --external react --loader .png=dataurl --clean",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external @tarojs/components --external @tarojs/taro --external @sa2kit-ui/shared --external react --loader .png=dataurl --clean",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@animal-island-components-sa2kit/shared": "workspace:*"
+    "@sa2kit-ui/shared": "workspace:*"
   },
   "peerDependencies": {
     "@tarojs/components": ">=4.0.0",
@@ -28,7 +28,7 @@
     "react": ">=18.0.0"
   },
   "devDependencies": {
-    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@sa2kit-ui/tokens": "workspace:*",
     "@tarojs/components": "^4.1.1",
     "@tarojs/taro": "^4.1.1",
     "@types/react": "^18.3.18",

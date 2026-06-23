@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { SelectProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { SelectProps } from '@sa2kit-ui/shared';
 import { useEffect, useRef, useState } from 'react';
 
 export function Select({
@@ -31,15 +31,15 @@ export function Select({
   };
 
   return (
-    <div ref={wrapperRef} className={cn('ai-select', disabled && 'ai-select-disabled', className)}>
+    <div ref={wrapperRef} className={cn('sa2-select', disabled && 'sa2-select-disabled', className)}>
       <button
         type="button"
-        className={cn('ai-select-trigger', open && 'ai-select-trigger-open')}
+        className={cn('sa2-select-trigger', open && 'sa2-select-trigger-open')}
         disabled={disabled}
         onClick={() => !disabled && setOpen((prev) => !prev)}
       >
-        <span className={value ? 'ai-select-value' : 'ai-select-placeholder'}>{currentLabel}</span>
-        <span className="ai-select-arrow" aria-hidden>
+        <span className={value ? 'sa2-select-value' : 'sa2-select-placeholder'}>{currentLabel}</span>
+        <span className="sa2-select-arrow" aria-hidden>
           <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path
               d="M3 4.5L6 7.5L9 4.5"
@@ -52,7 +52,7 @@ export function Select({
         </span>
       </button>
       {open ? (
-        <div className="ai-select-dropdown">
+        <div className="sa2-select-dropdown">
           {options.map((option) => {
             const isActive = value === option.key;
             const isHovered = hoveredKey === option.key;
@@ -61,17 +61,17 @@ export function Select({
                 key={option.key}
                 type="button"
                 className={cn(
-                  'ai-select-option',
-                  isActive && 'ai-select-option-active',
-                  isHovered && 'ai-select-option-hovered',
+                  'sa2-select-option',
+                  isActive && 'sa2-select-option-active',
+                  isHovered && 'sa2-select-option-hovered',
                 )}
                 onClick={() => handleSelect(option.key)}
                 onMouseEnter={() => setHoveredKey(option.key)}
                 onMouseLeave={() => setHoveredKey(null)}
               >
-                <span className="ai-select-option-dot" />
+                <span className="sa2-select-option-dot" />
                 {option.label}
-                {isActive ? <span className="ai-select-pill-bar" aria-hidden /> : null}
+                {isActive ? <span className="sa2-select-pill-bar" aria-hidden /> : null}
               </button>
             );
           })}

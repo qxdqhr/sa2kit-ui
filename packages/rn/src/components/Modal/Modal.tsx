@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { ModalProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { ModalProps } from '@sa2kit-ui/shared';
 import { useEffect, useState } from 'react';
 import { Modal as RNModal, Pressable, Text, View } from 'react-native';
 import { Button } from '../Button';
@@ -33,19 +33,19 @@ export function Modal({
 
   return (
     <RNModal visible={open} transparent animationType="fade" onRequestClose={onClose}>
-      <Pressable className="ai-modal-mask flex-1" onPress={() => maskClosable && onClose?.()}>
+      <Pressable className="sa2-modal-mask flex-1" onPress={() => maskClosable && onClose?.()}>
         <Pressable
-          className={cn('ai-modal', className)}
+          className={cn('sa2-modal', className)}
           style={{ width: typeof width === 'number' ? width : undefined }}
           onPress={(event) => event.stopPropagation()}
         >
-          <View className="ai-modal-clipped">
+          <View className="sa2-modal-clipped">
             {title ? (
-              <View className="ai-modal-header">
-                {typeof title === 'string' ? <Text className="ai-modal-title">{title}</Text> : title}
+              <View className="sa2-modal-header">
+                {typeof title === 'string' ? <Text className="sa2-modal-title">{title}</Text> : title}
               </View>
             ) : null}
-            <View className="ai-modal-body">
+            <View className="sa2-modal-body">
               {typewriter ? (
                 <Typewriter speed={typeSpeed} trigger={playKey}>{children}</Typewriter>
               ) : (
@@ -53,7 +53,7 @@ export function Modal({
               )}
             </View>
             {footer !== null ? (
-              <View className="ai-modal-footer">{footer === undefined ? defaultFooter : footer}</View>
+              <View className="sa2-modal-footer">{footer === undefined ? defaultFooter : footer}</View>
             ) : null}
           </View>
         </Pressable>

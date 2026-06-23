@@ -25,8 +25,8 @@ import {
   Wallet,
   WeddingInvitation,
   WeddingInvitationExportButton,
-} from '@animal-island-components-sa2kit/rn';
-import type { WeddingInvitationRef } from '@animal-island-components-sa2kit/shared';
+} from '@sa2kit-ui/rn';
+import type { WeddingInvitationRef } from '@sa2kit-ui/shared';
 import type { ReactNode } from 'react';
 import { useRef, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
@@ -60,14 +60,14 @@ export default function Showcase() {
 
   return (
     <Cursor>
-      <ScrollView className="ai-font flex-1 bg-animal-bg">
+      <ScrollView className="sa2-font flex-1 bg-sa2-bg">
         <View className="gap-6 px-4 py-8">
           <View className="mb-2 flex-row flex-wrap items-start justify-between gap-3">
             <View className="flex-1">
               <Title size="large" color="app-teal">
                 全组件 Showcase
               </Title>
-              <Text className="mt-2 text-animal-text-secondary">Animal Island · RN · 24 组件一览</Text>
+              <Text className="mt-2 text-sa2-text-secondary">SA2Kit UI · RN · 24 组件一览</Text>
             </View>
             <Time />
           </View>
@@ -94,7 +94,7 @@ export default function Showcase() {
                 <Button type="default">Tooltip</Button>
               </Tooltip>
             </View>
-            <Text className="mt-3 text-animal-text">
+            <Text className="mt-3 text-sa2-text">
               <Typewriter speed={60}>今天也要在岛上度过美好的一天～</Typewriter>
             </Text>
           </Section>
@@ -104,17 +104,17 @@ export default function Showcase() {
               {
                 key: '1',
                 label: '岛屿',
-                children: <Text className="p-2 text-animal-text">欢迎来到无人岛！</Text>,
+                children: <Text className="p-2 text-sa2-text">欢迎来到无人岛！</Text>,
               },
               {
                 key: '2',
                 label: '商店',
-                children: <Text className="p-2 text-animal-text">Nook 购物中…</Text>,
+                children: <Text className="p-2 text-sa2-text">Nook 购物中…</Text>,
               },
               {
                 key: '3',
                 label: '博物馆',
-                children: <Text className="p-2 text-animal-text">捐赠化石与鱼类</Text>,
+                children: <Text className="p-2 text-sa2-text">捐赠化石与鱼类</Text>,
               },
             ]}
           />
@@ -172,7 +172,7 @@ export default function Showcase() {
             />
           </Section>
 
-          <CodeBlock code={`import { Button } from '@animal-island-components-sa2kit/rn';\n\n<Button type="primary">Go</Button>`} />
+          <CodeBlock code={`import { Button } from '@sa2kit-ui/rn';\n\n<Button type="primary">Go</Button>`} />
 
           <Divider type="dashed-teal" />
 
@@ -198,13 +198,13 @@ export default function Showcase() {
 
           <View className="flex-row flex-wrap gap-2">
             <Card color="app-pink" className="min-w-[100px] flex-1">
-              <Text className="text-center text-animal-text">pink</Text>
+              <Text className="text-center text-sa2-text">pink</Text>
             </Card>
             <Card color="app-blue" className="min-w-[100px] flex-1">
-              <Text className="text-center text-animal-text">blue</Text>
+              <Text className="text-center text-sa2-text">blue</Text>
             </Card>
             <Card color="app-yellow" className="min-w-[100px] flex-1">
-              <Text className="text-center text-animal-text">yellow</Text>
+              <Text className="text-center text-sa2-text">yellow</Text>
             </Card>
           </View>
 
@@ -218,7 +218,7 @@ export default function Showcase() {
           onClose={() => setModalOpen(false)}
           onOk={() => setModalOpen(false)}
         >
-          <Text className="text-animal-text">今天也要在岛上度过美好的一天！</Text>
+          <Text className="text-sa2-text">今天也要在岛上度过美好的一天！</Text>
         </Modal>
 
         {loading ? <Loading /> : null}

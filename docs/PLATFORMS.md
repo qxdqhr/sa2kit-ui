@@ -2,7 +2,17 @@
 
 详见全局 Skill：`~/.agents/skills/build-sa2kit-component-library/PLATFORMS.md`
 
-本仓库已启用：React Web、Electron 桌面、RN (NativeWind)、Taro (weapp + alipay)。
+本仓库 **sa2Kit-UI** 已启用：React Web、Electron 桌面、RN (NativeWind)、Taro (weapp + alipay)。
+
+## 多主题架构（方案 2）
+
+| 包 | 职责 |
+|----|------|
+| `@sa2kit-ui/tokens` | 语义 CSS 变量 `--sa2-*` + 无主题色 Tailwind preset |
+| `@sa2kit-ui/theme-animal-island` | 动森主题 plugin + preset + theme.css |
+| `@sa2kit-ui/theme-runtime` | `ThemeProvider` / `useTheme`，通过 `data-theme` 切换 |
+
+Web/Electron 使用 `ThemeProvider` 可在 `animal-island` 与 `tech` 主题间运行时切换。
 
 ## 组件覆盖（24/24）
 
@@ -27,4 +37,4 @@
 
 ## 共享逻辑
 
-- `@animal-island-components-sa2kit/shared` 提供 `useTypewriterEffect`、`getHighlightSegments` 等跨端工具。
+- `@sa2kit-ui/shared` 提供 `useTypewriterEffect`、`getHighlightSegments` 等跨端工具。

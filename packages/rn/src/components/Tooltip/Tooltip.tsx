@@ -1,21 +1,21 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { TooltipPlacement, TooltipProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { TooltipPlacement, TooltipProps } from '@sa2kit-ui/shared';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 const placementClass: Record<TooltipPlacement, string> = {
-  top: 'ai-tooltip-top',
-  'top-start': 'ai-tooltip-top-start',
-  'top-end': 'ai-tooltip-top-end',
-  bottom: 'ai-tooltip-bottom',
-  'bottom-start': 'ai-tooltip-bottom-start',
-  'bottom-end': 'ai-tooltip-bottom-end',
-  left: 'ai-tooltip-left',
-  'left-start': 'ai-tooltip-left-start',
-  'left-end': 'ai-tooltip-left-end',
-  right: 'ai-tooltip-right',
-  'right-start': 'ai-tooltip-right-start',
-  'right-end': 'ai-tooltip-right-end',
+  top: 'sa2-tooltip-top',
+  'top-start': 'sa2-tooltip-top-start',
+  'top-end': 'sa2-tooltip-top-end',
+  bottom: 'sa2-tooltip-bottom',
+  'bottom-start': 'sa2-tooltip-bottom-start',
+  'bottom-end': 'sa2-tooltip-bottom-end',
+  left: 'sa2-tooltip-left',
+  'left-start': 'sa2-tooltip-left-start',
+  'left-end': 'sa2-tooltip-left-end',
+  right: 'sa2-tooltip-right',
+  'right-start': 'sa2-tooltip-right-start',
+  'right-end': 'sa2-tooltip-right-end',
 };
 
 export function Tooltip({
@@ -47,7 +47,7 @@ export function Tooltip({
   const mobileTrigger = trigger === 'click' ? 'click' : 'press';
 
   return (
-    <View className={cn('ai-tooltip-wrap', className)} style={style as object}>
+    <View className={cn('sa2-tooltip-wrap', className)} style={style as object}>
       <Pressable
         onPress={mobileTrigger === 'click' ? () => setVisible((value) => !value) : undefined}
         onPressIn={mobileTrigger === 'press' ? show : undefined}
@@ -57,14 +57,14 @@ export function Tooltip({
       </Pressable>
       <View
         className={cn(
-          'ai-tooltip',
+          'sa2-tooltip',
           placementClass[placement],
-          variant === 'island' && 'ai-tooltip-island',
-          bordered ? 'ai-tooltip-bordered' : 'ai-tooltip-borderless',
-          visible && 'ai-tooltip-visible',
+          variant === 'island' && 'sa2-tooltip-island',
+          bordered ? 'sa2-tooltip-bordered' : 'sa2-tooltip-borderless',
+          visible && 'sa2-tooltip-visible',
         )}
       >
-        <Text className="ai-tooltip-content">{title}</Text>
+        <Text className="sa2-tooltip-content">{title}</Text>
       </View>
     </View>
   );

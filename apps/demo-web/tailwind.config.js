@@ -5,5 +5,5 @@ export default {
     './src/**/*.{ts,tsx}',
     '../../packages/react/src/**/*.{ts,tsx}',
   ],
-  presets: [require('@animal-island-components-sa2kit/tokens/tailwind.preset')],
+  presets: [require('@sa2kit-ui/theme-animal-island/tailwind.preset')],
 };

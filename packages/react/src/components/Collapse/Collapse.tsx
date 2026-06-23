@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CollapseProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CollapseProps } from '@sa2kit-ui/shared';
 import { useState } from 'react';
 
 export function Collapse({
@@ -18,19 +18,19 @@ export function Collapse({
 
   return (
     <div
-      className={cn('ai-collapse', expanded && 'ai-collapse-expanded', disabled && 'ai-collapse-disabled', className)}
+      className={cn('sa2-collapse', expanded && 'sa2-collapse-expanded', disabled && 'sa2-collapse-disabled', className)}
       style={style}
     >
       <button
         type="button"
-        className="ai-collapse-header"
+        className="sa2-collapse-header"
         onClick={handleClick}
         disabled={disabled}
         aria-expanded={expanded}
       >
-        <span className="ai-collapse-icon">{expanded ? '−' : '+'}</span>
-        <span className="ai-collapse-question">{question}</span>
-        <span className="ai-collapse-leaf" aria-hidden>
+        <span className="sa2-collapse-icon">{expanded ? '−' : '+'}</span>
+        <span className="sa2-collapse-question">{question}</span>
+        <span className="sa2-collapse-leaf" aria-hidden>
           <svg viewBox="0 0 24 24" width="20" height="20">
             <path
               fill="currentColor"
@@ -39,8 +39,8 @@ export function Collapse({
           </svg>
         </span>
       </button>
-      <div className="ai-collapse-body">
-        <div className="ai-collapse-answer">{answer}</div>
+      <div className="sa2-collapse-body">
+        <div className="sa2-collapse-answer">{answer}</div>
       </div>
     </div>
   );

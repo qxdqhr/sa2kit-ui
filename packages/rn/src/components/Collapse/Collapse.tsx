@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CollapseProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CollapseProps } from '@sa2kit-ui/shared';
 import { useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
@@ -15,22 +15,22 @@ export function Collapse({
 
   return (
     <View
-      className={cn('ai-collapse', expanded && 'ai-collapse-expanded', disabled && 'ai-collapse-disabled', className)}
+      className={cn('sa2-collapse', expanded && 'sa2-collapse-expanded', disabled && 'sa2-collapse-disabled', className)}
       style={style as object}
     >
       <Pressable
-        className="ai-collapse-header"
+        className="sa2-collapse-header"
         onPress={() => !disabled && setExpanded((value) => !value)}
         disabled={disabled}
         accessibilityRole="button"
         accessibilityState={{ expanded }}
       >
-        <Text className="ai-collapse-icon">{expanded ? '−' : '+'}</Text>
-        <Text className="ai-collapse-question">{question}</Text>
-        <Text className="ai-collapse-leaf">🍃</Text>
+        <Text className="sa2-collapse-icon">{expanded ? '−' : '+'}</Text>
+        <Text className="sa2-collapse-question">{question}</Text>
+        <Text className="sa2-collapse-leaf">🍃</Text>
       </Pressable>
-      <View className="ai-collapse-body">
-        <View className="ai-collapse-answer">{answer}</View>
+      <View className="sa2-collapse-body">
+        <View className="sa2-collapse-answer">{answer}</View>
       </View>
     </View>
   );

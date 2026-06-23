@@ -3,7 +3,7 @@ export default {
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#f8fafc',
-    navigationBarTitleText: 'animal-island-components-sa2kit',
+    navigationBarTitleText: 'sa2kit-ui',
     navigationBarTextStyle: 'black',
   },
 };

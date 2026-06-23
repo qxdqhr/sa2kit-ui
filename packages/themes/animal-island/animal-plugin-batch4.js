@@ -1,7 +1,7 @@
 /** Batch-4: Time / Table / Icon / Footer */
 module.exports = {
   /* ========== Time ========== */
-  '.ai-time': {
+  '.sa2-time': {
     display: 'inline-flex',
     gap: '20px',
     alignItems: 'center',
@@ -9,16 +9,16 @@ module.exports = {
     width: 'fit-content',
     maxWidth: 'max-content',
     padding: '16px 36px',
-    background: 'linear-gradient(180deg, #fff 0%, #f8f8f0 100%)',
+    background: 'linear-gradient(180deg, #fff 0%, var(--sa2-bg) 100%)',
     border: '3px solid #d4cfc3',
     borderRadius: '18px',
-    animation: 'ai-time-fade-up 0.5s ease-out',
+    animation: 'sa2-time-fade-up 0.5s ease-out',
     '@media (max-width: 768px)': {
       padding: '12px 20px',
       gap: '12px',
     },
   },
-  '.ai-time-date': {
+  '.sa2-time-date': {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -28,8 +28,8 @@ module.exports = {
       paddingRight: '12px',
     },
   },
-  '.ai-time-weekday': {
-    color: '#6fba2c',
+  '.sa2-time-weekday': {
+    color: 'var(--sa2-success)',
     fontWeight: '900',
     fontSize: '14px',
     letterSpacing: '1.5px',
@@ -38,7 +38,7 @@ module.exports = {
       fontSize: '11px',
     },
   },
-  '.ai-time-monthday': {
+  '.sa2-time-monthday': {
     color: '#8b7355',
     fontWeight: '800',
     fontSize: '22px',
@@ -46,7 +46,7 @@ module.exports = {
       fontSize: '16px',
     },
   },
-  '.ai-time-clock': {
+  '.sa2-time-clock': {
     display: 'flex',
     alignItems: 'center',
     color: '#8b7355',
@@ -57,40 +57,40 @@ module.exports = {
       fontSize: '32px',
     },
   },
-  '.ai-time-colon': {
+  '.sa2-time-colon': {
     position: 'relative',
     top: '-0.08em',
     margin: '0 1px',
     fontSize: '48px',
     color: '#8b7355',
-    animation: 'ai-time-blink 1s step-end infinite',
+    animation: 'sa2-time-blink 1s step-end infinite',
     '@media (max-width: 768px)': {
       fontSize: '32px',
     },
   },
 
   /* ========== Table ========== */
-  '.ai-table-wrap': {
+  '.sa2-table-wrap': {
     position: 'relative',
     width: '100%',
-    background: 'rgb(247, 243, 223)',
+    background: 'var(--sa2-bg-content)',
     borderRadius: '20px',
     padding: '6px',
     boxSizing: 'border-box',
   },
-  '.ai-table-scrollable': {
+  '.sa2-table-scrollable': {
     overflowX: 'auto',
     overflowY: 'auto',
   },
-  '.ai-table': {
+  '.sa2-table': {
     width: '100%',
     borderCollapse: 'separate',
     borderSpacing: '0',
   },
-  '.ai-table-thead': {
-    background: 'rgb(247, 243, 223)',
+  '.sa2-table-thead': {
+    background: 'var(--sa2-bg-content)',
   },
-  '.ai-table-header-row': {
+  '.sa2-table-header-row': {
     position: 'relative',
     '&::after': {
       content: '""',
@@ -104,20 +104,20 @@ module.exports = {
       transition: 'opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
     },
   },
-  '.ai-table-header-cell': {
+  '.sa2-table-header-cell': {
     padding: '16px 20px',
     fontSize: '14px',
     fontWeight: '700',
-    color: '#725d42',
+    color: 'var(--sa2-text-body)',
     textAlign: 'left',
     whiteSpace: 'nowrap',
     letterSpacing: '0.02em',
     background: 'transparent',
   },
-  '.ai-table-tbody': {
-    background: 'rgb(247, 243, 223)',
+  '.sa2-table-tbody': {
+    background: 'var(--sa2-bg-content)',
   },
-  '.ai-table-row': {
+  '.sa2-table-row': {
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
     position: 'relative',
     '&::after': {
@@ -136,11 +136,11 @@ module.exports = {
       backgroundSize: '28.28px 28.28px',
       clipPath: 'inset(0 0 0 0 round 30px)',
       '&::after': { opacity: '0' },
-      '& .ai-table-cell': { color: '#3d2e1e' },
+      '& .sa2-table-cell': { color: '#3d2e1e' },
     },
     '&:last-child::after': { display: 'none' },
   },
-  '.ai-table-row-striped': {
+  '.sa2-table-row-striped': {
     background: 'rgba(248, 248, 240, 0.6)',
     '&:hover': {
       backgroundImage:
@@ -148,38 +148,38 @@ module.exports = {
       backgroundSize: '28.28px 28.28px',
       clipPath: 'inset(0 0 0 0 round 30px)',
       '&::after': { opacity: '0' },
-      '& .ai-table-cell': { color: '#3d2e1e' },
+      '& .sa2-table-cell': { color: '#3d2e1e' },
     },
   },
-  '.ai-table-cell': {
+  '.sa2-table-cell': {
     padding: '14px 20px',
     fontSize: '14px',
     fontWeight: '500',
-    color: '#725d42',
+    color: 'var(--sa2-text-body)',
     lineHeight: '1.6',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-table-empty-cell': {
+  '.sa2-table-empty-cell': {
     padding: '60px 20px',
     textAlign: 'center',
   },
-  '.ai-table-empty-content': {
+  '.sa2-table-empty-content': {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: '16px',
-    color: '#9f927d',
+    color: 'var(--sa2-text-secondary)',
     fontSize: '14px',
   },
-  '.ai-table-empty-icon': {
-    color: '#9f927d',
+  '.sa2-table-empty-icon': {
+    color: 'var(--sa2-text-secondary)',
     opacity: '0.5',
   },
-  '.ai-table-loading': {
+  '.sa2-table-loading': {
     opacity: '0.7',
     pointerEvents: 'none',
   },
-  '.ai-table-loading-overlay': {
+  '.sa2-table-loading-overlay': {
     position: 'absolute',
     inset: '0',
     display: 'flex',
@@ -188,27 +188,27 @@ module.exports = {
     background: 'rgba(247, 243, 223, 0.8)',
     backdropFilter: 'blur(2px)',
   },
-  '.ai-table-loading-spinner': {
-    color: '#19c8b9',
-    animation: 'ai-spin 1s linear infinite',
+  '.sa2-table-loading-spinner': {
+    color: 'var(--sa2-primary)',
+    animation: 'sa2-spin 1s linear infinite',
     '& circle': {
-      animation: 'ai-loading-dash 1.5s ease-in-out infinite',
+      animation: 'sa2-loading-dash 1.5s ease-in-out infinite',
     },
   },
 
   /* ========== Icon ========== */
-  '.ai-icon': {
+  '.sa2-icon': {
     display: 'inline-block',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
     backgroundSize: 'contain',
   },
-  '.ai-icon-bounce:hover': {
-    animation: 'ai-icon-bounce 0.3s ease-in-out forwards',
+  '.sa2-icon-bounce:hover': {
+    animation: 'sa2-icon-bounce 0.3s ease-in-out forwards',
   },
 
   /* ========== CodeBlock ========== */
-  '.ai-codeblock': {
+  '.sa2-codeblock': {
     padding: '20px 24px',
     background: '#2b2118',
     border: '1px solid #3d3028',
@@ -224,20 +224,20 @@ module.exports = {
   },
 
   /* ========== Footer ========== */
-  '.ai-footer': {
+  '.sa2-footer': {
     width: '100%',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   },
-  '.ai-footer-sea': {
+  '.sa2-footer-sea': {
     height: '80px',
     backgroundSize: 'contain',
   },
-  '.ai-footer-tree': {
+  '.sa2-footer-tree': {
     height: '60px',
     backgroundSize: 'cover',
     backgroundPosition: 'bottom center',
     backgroundImage:
-      'linear-gradient(to top, #6fba2c 0%, #6fba2c 35%, transparent 35%), radial-gradient(ellipse 18px 28px at 8% 100%, #4a8a18 70%, transparent 71%), radial-gradient(ellipse 22px 34px at 22% 100%, #5a9e1e 70%, transparent 71%), radial-gradient(ellipse 26px 40px at 40% 100%, #6fba2c 70%, transparent 71%), radial-gradient(ellipse 20px 32px at 58% 100%, #4a8a18 70%, transparent 71%), radial-gradient(ellipse 24px 38px at 76% 100%, #5a9e1e 70%, transparent 71%), radial-gradient(ellipse 18px 28px at 92% 100%, #6fba2c 70%, transparent 71%)',
+      'linear-gradient(to top, var(--sa2-success) 0%, var(--sa2-success) 35%, transparent 35%), radial-gradient(ellipse 18px 28px at 8% 100%, #4a8a18 70%, transparent 71%), radial-gradient(ellipse 22px 34px at 22% 100%, var(--sa2-success-active) 70%, transparent 71%), radial-gradient(ellipse 26px 40px at 40% 100%, var(--sa2-success) 70%, transparent 71%), radial-gradient(ellipse 20px 32px at 58% 100%, #4a8a18 70%, transparent 71%), radial-gradient(ellipse 24px 38px at 76% 100%, var(--sa2-success-active) 70%, transparent 71%), radial-gradient(ellipse 18px 28px at 92% 100%, var(--sa2-success) 70%, transparent 71%)',
   },
 };

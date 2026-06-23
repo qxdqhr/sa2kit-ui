@@ -1,6 +1,6 @@
 /** Batch-6: Wallet */
 module.exports = {
-  '.ai-wallet': {
+  '.sa2-wallet': {
     '--wallet-pill-w': '132px',
     '--wallet-pill-h': '42px',
     '--wallet-bag': '50px',
@@ -14,25 +14,25 @@ module.exports = {
     paddingTop: 'calc(var(--wallet-bag) * 0.7)',
     userSelect: 'none',
     lineHeight: '1',
-    '&:hover .ai-wallet-bag-slot': {
-      animation: 'ai-wallet-bag-bounce 0.5s ease-in-out',
+    '&:hover .sa2-wallet-bag-slot': {
+      animation: 'sa2-wallet-bag-bounce 0.5s ease-in-out',
     },
   },
-  '.ai-wallet-sm': {
+  '.sa2-wallet-sm': {
     '--wallet-pill-w': '96px',
     '--wallet-pill-h': '32px',
     '--wallet-bag': '38px',
     '--wallet-text-size': '12px',
     '--wallet-halo': '3px',
   },
-  '.ai-wallet-lg': {
+  '.sa2-wallet-lg': {
     '--wallet-pill-w': '176px',
     '--wallet-pill-h': '54px',
     '--wallet-bag': '66px',
     '--wallet-text-size': '22px',
     '--wallet-halo': '6px',
   },
-  '.ai-wallet-bag-slot': {
+  '.sa2-wallet-bag-slot': {
     position: 'absolute',
     left: '50%',
     top: '0',
@@ -46,7 +46,7 @@ module.exports = {
     zIndex: '2',
     filter: 'drop-shadow(0 4px 6px rgba(91, 78, 30, 0.18))',
   },
-  '.ai-wallet-bag-fallback': {
+  '.sa2-wallet-bag-fallback': {
     display: 'block',
     width: '80%',
     height: '80%',
@@ -54,7 +54,7 @@ module.exports = {
     backgroundPosition: 'center',
     backgroundSize: 'contain',
   },
-  '.ai-wallet-pill': {
+  '.sa2-wallet-pill': {
     position: 'relative',
     width: '100%',
     height: 'var(--wallet-pill-h)',
@@ -67,7 +67,7 @@ module.exports = {
     justifyContent: 'center',
     overflow: 'visible',
   },
-  '.ai-wallet-value': {
+  '.sa2-wallet-value': {
     fontWeight: '800',
     fontSize: 'var(--wallet-text-size)',
     color: '#ffffff',

@@ -25,8 +25,9 @@ import {
   Wallet,
   WeddingInvitation,
   WeddingInvitationExportButton,
-} from '@animal-island-components-sa2kit/react';
-import type { WeddingInvitationRef } from '@animal-island-components-sa2kit/react';
+} from '@sa2kit-ui/react';
+import type { WeddingInvitationRef } from '@sa2kit-ui/react';
+import { SA2_THEMES, useTheme } from '@sa2kit-ui/theme-runtime';
 import { useRef, useState } from 'react';
 
 const tableData = [
@@ -34,6 +35,25 @@ const tableData = [
   { id: '2', name: '鲷鱼', price: 3000 },
   { id: '3', name: '金鱼', price: 1300 },
 ];
+
+function ThemeSwitcher() {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <div className="flex flex-wrap gap-2">
+      {SA2_THEMES.map((item) => (
+        <Button
+          key={item.id}
+          type={theme === item.id ? 'primary' : 'default'}
+          size="small"
+          onClick={() => setTheme(item.id)}
+        >
+          {item.label}
+        </Button>
+      ))}
+    </div>
+  );
+}
 
 export default function Showcase() {
   const [on, setOn] = useState(true);
@@ -46,16 +66,19 @@ export default function Showcase() {
 
   return (
     <Cursor>
-      <main className="ai-font min-h-screen bg-animal-bg p-8 md:p-12">
+      <main className="sa2-font min-h-screen bg-sa2-bg p-8 md:p-12">
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           <header className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <Title size="large" color="app-teal">
                 全组件 Showcase
               </Title>
-              <p className="mt-4 text-animal-text-secondary">
-                Animal Island SA2Kit · Web · 24 组件一览
+              <p className="mt-4 text-sa2-text-secondary">
+                SA2Kit UI · Web · 24 组件一览
               </p>
+              <div className="mt-4">
+                <ThemeSwitcher />
+              </div>
             </div>
             <Time />
           </header>
@@ -82,7 +105,7 @@ export default function Showcase() {
                 <Button type="default">Tooltip</Button>
               </Tooltip>
             </div>
-            <p className="mt-4 text-animal-text">
+            <p className="mt-4 text-sa2-text">
               <Typewriter speed={60}>今天也要在岛上度过美好的一天～</Typewriter>
             </p>
           </Card>
@@ -96,7 +119,7 @@ export default function Showcase() {
           />
 
           <Collapse
-            question="什么是 animal-island-components-sa2kit？"
+            question="什么是 sa2kit-ui？"
             answer="一套受《集合啦！动物森友会》启发的 sa2kit 多平台 UI 组件库，样式从 animal-island-ui 移植。"
           />
 
@@ -155,7 +178,7 @@ export default function Showcase() {
           </Card>
 
           <CodeBlock
-            code={`import { Button } from '@animal-island-components-sa2kit/react';\n\n<Button type="primary">Go</Button>`}
+            code={`import { Button } from '@sa2kit-ui/react';\n\n<Button type="primary">Go</Button>`}
           />
 
           <Divider type="dashed-teal" />

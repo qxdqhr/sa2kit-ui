@@ -1,7 +1,7 @@
 {
-  "name": "@animal-island-components-sa2kit/electron",
+  "name": "@sa2kit-ui/electron",
   "version": "0.0.1",
-  "description": "Electron desktop entry for animal-island-components-sa2kit (re-exports react + desktop-only components)",
+  "description": "Electron desktop entry for sa2kit-ui (re-exports react + desktop-only components)",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -16,12 +16,12 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --external electron --external react --external react-dom --external @animal-island-components-sa2kit/react --external @animal-island-components-sa2kit/shared --clean",
+    "build": "tsup src/index.ts --format esm,cjs --dts --external electron --external react --external react-dom --external @sa2kit-ui/react --external @sa2kit-ui/shared --clean",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@animal-island-components-sa2kit/react": "workspace:*",
-    "@animal-island-components-sa2kit/shared": "workspace:*"
+    "@sa2kit-ui/react": "workspace:*",
+    "@sa2kit-ui/shared": "workspace:*"
   },
   "peerDependencies": {
     "electron": ">=28.0.0",

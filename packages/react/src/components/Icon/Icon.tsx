@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { IconProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { IconProps } from '@sa2kit-ui/shared';
 
 import { ICON_LIST, ICON_URLS, ITEM_LIST, ITEM_URL_MAP } from './iconAssets';
 
@@ -20,7 +20,7 @@ export function Icon({
 
   return (
     <span
-      className={cn('ai-icon', bounce && 'ai-icon-bounce', className)}
+      className={cn('sa2-icon', bounce && 'sa2-icon-bounce', className)}
       style={{
         width: size,
         height: size,

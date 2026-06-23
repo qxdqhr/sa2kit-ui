@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { ModalProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { ModalProps } from '@sa2kit-ui/shared';
 import { Text, View } from '@tarojs/components';
 import { useEffect, useState } from 'react';
 import { Button } from '../Button';
@@ -34,19 +34,19 @@ export function Modal({
   );
 
   return (
-    <View className="ai-modal-mask fixed inset-0 z-50" onClick={() => maskClosable && onClose?.()}>
+    <View className="sa2-modal-mask fixed inset-0 z-50" onClick={() => maskClosable && onClose?.()}>
       <View
-        className={cn('ai-modal', className)}
+        className={cn('sa2-modal', className)}
         style={{ width: typeof width === 'number' ? `${width}px` : width }}
         onClick={(event) => event.stopPropagation()}
       >
-        <View className="ai-modal-clipped">
+        <View className="sa2-modal-clipped">
           {title ? (
-            <View className="ai-modal-header">
-              {typeof title === 'string' ? <Text className="ai-modal-title">{title}</Text> : title}
+            <View className="sa2-modal-header">
+              {typeof title === 'string' ? <Text className="sa2-modal-title">{title}</Text> : title}
             </View>
           ) : null}
-          <View className="ai-modal-body">
+          <View className="sa2-modal-body">
             {typewriter ? (
               <Typewriter speed={typeSpeed} trigger={playKey}>{children}</Typewriter>
             ) : (
@@ -54,7 +54,7 @@ export function Modal({
             )}
           </View>
           {footer !== null ? (
-            <View className="ai-modal-footer">{footer === undefined ? defaultFooter : footer}</View>
+            <View className="sa2-modal-footer">{footer === undefined ? defaultFooter : footer}</View>
           ) : null}
         </View>
       </View>

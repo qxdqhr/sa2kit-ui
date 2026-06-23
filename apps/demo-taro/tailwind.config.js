@@ -4,5 +4,5 @@ module.exports = {
     './src/**/*.{html,js,ts,jsx,tsx}',
     '../../packages/taro/src/**/*.{ts,tsx}',
   ],
-  presets: [require('@animal-island-components-sa2kit/tokens/tailwind.preset')],
+  presets: [require('@sa2kit-ui/tokens/tailwind.preset')],
 };

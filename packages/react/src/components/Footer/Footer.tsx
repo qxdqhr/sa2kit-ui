@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { FooterProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { FooterProps } from '@sa2kit-ui/shared';
 
 import footerSea from '../../assets/footer/footer-sea.svg';
 
@@ -8,7 +8,7 @@ export function Footer({ type = 'tree', className, style }: FooterProps) {
 
   return (
     <div
-      className={cn('ai-footer', isSea ? 'ai-footer-sea' : 'ai-footer-tree', className)}
+      className={cn('sa2-footer', isSea ? 'sa2-footer-sea' : 'sa2-footer-tree', className)}
       style={
         isSea
           ? {

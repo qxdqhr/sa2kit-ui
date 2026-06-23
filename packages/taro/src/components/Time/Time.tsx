@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { TimeProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { TimeProps } from '@sa2kit-ui/shared';
 import { useEffect, useState } from 'react';
 import { Text, View } from '@tarojs/components';
 
@@ -13,14 +13,14 @@ export function Time({ className }: TimeProps) {
     return () => clearInterval(timer);
   }, []);
   return (
-    <View className={cn('ai-time', className)}>
-      <View className="ai-time-date">
-        <Text className="ai-time-weekday">{weekdays[currentTime.getDay()]}</Text>
-        <Text className="ai-time-monthday">{months[currentTime.getMonth()]} {currentTime.getDate()}</Text>
+    <View className={cn('sa2-time', className)}>
+      <View className="sa2-time-date">
+        <Text className="sa2-time-weekday">{weekdays[currentTime.getDay()]}</Text>
+        <Text className="sa2-time-monthday">{months[currentTime.getMonth()]} {currentTime.getDate()}</Text>
       </View>
-      <View className="ai-time-clock">
+      <View className="sa2-time-clock">
         <Text>{currentTime.getHours().toString().padStart(2, '0')}</Text>
-        <Text className="ai-time-colon">:</Text>
+        <Text className="sa2-time-colon">:</Text>
         <Text>{currentTime.getMinutes().toString().padStart(2, '0')}</Text>
       </View>
     </View>

@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { SwitchProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { SwitchProps } from '@sa2kit-ui/shared';
 import { Text, View } from '@tarojs/components';
 import { useCallback, useState } from 'react';
 
@@ -28,16 +28,16 @@ export function Switch({
   return (
     <View
       className={cn(
-        'ai-switch',
-        size === 'small' && 'ai-switch-sm',
-        isChecked && 'ai-switch-checked',
-        disabled && 'ai-switch-disabled',
+        'sa2-switch',
+        size === 'small' && 'sa2-switch-sm',
+        isChecked && 'sa2-switch-checked',
+        disabled && 'sa2-switch-disabled',
         className,
       )}
       onClick={handleClick}
     >
-      <View className="ai-switch-handle">
-        {loading ? <View className="ai-switch-loading" /> : null}
+      <View className="sa2-switch-handle">
+        {loading ? <View className="sa2-switch-loading" /> : null}
       </View>
       {(checkedChildren || unCheckedChildren) && (
         <Text className="px-2 text-[11px] font-bold text-white">

@@ -75,4 +75,4 @@ export type {
   WeddingInvitationProps,
   WeddingInvitationRef,
   WeddingInvitationExportButtonProps,
-} from '@animal-island-components-sa2kit/shared';
+} from '@sa2kit-ui/shared';

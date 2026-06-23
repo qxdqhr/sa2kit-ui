@@ -2,8 +2,8 @@ import type {
   WeddingInvitationExportButtonProps,
   WeddingInvitationProps,
   WeddingInvitationRef,
-} from '@animal-island-components-sa2kit/shared';
-import { cn } from '@animal-island-components-sa2kit/shared';
+} from '@sa2kit-ui/shared';
+import { cn } from '@sa2kit-ui/shared';
 import { Text, View } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import { forwardRef, useCallback, useImperativeHandle, useRef, useState } from 'react';
@@ -54,87 +54,87 @@ export const WeddingInvitation = forwardRef<WeddingInvitationRef, WeddingInvitat
     return (
       <View
         ref={rootRef as never}
-        className={cn('ai-wedding-envelope', !showLotteryNumber && 'ai-wedding-no-lottery', className)}
+        className={cn('sa2-wedding-envelope', !showLotteryNumber && 'sa2-wedding-no-lottery', className)}
         style={style}
       >
-        <Text className={cn('ai-wedding-corner-leaf', 'ai-wedding-tl')}>🍃</Text>
-        <Text className={cn('ai-wedding-corner-leaf', 'ai-wedding-tr')}>🍃</Text>
-        <Text className={cn('ai-wedding-corner-leaf', 'ai-wedding-bl')}>🍃</Text>
-        <Text className={cn('ai-wedding-corner-leaf', 'ai-wedding-br')}>🍃</Text>
+        <Text className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-tl')}>🍃</Text>
+        <Text className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-tr')}>🍃</Text>
+        <Text className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-bl')}>🍃</Text>
+        <Text className={cn('sa2-wedding-corner-leaf', 'sa2-wedding-br')}>🍃</Text>
 
-        <Text className={cn('ai-wedding-float-item', 'ai-wedding-f1')}>🌸</Text>
-        <Text className={cn('ai-wedding-float-item', 'ai-wedding-f2')}>🌼</Text>
-        <Text className={cn('ai-wedding-float-item', 'ai-wedding-f3')}>💜</Text>
-        <Text className={cn('ai-wedding-float-item', 'ai-wedding-s1')}>⭐</Text>
-        <Text className={cn('ai-wedding-float-item', 'ai-wedding-s2')}>✨</Text>
+        <Text className={cn('sa2-wedding-float-item', 'sa2-wedding-f1')}>🌸</Text>
+        <Text className={cn('sa2-wedding-float-item', 'sa2-wedding-f2')}>🌼</Text>
+        <Text className={cn('sa2-wedding-float-item', 'sa2-wedding-f3')}>💜</Text>
+        <Text className={cn('sa2-wedding-float-item', 'sa2-wedding-s1')}>⭐</Text>
+        <Text className={cn('sa2-wedding-float-item', 'sa2-wedding-s2')}>✨</Text>
 
-        <View className="ai-wedding-banner">
-          <View className="ai-wedding-banner-line" />
+        <View className="sa2-wedding-banner">
+          <View className="sa2-wedding-banner-line" />
           <Text>⭐</Text>
-          <View className="ai-wedding-banner-line" />
+          <View className="sa2-wedding-banner-line" />
         </View>
 
-        <Text className="ai-wedding-title-en">{title}</Text>
-        <Text className="ai-wedding-title-zh">{subtitle}</Text>
+        <Text className="sa2-wedding-title-en">{title}</Text>
+        <Text className="sa2-wedding-title-zh">{subtitle}</Text>
 
-        <View className="ai-wedding-couple-img">
+        <View className="sa2-wedding-couple-img">
           <Text>👰 🤵</Text>
         </View>
 
-        <View className="ai-wedding-couple-row">
-          <View className="ai-wedding-mascot">
-            <Text className="ai-wedding-name">{brideName}</Text>
+        <View className="sa2-wedding-couple-row">
+          <View className="sa2-wedding-mascot">
+            <Text className="sa2-wedding-name">{brideName}</Text>
           </View>
-          <View className="ai-wedding-heart-col">
+          <View className="sa2-wedding-heart-col">
             <Text>❤️</Text>
           </View>
-          <View className="ai-wedding-mascot">
-            <Text className="ai-wedding-name">{groomName}</Text>
+          <View className="sa2-wedding-mascot">
+            <Text className="sa2-wedding-name">{groomName}</Text>
           </View>
         </View>
 
-        <View className="ai-wedding-date-card">
-          <Text className="ai-wedding-date-label">婚礼时间</Text>
-          <Text className="ai-wedding-date-value">{date}</Text>
-          <View className="ai-wedding-date-meta">
+        <View className="sa2-wedding-date-card">
+          <Text className="sa2-wedding-date-label">婚礼时间</Text>
+          <Text className="sa2-wedding-date-value">{date}</Text>
+          <View className="sa2-wedding-date-meta">
             <Text>{weekday}</Text>
-            <Text className="ai-wedding-dot">·</Text>
+            <Text className="sa2-wedding-dot">·</Text>
             <Text>{time}</Text>
           </View>
         </View>
 
-        <View className="ai-wedding-venue-card">
-          <View className="ai-wedding-venue-icon">
+        <View className="sa2-wedding-venue-card">
+          <View className="sa2-wedding-venue-icon">
             <Icon name="icon-map" size={26} />
           </View>
-          <View className="ai-wedding-venue-text">
-            <Text className="ai-wedding-venue-name">{venue}</Text>
-            <Text className="ai-wedding-venue-addr">{address}</Text>
+          <View className="sa2-wedding-venue-text">
+            <Text className="sa2-wedding-venue-name">{venue}</Text>
+            <Text className="sa2-wedding-venue-addr">{address}</Text>
           </View>
         </View>
 
-        <Text className="ai-wedding-message">{message}</Text>
+        <Text className="sa2-wedding-message">{message}</Text>
 
         {showLotteryNumber ? (
-          <View className="ai-wedding-signature-lottery">
+          <View className="sa2-wedding-signature-lottery">
             <Text>抽奖码</Text>
-            <Text className="ai-wedding-signature-lottery-no">
-              <Text className="ai-wedding-lottery-hash">NO.</Text>
+            <Text className="sa2-wedding-signature-lottery-no">
+              <Text className="sa2-wedding-lottery-hash">NO.</Text>
               {lotteryNumber}
             </Text>
           </View>
         ) : null}
 
         {showLotteryNumber ? (
-          <View className="ai-wedding-lottery">
-            <Text className="ai-wedding-tear-hint">✂ 沿虚线剪开 ✂</Text>
-            <Text className="ai-wedding-lottery-title">婚礼抽奖券</Text>
-            <Text className="ai-wedding-lottery-label">⭐ {lotteryLabel} ⭐</Text>
-            <Text className="ai-wedding-lottery-number">
-              <Text className="ai-wedding-lottery-hash">NO.</Text>
+          <View className="sa2-wedding-lottery">
+            <Text className="sa2-wedding-tear-hint">✂ 沿虚线剪开 ✂</Text>
+            <Text className="sa2-wedding-lottery-title">婚礼抽奖券</Text>
+            <Text className="sa2-wedding-lottery-label">⭐ {lotteryLabel} ⭐</Text>
+            <Text className="sa2-wedding-lottery-number">
+              <Text className="sa2-wedding-lottery-hash">NO.</Text>
               {lotteryNumber}
             </Text>
-            {lotteryHint ? <Text className="ai-wedding-lottery-hint">{lotteryHint}</Text> : null}
+            {lotteryHint ? <Text className="sa2-wedding-lottery-hint">{lotteryHint}</Text> : null}
           </View>
         ) : null}
       </View>
@@ -164,7 +164,7 @@ export function WeddingInvitationExportButton({
   };
 
   return (
-    <View className={cn('ai-wedding-export-btn', className)} style={style} onClick={handleClick}>
+    <View className={cn('sa2-wedding-export-btn', className)} style={style} onClick={handleClick}>
       <Text>{exporting ? '生成中…' : children}</Text>
     </View>
   );

@@ -1,7 +1,7 @@
 {
-  "name": "@animal-island-components-sa2kit/rn",
+  "name": "@sa2kit-ui/rn",
   "version": "0.0.1",
-  "description": "React Native components for animal-island-components-sa2kit",
+  "description": "React Native components for sa2kit-ui",
   "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",
@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@animal-island-components-sa2kit/shared": "workspace:*"
+    "@sa2kit-ui/shared": "workspace:*"
   },
   "peerDependencies": {
     "nativewind": "^4.0.0",
@@ -25,7 +25,7 @@
     "react-native": ">=0.76.0"
   },
   "devDependencies": {
-    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@sa2kit-ui/tokens": "workspace:*",
     "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^18.3.18",
     "nativewind": "^4.2.1",

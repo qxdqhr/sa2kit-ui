@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { ModalProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { ModalProps } from '@sa2kit-ui/shared';
 import { useCallback, useEffect, useState, type MouseEvent } from 'react';
 import { createPortal } from 'react-dom';
 import { Button } from '../Button';
@@ -72,22 +72,22 @@ export function Modal({
   );
 
   return createPortal(
-    <div className="ai-modal-mask" onClick={handleMaskClick} role="presentation">
+    <div className="sa2-modal-mask" onClick={handleMaskClick} role="presentation">
       <div
-        className={cn('ai-modal', className)}
+        className={cn('sa2-modal', className)}
         style={{ width }}
         onClick={handleContentClick}
         role="dialog"
         aria-modal="true"
       >
         <ClipDef />
-        <div className="ai-modal-clipped">
+        <div className="sa2-modal-clipped">
           {title ? (
-            <div className="ai-modal-header">
-              <div className="ai-modal-title">{title}</div>
+            <div className="sa2-modal-header">
+              <div className="sa2-modal-title">{title}</div>
             </div>
           ) : null}
-          <div className="ai-modal-body">
+          <div className="sa2-modal-body">
             {typewriter ? (
               <Typewriter speed={typeSpeed} trigger={playKey}>
                 {children}
@@ -97,7 +97,7 @@ export function Modal({
             )}
           </div>
           {footer !== null ? (
-            <div className="ai-modal-footer">
+            <div className="sa2-modal-footer">
               {footer === undefined ? defaultFooter : footer}
             </div>
           ) : null}

@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { WalletProps, WalletSize } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { WalletProps, WalletSize } from '@sa2kit-ui/shared';
 import type { ReactNode } from 'react';
 import { Text, View } from 'react-native';
 
@@ -16,9 +16,9 @@ const formatValue = (value: WalletProps['value'], sep: string): string => {
 };
 
 const SIZE_CLASS: Record<WalletSize, string> = {
-  small: 'ai-wallet-sm',
+  small: 'sa2-wallet-sm',
   medium: '',
-  large: 'ai-wallet-lg',
+  large: 'sa2-wallet-lg',
 };
 
 function DefaultBagIcon() {
@@ -36,10 +36,10 @@ export function Wallet({
   const bagContent: ReactNode = icon ?? <DefaultBagIcon />;
 
   return (
-    <View className={cn('ai-wallet', SIZE_CLASS[size], className)} style={style as object}>
-      <View className="ai-wallet-bag-slot">{bagContent}</View>
-      <View className="ai-wallet-pill">
-        <Text className="ai-wallet-value">{formatValue(value, thousandSeparator)}</Text>
+    <View className={cn('sa2-wallet', SIZE_CLASS[size], className)} style={style as object}>
+      <View className="sa2-wallet-bag-slot">{bagContent}</View>
+      <View className="sa2-wallet-pill">
+        <Text className="sa2-wallet-value">{formatValue(value, thousandSeparator)}</Text>
       </View>
     </View>
   );

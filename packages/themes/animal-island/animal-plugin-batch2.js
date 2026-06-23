@@ -1,7 +1,7 @@
 /** Batch-2 component classes — merged into animal-plugin.js */
 module.exports = {
   /* ========== Modal ========== */
-  '.ai-modal-mask': {
+  '.sa2-modal-mask': {
     position: 'fixed',
     inset: '0',
     zIndex: '1000',
@@ -9,40 +9,40 @@ module.exports = {
     alignItems: 'center',
     justifyContent: 'center',
     background: 'rgba(0, 0, 0, 0.35)',
-    animation: 'ai-fade-in 0.25s ease',
+    animation: 'sa2-fade-in 0.25s ease',
   },
-  '.ai-modal': {
+  '.sa2-modal': {
     position: 'relative',
     maxWidth: 'calc(100vw - 32px)',
     maxHeight: 'calc(100vh - 64px)',
     display: 'flex',
     flexDirection: 'column',
-    animation: 'ai-zoom-in 0.3s ease',
+    animation: 'sa2-zoom-in 0.3s ease',
   },
-  '.ai-modal-clipped': {
+  '.sa2-modal-clipped': {
     width: '100%',
     height: '100%',
     clipPath: 'url(#animal-modal-clip)',
     padding: '48px 48px 32px 48px',
-    background: 'rgb(247, 243, 223)',
+    background: 'var(--sa2-bg-content)',
     color: 'rgb(128, 115, 89)',
     fontFamily: 'Nunito, "Noto Sans SC", sans-serif',
     display: 'flex',
     flexDirection: 'column',
     overflow: 'hidden',
   },
-  '.ai-modal-header': {
+  '.sa2-modal-header': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingBottom: '15px',
   },
-  '.ai-modal-title': {
+  '.sa2-modal-title': {
     fontSize: '28px',
     fontWeight: '700',
     color: 'rgba(114, 93, 66, 1)',
   },
-  '.ai-modal-body': {
+  '.sa2-modal-body': {
     paddingBottom: '20px',
     display: 'flex',
     flexDirection: 'column',
@@ -52,9 +52,9 @@ module.exports = {
     fontSize: '20px',
     fontWeight: '600',
     lineHeight: '1.6',
-    color: '#8a7b66',
+    color: 'var(--sa2-text-muted)',
   },
-  '.ai-modal-footer': {
+  '.sa2-modal-footer': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -62,14 +62,14 @@ module.exports = {
   },
 
   /* ========== Title Ribbon ========== */
-  '.ai-title': {
+  '.sa2-title': {
     display: 'inline-block',
     fontFamily: 'Nunito, "Noto Sans SC", sans-serif',
     fontWeight: '800',
     lineHeight: '1',
     userSelect: 'none',
   },
-  '.ai-title-ribbon': {
+  '.sa2-title-ribbon': {
     '--rf': '#27d039',
     '--rb': '#20992a',
     '--rk': '#115017',
@@ -86,7 +86,7 @@ module.exports = {
     whiteSpace: 'nowrap',
     filter: 'drop-shadow(0 0.08em 0.12em rgba(0, 0, 0, 0.05))',
   },
-  '.ai-title-ribbon-text': {
+  '.sa2-title-ribbon-text': {
     position: 'relative',
     zIndex: '4',
     fontSize: 'inherit',
@@ -97,7 +97,7 @@ module.exports = {
     color: 'var(--rt)',
     textShadow: '0 0.04em 0.08em rgba(0, 0, 0, 0.05)',
   },
-  '.ai-title-ribbon-back': {
+  '.sa2-title-ribbon-back': {
     position: 'absolute',
     fontSize: 'inherit',
     bottom: '-0.4em',
@@ -106,17 +106,17 @@ module.exports = {
     background: 'var(--rb)',
     zIndex: '1',
   },
-  '.ai-title-ribbon-back-left': {
+  '.sa2-title-ribbon-back-left': {
     left: '-0.6em',
     borderRadius: '0.08em 0 0 0.08em',
     clipPath: 'polygon(100% 0%, 100% 100%, 0% 100%, 30% 50%, 0% 0%)',
   },
-  '.ai-title-ribbon-back-right': {
+  '.sa2-title-ribbon-back-right': {
     right: '-0.6em',
     borderRadius: '0 0.08em 0.08em 0',
     clipPath: 'polygon(0% 0%, 100% 0%, 70% 50%, 100% 100%, 0% 100%)',
   },
-  '.ai-title-ribbon-fold': {
+  '.sa2-title-ribbon-fold': {
     position: 'absolute',
     fontSize: 'inherit',
     top: 'calc(100% - 0.04em)',
@@ -125,20 +125,20 @@ module.exports = {
     borderStyle: 'solid',
     zIndex: '2',
   },
-  '.ai-title-ribbon-fold-left': {
+  '.sa2-title-ribbon-fold-left': {
     left: '0.15em',
     top: 'calc(100% - 0.05em)',
     borderWidth: '0 0.95em 0.45em 0',
     borderColor: 'transparent var(--rk) transparent transparent',
     transformOrigin: 'top left',
   },
-  '.ai-title-ribbon-fold-right': {
+  '.sa2-title-ribbon-fold-right': {
     right: '0.16em',
     top: 'calc(100% - 0.05em)',
     borderWidth: '0 0 0.45em 0.95em',
     borderColor: 'transparent transparent transparent var(--rk)',
   },
-  '.ai-title-ribbon-front': {
+  '.sa2-title-ribbon-front': {
     position: 'absolute',
     fontSize: 'inherit',
     inset: '0 0.1em',
@@ -149,34 +149,34 @@ module.exports = {
     boxShadow: 'inset 0 -0.06em 0 rgba(0, 0, 0, 0.05)',
     pointerEvents: 'none',
   },
-  '.ai-title-color-app-pink': { '--rf': '#f8a6b2', '--rb': '#e06880', '--rk': '#a03060', '--rt': '#fff' },
-  '.ai-title-color-purple': { '--rf': '#b77dee', '--rb': '#9050d0', '--rk': '#5a1a9a', '--rt': '#fff' },
-  '.ai-title-color-app-blue': { '--rf': '#889df0', '--rb': '#5068d8', '--rk': '#2030a0', '--rt': '#fff' },
-  '.ai-title-color-app-yellow': { '--rf': '#f7cd67', '--rb': '#d4a030', '--rk': '#8a6010', '--rt': '#725d42' },
-  '.ai-title-color-app-orange': { '--rf': '#e59266', '--rb': '#c06a30', '--rk': '#7a3a10', '--rt': '#fff' },
-  '.ai-title-color-app-teal': { '--rf': '#82d5bb', '--rb': '#40a880', '--rk': '#186048', '--rt': '#fff' },
-  '.ai-title-color-app-green': { '--rf': '#8ac68a', '--rb': '#509050', '--rk': '#205020', '--rt': '#fff' },
-  '.ai-title-color-app-red': { '--rf': '#fc736d', '--rb': '#d43030', '--rk': '#900010', '--rt': '#fff' },
-  '.ai-title-color-lime-green': { '--rf': '#d1da49', '--rb': '#90a010', '--rk': '#485800', '--rt': '#3d5a1a' },
-  '.ai-title-color-yellow-green': { '--rf': '#ecdf52', '--rb': '#c0b010', '--rk': '#706800', '--rt': '#725d42' },
-  '.ai-title-color-brown': { '--rf': '#9a835a', '--rb': '#705830', '--rk': '#3a2810', '--rt': '#fff' },
-  '.ai-title-color-warm-peach-pink': { '--rf': '#e18c6f', '--rb': '#b85a30', '--rk': '#6a2a10', '--rt': '#fff' },
+  '.sa2-title-color-app-pink': { '--rf': 'var(--sa2-card-pink)', '--rb': '#e06880', '--rk': '#a03060', '--rt': '#fff' },
+  '.sa2-title-color-purple': { '--rf': 'var(--sa2-card-purple)', '--rb': '#9050d0', '--rk': '#5a1a9a', '--rt': '#fff' },
+  '.sa2-title-color-app-blue': { '--rf': 'var(--sa2-card-blue)', '--rb': '#5068d8', '--rk': '#2030a0', '--rt': '#fff' },
+  '.sa2-title-color-app-yellow': { '--rf': 'var(--sa2-card-yellow)', '--rb': '#d4a030', '--rk': '#8a6010', '--rt': 'var(--sa2-text-body)' },
+  '.sa2-title-color-app-orange': { '--rf': 'var(--sa2-card-orange)', '--rb': '#c06a30', '--rk': '#7a3a10', '--rt': '#fff' },
+  '.sa2-title-color-app-teal': { '--rf': 'var(--sa2-card-teal)', '--rb': '#40a880', '--rk': '#186048', '--rt': '#fff' },
+  '.sa2-title-color-app-green': { '--rf': 'var(--sa2-card-green)', '--rb': '#509050', '--rk': '#205020', '--rt': '#fff' },
+  '.sa2-title-color-app-red': { '--rf': 'var(--sa2-card-red)', '--rb': '#d43030', '--rk': '#900010', '--rt': '#fff' },
+  '.sa2-title-color-lime-green': { '--rf': 'var(--sa2-card-lime)', '--rb': '#90a010', '--rk': '#485800', '--rt': '#3d5a1a' },
+  '.sa2-title-color-yellow-green': { '--rf': 'var(--sa2-card-yellow-green)', '--rb': '#c0b010', '--rk': '#706800', '--rt': 'var(--sa2-text-body)' },
+  '.sa2-title-color-brown': { '--rf': 'var(--sa2-card-brown)', '--rb': '#705830', '--rk': '#3a2810', '--rt': '#fff' },
+  '.sa2-title-color-warm-peach-pink': { '--rf': 'var(--sa2-card-peach)', '--rb': '#b85a30', '--rk': '#6a2a10', '--rt': '#fff' },
 
   /* ========== Tabs ========== */
-  '.ai-tabs': {
-    background: 'rgb(247, 243, 223)',
+  '.sa2-tabs': {
+    background: 'var(--sa2-bg-content)',
     borderRadius: '20px',
-    border: '2px solid #9f927d',
+    border: '2px solid var(--sa2-text-secondary)',
     overflow: 'hidden',
   },
-  '.ai-tabs-list': {
+  '.sa2-tabs-list': {
     display: 'flex',
     gap: '4px',
     padding: '12px',
     background: 'rgba(255, 255, 255, 0.6)',
-    borderBottom: '2px solid #c4b89e',
+    borderBottom: '2px solid var(--sa2-border-light)',
   },
-  '.ai-tabs-item': {
+  '.sa2-tabs-item': {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -188,70 +188,70 @@ module.exports = {
     cursor: 'pointer',
     fontSize: '14px',
     fontWeight: '500',
-    color: '#8a7b66',
+    color: 'var(--sa2-text-muted)',
     transition: 'all 0.2s ease',
     '&:hover': {
       background: 'rgba(25, 200, 185, 0.1)',
-      color: '#725d42',
+      color: 'var(--sa2-text-body)',
     },
   },
-  '.ai-tabs-item-active': {
+  '.sa2-tabs-item-active': {
     background: '#0CC0B5',
     color: '#FFF9E3',
     fontWeight: '600',
   },
-  '.ai-tabs-item-active-shadow': {
-    boxShadow: '0 3px 0 0 #d4c9b4',
+  '.sa2-tabs-item-active-shadow': {
+    boxShadow: '0 3px 0 0 var(--sa2-shadow-input)',
   },
-  '.ai-tabs-icon': {
+  '.sa2-tabs-icon': {
     fontSize: '10px',
     transition: 'transform 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-tabs-item-active .ai-tabs-icon': {
+  '.sa2-tabs-item-active .sa2-tabs-icon': {
     transform: 'scale(1.2)',
   },
-  '.ai-tabs-label': {
+  '.sa2-tabs-label': {
     position: 'relative',
     color: 'inherit',
   },
-  '.ai-tabs-leaf': {
+  '.sa2-tabs-leaf': {
     position: 'absolute',
     right: '-5px',
     top: '-4px',
     width: '18px',
     height: '18px',
-    animation: 'ai-leaf-wiggle 2s ease-in-out infinite',
+    animation: 'sa2-leaf-wiggle 2s ease-in-out infinite',
   },
-  '.ai-tabs-leaf-static': {
+  '.sa2-tabs-leaf-static': {
     animation: 'none',
   },
-  '.ai-tabs-content': {
+  '.sa2-tabs-content': {
     minHeight: '60px',
     padding: '24px',
-    animation: 'ai-tab-fade-in 0.25s ease',
+    animation: 'sa2-tab-fade-in 0.25s ease',
   },
-  '.ai-tabs-content-inner': {
+  '.sa2-tabs-content-inner': {
     minHeight: '40px',
-    color: '#9f927d',
+    color: 'var(--sa2-text-secondary)',
     fontSize: '14px',
     lineHeight: '1.6',
   },
 
   /* ========== Collapse ========== */
-  '.ai-collapse': {
+  '.sa2-collapse': {
     position: 'relative',
-    background: '#f8f8f0',
+    background: 'var(--sa2-bg)',
     borderRadius: '18px',
-    border: '2px solid #9f927d',
+    border: '2px solid var(--sa2-text-secondary)',
     overflow: 'hidden',
     marginBottom: '12px',
     transition: 'border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-collapse-disabled': {
+  '.sa2-collapse-disabled': {
     opacity: '0.6',
     cursor: 'not-allowed',
   },
-  '.ai-collapse-header': {
+  '.sa2-collapse-header': {
     display: 'flex',
     alignItems: 'center',
     gap: '12px',
@@ -263,13 +263,13 @@ module.exports = {
     textAlign: 'left',
     '&:disabled': { cursor: 'not-allowed' },
   },
-  '.ai-collapse-icon': {
+  '.sa2-collapse-icon': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     width: '28px',
     height: '28px',
-    background: '#19c8b9',
+    background: 'var(--sa2-primary)',
     color: '#fff',
     borderRadius: '50%',
     fontSize: '18px',
@@ -279,207 +279,207 @@ module.exports = {
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
     boxShadow: '0 2px 4px rgba(25, 200, 185, 0.3)',
   },
-  '.ai-collapse-expanded .ai-collapse-icon': {
-    background: '#11a89b',
+  '.sa2-collapse-expanded .sa2-collapse-icon': {
+    background: 'var(--sa2-primary-active)',
     transform: 'rotate(180deg)',
   },
-  '.ai-collapse-question': {
+  '.sa2-collapse-question': {
     flex: '1',
     fontSize: '16px',
     fontWeight: '600',
-    color: '#794f27',
+    color: 'var(--sa2-text)',
     lineHeight: '1.4',
   },
-  '.ai-collapse-leaf': {
-    color: '#19c8b9',
+  '.sa2-collapse-leaf': {
+    color: 'var(--sa2-primary)',
     opacity: '0.5',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-collapse-expanded .ai-collapse-leaf': {
+  '.sa2-collapse-expanded .sa2-collapse-leaf': {
     opacity: '1',
     transform: 'rotate(45deg)',
   },
-  '.ai-collapse-body': {
+  '.sa2-collapse-body': {
     display: 'grid',
     gridTemplateRows: '0fr',
     transition: 'grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-collapse-expanded .ai-collapse-body': {
+  '.sa2-collapse-expanded .sa2-collapse-body': {
     gridTemplateRows: '1fr',
   },
-  '.ai-collapse-answer': {
+  '.sa2-collapse-answer': {
     overflow: 'hidden',
     padding: '0 24px',
-    color: '#9f927d',
+    color: 'var(--sa2-text-secondary)',
     fontSize: '14px',
     lineHeight: '1.7',
     transition: 'padding 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-collapse-expanded .ai-collapse-answer': {
+  '.sa2-collapse-expanded .sa2-collapse-answer': {
     paddingBottom: '24px',
   },
 
   /* ========== Checkbox ========== */
-  '.ai-checkbox-group': {
+  '.sa2-checkbox-group': {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '12px',
     fontFamily: 'Nunito, "Noto Sans SC", sans-serif',
   },
-  '.ai-checkbox-vertical': {
+  '.sa2-checkbox-vertical': {
     flexDirection: 'column',
     gap: '8px',
   },
-  '.ai-checkbox-item': {
+  '.sa2-checkbox-item': {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '8px',
     cursor: 'pointer',
     userSelect: 'none',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
-    '&:hover:not(.ai-checkbox-disabled) .ai-checkbox-box': {
-      borderColor: '#19c8b9',
+    '&:hover:not(.sa2-checkbox-disabled) .sa2-checkbox-box': {
+      borderColor: 'var(--sa2-primary)',
       transform: 'translateY(-1px)',
     },
   },
-  '.ai-checkbox-box': {
+  '.sa2-checkbox-box': {
     position: 'relative',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: '0',
-    background: 'rgb(247, 243, 223)',
-    border: '2.5px solid #c4b89e',
+    background: 'var(--sa2-bg-content)',
+    border: '2.5px solid var(--sa2-border-light)',
     borderRadius: '8px',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
     outline: 'none',
     '&:focus-visible': {
-      outline: '2px solid #ffcc00',
+      outline: '2px solid var(--sa2-focus)',
       outlineOffset: '2px',
     },
   },
-  '.ai-checkbox-sm .ai-checkbox-box': { width: '18px', height: '18px', borderWidth: '2px' },
-  '.ai-checkbox-md .ai-checkbox-box': { width: '22px', height: '22px' },
-  '.ai-checkbox-lg .ai-checkbox-box': { width: '28px', height: '28px', borderWidth: '3px' },
-  '.ai-checkbox-checked .ai-checkbox-box': {
-    background: '#19c8b9',
-    borderColor: '#11a89b',
+  '.sa2-checkbox-sm .sa2-checkbox-box': { width: '18px', height: '18px', borderWidth: '2px' },
+  '.sa2-checkbox-md .sa2-checkbox-box': { width: '22px', height: '22px' },
+  '.sa2-checkbox-lg .sa2-checkbox-box': { width: '28px', height: '28px', borderWidth: '3px' },
+  '.sa2-checkbox-checked .sa2-checkbox-box': {
+    background: 'var(--sa2-primary)',
+    borderColor: 'var(--sa2-primary-active)',
   },
-  '.ai-checkbox-checked:hover:not(.ai-checkbox-disabled) .ai-checkbox-box': {
-    background: '#3dd4c6',
-    borderColor: '#19c8b9',
+  '.sa2-checkbox-checked:hover:not(.sa2-checkbox-disabled) .sa2-checkbox-box': {
+    background: 'var(--sa2-primary-hover)',
+    borderColor: 'var(--sa2-primary)',
   },
-  '.ai-checkbox-mark': {
+  '.sa2-checkbox-mark': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff',
     lineHeight: '1',
-    animation: 'ai-checkbox-pop 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+    animation: 'sa2-checkbox-pop 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-checkbox-sm .ai-checkbox-mark svg': { width: '10px', height: '10px' },
-  '.ai-checkbox-md .ai-checkbox-mark svg': { width: '12px', height: '12px' },
-  '.ai-checkbox-lg .ai-checkbox-mark svg': { width: '16px', height: '16px' },
-  '.ai-checkbox-label': {
-    color: '#725d42',
+  '.sa2-checkbox-sm .sa2-checkbox-mark svg': { width: '10px', height: '10px' },
+  '.sa2-checkbox-md .sa2-checkbox-mark svg': { width: '12px', height: '12px' },
+  '.sa2-checkbox-lg .sa2-checkbox-mark svg': { width: '16px', height: '16px' },
+  '.sa2-checkbox-label': {
+    color: 'var(--sa2-text-body)',
     fontWeight: '500',
     letterSpacing: '0.01em',
     fontSize: '14px',
     transition: 'color 0.15s',
   },
-  '.ai-checkbox-sm .ai-checkbox-label': { fontSize: '12px' },
-  '.ai-checkbox-lg .ai-checkbox-label': { fontSize: '16px' },
-  '.ai-checkbox-item:hover:not(.ai-checkbox-disabled) .ai-checkbox-label': {
-    color: '#794f27',
+  '.sa2-checkbox-sm .sa2-checkbox-label': { fontSize: '12px' },
+  '.sa2-checkbox-lg .sa2-checkbox-label': { fontSize: '16px' },
+  '.sa2-checkbox-item:hover:not(.sa2-checkbox-disabled) .sa2-checkbox-label': {
+    color: 'var(--sa2-text)',
   },
-  '.ai-checkbox-disabled': {
+  '.sa2-checkbox-disabled': {
     cursor: 'not-allowed',
     opacity: '0.55',
-    '& .ai-checkbox-box': {
+    '& .sa2-checkbox-box': {
       background: '#f0ece2',
-      borderColor: '#d4c9b4',
+      borderColor: 'var(--sa2-shadow-input)',
       transform: 'none !important',
     },
-    '& .ai-checkbox-label': { color: '#c4b89e' },
+    '& .sa2-checkbox-label': { color: 'var(--sa2-border-light)' },
   },
-  '.ai-checkbox-group-disabled .ai-checkbox-item': { cursor: 'not-allowed' },
+  '.sa2-checkbox-group-disabled .sa2-checkbox-item': { cursor: 'not-allowed' },
 
   /* ========== Radio ========== */
-  '.ai-radio-group': {
+  '.sa2-radio-group': {
     display: 'flex',
     flexWrap: 'wrap',
     gap: '12px',
     fontFamily: 'Nunito, "Noto Sans SC", sans-serif',
   },
-  '.ai-radio-vertical': {
+  '.sa2-radio-vertical': {
     flexDirection: 'column',
     gap: '8px',
   },
-  '.ai-radio-item': {
+  '.sa2-radio-item': {
     display: 'inline-flex',
     alignItems: 'center',
     gap: '8px',
     cursor: 'pointer',
     userSelect: 'none',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
-    '&:hover:not(.ai-radio-disabled) .ai-radio-circle': {
-      borderColor: '#19c8b9',
+    '&:hover:not(.sa2-radio-disabled) .sa2-radio-circle': {
+      borderColor: 'var(--sa2-primary)',
       transform: 'translateY(-1px)',
     },
   },
-  '.ai-radio-circle': {
+  '.sa2-radio-circle': {
     position: 'relative',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     flexShrink: '0',
-    background: 'rgb(247, 243, 223)',
-    border: '2px solid #c4b89e',
+    background: 'var(--sa2-bg-content)',
+    border: '2px solid var(--sa2-border-light)',
     borderRadius: '8px',
     transition: 'all 0.25s cubic-bezier(0.4, 0, 0.2, 1)',
     outline: 'none',
     '&:focus-visible': {
-      outline: '2px solid #f5c31c',
+      outline: '2px solid var(--sa2-warning)',
       outlineOffset: '2px',
     },
   },
-  '.ai-radio-sm .ai-radio-circle': { width: '18px', height: '18px', borderRadius: '12px' },
-  '.ai-radio-md .ai-radio-circle': { width: '22px', height: '22px', borderRadius: '14px' },
-  '.ai-radio-lg .ai-radio-circle': { width: '28px', height: '28px', borderRadius: '16px', borderWidth: '2px' },
-  '.ai-radio-checked .ai-radio-circle': {
-    background: '#19c8b9',
-    borderColor: '#11a89b',
+  '.sa2-radio-sm .sa2-radio-circle': { width: '18px', height: '18px', borderRadius: '12px' },
+  '.sa2-radio-md .sa2-radio-circle': { width: '22px', height: '22px', borderRadius: '14px' },
+  '.sa2-radio-lg .sa2-radio-circle': { width: '28px', height: '28px', borderRadius: '16px', borderWidth: '2px' },
+  '.sa2-radio-checked .sa2-radio-circle': {
+    background: 'var(--sa2-primary)',
+    borderColor: 'var(--sa2-primary-active)',
   },
-  '.ai-radio-mark': {
+  '.sa2-radio-mark': {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     color: '#fff',
     lineHeight: '1',
-    animation: 'ai-radio-pop 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+    animation: 'sa2-radio-pop 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
   },
-  '.ai-radio-sm .ai-radio-mark svg': { width: '10px', height: '10px' },
-  '.ai-radio-md .ai-radio-mark svg': { width: '12px', height: '12px' },
-  '.ai-radio-lg .ai-radio-mark svg': { width: '16px', height: '16px' },
-  '.ai-radio-label': {
-    color: '#725d42',
+  '.sa2-radio-sm .sa2-radio-mark svg': { width: '10px', height: '10px' },
+  '.sa2-radio-md .sa2-radio-mark svg': { width: '12px', height: '12px' },
+  '.sa2-radio-lg .sa2-radio-mark svg': { width: '16px', height: '16px' },
+  '.sa2-radio-label': {
+    color: 'var(--sa2-text-body)',
     fontWeight: '500',
     letterSpacing: '0.01em',
     fontSize: '14px',
   },
-  '.ai-radio-sm .ai-radio-label': { fontSize: '12px' },
-  '.ai-radio-lg .ai-radio-label': { fontSize: '16px' },
-  '.ai-radio-checked .ai-radio-label': { color: '#794f27' },
-  '.ai-radio-disabled': {
+  '.sa2-radio-sm .sa2-radio-label': { fontSize: '12px' },
+  '.sa2-radio-lg .sa2-radio-label': { fontSize: '16px' },
+  '.sa2-radio-checked .sa2-radio-label': { color: 'var(--sa2-text)' },
+  '.sa2-radio-disabled': {
     cursor: 'not-allowed',
     opacity: '0.55',
-    '& .ai-radio-circle': {
+    '& .sa2-radio-circle': {
       background: '#f0ece2',
-      borderColor: '#d4c9b4',
+      borderColor: 'var(--sa2-shadow-input)',
       transform: 'none !important',
       boxShadow: 'none !important',
     },
-    '& .ai-radio-label': { color: '#c4b89e' },
+    '& .sa2-radio-label': { color: 'var(--sa2-border-light)' },
   },
-  '.ai-radio-group-disabled .ai-radio-item': { cursor: 'not-allowed' },
+  '.sa2-radio-group-disabled .sa2-radio-item': { cursor: 'not-allowed' },
 };

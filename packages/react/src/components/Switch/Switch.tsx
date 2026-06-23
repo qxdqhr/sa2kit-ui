@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { SwitchProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { SwitchProps } from '@sa2kit-ui/shared';
 import { useCallback, useState } from 'react';
 
 export function Switch({
@@ -32,17 +32,17 @@ export function Switch({
       disabled={disabled}
       onClick={handleClick}
       className={cn(
-        'ai-switch',
-        size === 'small' && 'ai-switch-sm',
-        isChecked && 'ai-switch-checked',
-        disabled && 'ai-switch-disabled',
+        'sa2-switch',
+        size === 'small' && 'sa2-switch-sm',
+        isChecked && 'sa2-switch-checked',
+        disabled && 'sa2-switch-disabled',
         className,
       )}
     >
-      <span className="ai-switch-handle">
+      <span className="sa2-switch-handle">
         {loading ? (
           <span
-            className="block h-2.5 w-2.5 animate-ai-spin rounded-full border-2 border-animal-success border-r-transparent"
+            className="block h-2.5 w-2.5 animate-sa2-spin rounded-full border-2 border-animal-success border-r-transparent"
             aria-hidden
           />
         ) : null}

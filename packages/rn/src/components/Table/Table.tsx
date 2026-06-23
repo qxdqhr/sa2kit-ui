@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { TableColumn, TableProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { TableColumn, TableProps } from '@sa2kit-ui/shared';
 import type { ReactNode } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 
@@ -26,8 +26,8 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
 
   const getRowClassName = (record: T, index: number): string =>
     cn(
-      'ai-table-row',
-      striped && index % 2 === 1 && 'ai-table-row-striped',
+      'sa2-table-row',
+      striped && index % 2 === 1 && 'sa2-table-row-striped',
       typeof rowClassName === 'function' ? rowClassName(record, index) : rowClassName,
     );
 
@@ -42,14 +42,14 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
     : style) as object;
 
   const body = (
-    <View className={cn('ai-table', loading && 'ai-table-loading')}>
+    <View className={cn('sa2-table', loading && 'sa2-table-loading')}>
       {showHeader ? (
-        <View className="ai-table-thead">
-          <View className="ai-table-header-row flex-row">
+        <View className="sa2-table-thead">
+          <View className="sa2-table-header-row flex-row">
             {columns.map((column, index) => (
               <View
                 key={index}
-                className="ai-table-header-cell flex-1"
+                className="sa2-table-header-cell flex-1"
                 style={({
                   width: column.width,
                   alignItems: column.align === 'center' ? 'center' : column.align === 'right' ? 'flex-end' : 'flex-start',
@@ -62,10 +62,10 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
           </View>
         </View>
       ) : null}
-      <View className="ai-table-tbody">
+      <View className="sa2-table-tbody">
         {dataSource.length === 0 ? (
-          <View className="ai-table-empty-cell items-center py-6">
-            <Text className="ai-table-empty-icon">📊</Text>
+          <View className="sa2-table-empty-cell items-center py-6">
+            <Text className="sa2-table-empty-icon">📊</Text>
             <Text>{emptyText}</Text>
           </View>
         ) : (
@@ -76,7 +76,7 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
                   return (
                   <View
                     key={colIndex}
-                    className="ai-table-cell flex-1"
+                    className="sa2-table-cell flex-1"
                     style={({
                       alignItems: column.align === 'center' ? 'center' : column.align === 'right' ? 'flex-end' : 'flex-start',
                       ...(column.style as object),
@@ -98,10 +98,10 @@ export function Table<T extends Record<string, unknown> = Record<string, unknown
   );
 
   return (
-    <View className={cn('ai-table-wrap', scroll && 'ai-table-scrollable', className)} style={wrapperStyle}>
+    <View className={cn('sa2-table-wrap', scroll && 'sa2-table-scrollable', className)} style={wrapperStyle}>
       {scroll ? <ScrollView horizontal={Boolean(scroll.x)}>{body}</ScrollView> : body}
       {loading ? (
-        <View className="ai-table-loading-overlay">
+        <View className="sa2-table-loading-overlay">
           <Loading />
         </View>
       ) : null}

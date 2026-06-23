@@ -1,4 +1,4 @@
-@import '@animal-island-components-sa2kit/tokens/theme.css';
+@import '@sa2kit-ui/theme-animal-island/theme.css';
 
 @tailwind base;
 @tailwind components;

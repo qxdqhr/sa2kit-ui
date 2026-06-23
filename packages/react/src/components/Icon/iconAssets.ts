@@ -1,4 +1,4 @@
-import type { IconName } from '@animal-island-components-sa2kit/shared';
+import type { IconName } from '@sa2kit-ui/shared';
 
 import iconCamera from '../../assets/icons/icon-camera.svg';
 import iconChat from '../../assets/icons/icon-chat.svg';

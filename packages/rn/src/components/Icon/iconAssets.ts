@@ -1,4 +1,4 @@
-import type { IconName } from '@animal-island-components-sa2kit/shared';
+import type { IconName } from '@sa2kit-ui/shared';
 import type { ImageSourcePropType } from 'react-native';
 
 import iconCamera from '../../assets/icons/icon-camera.png';

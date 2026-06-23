@@ -1,0 +1,171 @@
+/**
+ * SA2Kit UI — 语义化设计 token（与具体主题无关的变量名）
+ * 各主题在 theme.css 中为 [data-theme="xxx"] 赋值
+ */
+:root,
+[data-theme='animal-island'] {
+  /* 主色 */
+  --sa2-primary: #19c8b9;
+  --sa2-primary-hover: #3dd4c6;
+  --sa2-primary-active: #11a89b;
+  --sa2-primary-bg: #e6f9f6;
+
+  /* 文字 */
+  --sa2-text: #794f27;
+  --sa2-text-body: #725d42;
+  --sa2-text-secondary: #9f927d;
+  --sa2-text-muted: #8a7b66;
+  --sa2-text-disabled: #c4b89e;
+  --sa2-text-affix: #a0936e;
+
+  /* 背景 */
+  --sa2-bg: #f8f8f0;
+  --sa2-bg-content: rgb(247, 243, 223);
+  --sa2-bg-secondary: #f0e8d8;
+  --sa2-bg-disabled: #ece8dc;
+  --sa2-bg-card-alt: rgb(250, 248, 242);
+
+  /* 边框 */
+  --sa2-border: #9f927d;
+  --sa2-border-light: #c4b89e;
+  --sa2-border-hover: #a89878;
+  --sa2-border-input: #c4b89e;
+  --sa2-border-handle: #bdaea0;
+  --sa2-border-dashed: #e8dcc8;
+  --sa2-border-dashed-hover: #d4c4a8;
+
+  /* 阴影 */
+  --sa2-shadow-sm: 0 2px 4px 0 rgba(61, 52, 40, 0.06);
+  --sa2-shadow-base: 0 3px 10px 0 rgba(61, 52, 40, 0.1);
+  --sa2-shadow-lg: 0 8px 24px 0 rgba(61, 52, 40, 0.14);
+  --sa2-shadow-btn: #bdaea0;
+  --sa2-shadow-input: #d4c9b4;
+  --sa2-shadow-input-hover: #c4b89e;
+  --sa2-shadow-focus-input: #e0b800;
+
+  /* 状态色 */
+  --sa2-success: #6fba2c;
+  --sa2-success-active: #5a9e1e;
+  --sa2-success-bg: #86d67a;
+  --sa2-success-border: #6fba2c;
+  --sa2-warning: #f5c31c;
+  --sa2-warning-active: #dba90e;
+  --sa2-error: #e05a5a;
+  --sa2-error-hover: #e87878;
+  --sa2-error-active: #c94444;
+
+  /* Focus */
+  --sa2-focus: #ffcc00;
+  --sa2-focus-dark: #e0b800;
+  --sa2-focus-ring: rgba(255, 204, 0, 0.15);
+  --sa2-focus-outline: #19c8b9;
+
+  /* 圆角 */
+  --sa2-radius: 18px;
+  --sa2-radius-sm: 12px;
+  --sa2-radius-lg: 24px;
+  --sa2-radius-pill: 50px;
+  --sa2-radius-card: 20px;
+
+  /* 字体 */
+  --sa2-font: Nunito, 'Noto Sans SC', -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+
+  /* 按钮 loading */
+  --sa2-btn-loading-bg: #0ec4b6;
+  --sa2-btn-loading-stripe: #01b0a7;
+  --sa2-btn-loading-border: #4de2da;
+
+  /* Switch */
+  --sa2-switch-bg: #d4c9b4;
+  --sa2-switch-inset: inset 0 2px 4px rgba(114, 93, 66, 0.15);
+
+  /* 卡片色板 */
+  --sa2-card-pink: #f8a6b2;
+  --sa2-card-purple: #b77dee;
+  --sa2-card-blue: #889df0;
+  --sa2-card-yellow: #f7cd67;
+  --sa2-card-orange: #e59266;
+  --sa2-card-teal: #82d5bb;
+  --sa2-card-green: #8ac68a;
+  --sa2-card-red: #fc736d;
+  --sa2-card-lime: #d1da49;
+  --sa2-card-yellow-green: #ecdf52;
+  --sa2-card-brown: #9a835a;
+  --sa2-card-peach: #e18c6f;
+}
+
+/* 科技风主题占位（后续扩展） */
+[data-theme='tech'] {
+  --sa2-primary: #2563eb;
+  --sa2-primary-hover: #3b82f6;
+  --sa2-primary-active: #1d4ed8;
+  --sa2-primary-bg: #eff6ff;
+  --sa2-text: #0f172a;
+  --sa2-text-body: #334155;
+  --sa2-text-secondary: #64748b;
+  --sa2-text-muted: #94a3b8;
+  --sa2-text-disabled: #cbd5e1;
+  --sa2-text-affix: #64748b;
+  --sa2-bg: #0f172a;
+  --sa2-bg-content: #1e293b;
+  --sa2-bg-secondary: #334155;
+  --sa2-bg-disabled: #475569;
+  --sa2-bg-card-alt: #1e293b;
+  --sa2-border: #475569;
+  --sa2-border-light: #64748b;
+  --sa2-border-hover: #94a3b8;
+  --sa2-border-input: #475569;
+  --sa2-border-handle: #64748b;
+  --sa2-border-dashed: #475569;
+  --sa2-border-dashed-hover: #64748b;
+  --sa2-shadow-sm: 0 2px 4px 0 rgb(0 0 0 / 0.3);
+  --sa2-shadow-base: 0 4px 12px 0 rgb(0 0 0 / 0.4);
+  --sa2-shadow-lg: 0 8px 24px 0 rgb(0 0 0 / 0.5);
+  --sa2-shadow-btn: #1e40af;
+  --sa2-shadow-input: #334155;
+  --sa2-shadow-input-hover: #475569;
+  --sa2-shadow-focus-input: #1d4ed8;
+  --sa2-success: #22c55e;
+  --sa2-success-active: #16a34a;
+  --sa2-success-bg: #166534;
+  --sa2-success-border: #22c55e;
+  --sa2-warning: #eab308;
+  --sa2-warning-active: #ca8a04;
+  --sa2-error: #ef4444;
+  --sa2-error-hover: #f87171;
+  --sa2-error-active: #dc2626;
+  --sa2-focus: #38bdf8;
+  --sa2-focus-dark: #0ea5e9;
+  --sa2-focus-ring: rgba(56, 189, 248, 0.2);
+  --sa2-focus-outline: #38bdf8;
+  --sa2-radius: 8px;
+  --sa2-radius-sm: 6px;
+  --sa2-radius-lg: 12px;
+  --sa2-radius-pill: 8px;
+  --sa2-radius-card: 12px;
+  --sa2-font: Inter, 'Noto Sans SC', -apple-system, sans-serif;
+  --sa2-btn-loading-bg: #1d4ed8;
+  --sa2-btn-loading-stripe: #1e3a8a;
+  --sa2-btn-loading-border: #3b82f6;
+  --sa2-switch-bg: #475569;
+  --sa2-switch-inset: inset 0 2px 4px rgb(0 0 0 / 0.3);
+  --sa2-card-pink: #ec4899;
+  --sa2-card-purple: #a855f7;
+  --sa2-card-blue: #3b82f6;
+  --sa2-card-yellow: #eab308;
+  --sa2-card-orange: #f97316;
+  --sa2-card-teal: #14b8a6;
+  --sa2-card-green: #22c55e;
+  --sa2-card-red: #ef4444;
+  --sa2-card-lime: #84cc16;
+  --sa2-card-yellow-green: #a3e635;
+  --sa2-card-brown: #78716c;
+  --sa2-card-peach: #fb923c;
+}
+
+body {
+  font-family: var(--sa2-font);
+  color: var(--sa2-text-body);
+  background-color: var(--sa2-bg);
+}

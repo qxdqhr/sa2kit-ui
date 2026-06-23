@@ -1,19 +1,19 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { ButtonProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { ButtonProps } from '@sa2kit-ui/shared';
 import { Pressable, Text, View } from 'react-native';
 
 const sizeClass = {
-  small: 'ai-btn-sm',
-  middle: 'ai-btn-md',
-  large: 'ai-btn-lg',
+  small: 'sa2-btn-sm',
+  middle: 'sa2-btn-md',
+  large: 'sa2-btn-lg',
 } as const;
 
 const typeClass = {
-  primary: 'ai-btn-primary',
-  default: 'ai-btn-default',
-  dashed: 'ai-btn-dashed',
-  text: 'ai-btn-text',
-  link: 'ai-btn-link',
+  primary: 'sa2-btn-primary',
+  default: 'sa2-btn-default',
+  dashed: 'sa2-btn-dashed',
+  text: 'sa2-btn-text',
+  link: 'sa2-btn-link',
 } as const;
 
 export function Button({
@@ -31,12 +31,12 @@ export function Button({
     <Pressable disabled={disabled || loading} onPress={onPress} className={block ? 'w-full' : undefined}>
       <View
         className={cn(
-          'ai-btn',
+          'sa2-btn',
           sizeClass[size],
           typeClass[type],
-          danger && 'ai-btn-danger',
-          block && 'ai-btn-block',
-          loading && 'ai-btn-loading',
+          danger && 'sa2-btn-danger',
+          block && 'sa2-btn-block',
+          loading && 'sa2-btn-loading',
           className,
         )}
       >

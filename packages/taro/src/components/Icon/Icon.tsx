@@ -1,5 +1,5 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { IconProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { IconProps } from '@sa2kit-ui/shared';
 import { Image, View } from '@tarojs/components';
 
 import defaultBag from '../../assets/wallet/bag-default.png';
@@ -22,7 +22,7 @@ export function Icon({ name, item, size = 24, className, style, bounce = false }
 
   return (
     <View
-      className={cn('ai-icon overflow-hidden', bounce && 'ai-icon-bounce', className)}
+      className={cn('sa2-icon overflow-hidden', bounce && 'sa2-icon-bounce', className)}
       style={{ ...dimension, ...style }}
     >
       {src ? <Image src={src} mode="aspectFit" className="h-full w-full" /> : null}

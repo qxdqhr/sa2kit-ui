@@ -1,11 +1,11 @@
-import { cn } from '@animal-island-components-sa2kit/shared';
-import type { CheckboxProps } from '@animal-island-components-sa2kit/shared';
+import { cn } from '@sa2kit-ui/shared';
+import type { CheckboxProps } from '@sa2kit-ui/shared';
 import { useCallback, useState } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
-const sizeClass = { small: 'ai-checkbox-sm', middle: 'ai-checkbox-md', large: 'ai-checkbox-lg' } as const;
+const sizeClass = { small: 'sa2-checkbox-sm', middle: 'sa2-checkbox-md', large: 'sa2-checkbox-lg' } as const;
 
-const CheckMark = () => <Text className="text-xs font-bold text-animal-success">✓</Text>;
+const CheckMark = () => <Text className="text-xs font-bold text-sa2-success">✓</Text>;
 
 export function Checkbox({
   value,
@@ -37,9 +37,9 @@ export function Checkbox({
   return (
     <View
       className={cn(
-        'ai-checkbox-group',
-        direction === 'vertical' ? 'ai-checkbox-vertical' : 'ai-checkbox-horizontal',
-        disabled && 'ai-checkbox-group-disabled',
+        'sa2-checkbox-group',
+        direction === 'vertical' ? 'sa2-checkbox-vertical' : 'sa2-checkbox-horizontal',
+        disabled && 'sa2-checkbox-group-disabled',
         className,
       )}
       style={style as object}
@@ -51,18 +51,18 @@ export function Checkbox({
           <Pressable
             key={String(opt.value)}
             className={cn(
-              'ai-checkbox-item',
+              'sa2-checkbox-item',
               sizeClass[size],
-              isChecked && 'ai-checkbox-checked',
-              isDisabled && 'ai-checkbox-disabled',
+              isChecked && 'sa2-checkbox-checked',
+              isDisabled && 'sa2-checkbox-disabled',
             )}
             onPress={() => handleChange(opt.value, opt.disabled)}
             disabled={isDisabled}
           >
-            <View className="ai-checkbox-box" accessibilityRole="checkbox" accessibilityState={{ checked: isChecked, disabled: isDisabled }}>
-              {isChecked ? <View className="ai-checkbox-mark"><CheckMark /></View> : null}
+            <View className="sa2-checkbox-box" accessibilityRole="checkbox" accessibilityState={{ checked: isChecked, disabled: isDisabled }}>
+              {isChecked ? <View className="sa2-checkbox-mark"><CheckMark /></View> : null}
             </View>
-            <Text className="ai-checkbox-label">{opt.label}</Text>
+            <Text className="sa2-checkbox-label">{opt.label}</Text>
           </Pressable>
         );
       })}

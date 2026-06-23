@@ -1,7 +1,7 @@
 {
-  "name": "@animal-island-components-sa2kit/react",
+  "name": "@sa2kit-ui/react",
   "version": "0.0.1",
-  "description": "React Web components for animal-island-components-sa2kit",
+  "description": "React Web components for sa2kit-ui",
   "license": "MIT",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -24,7 +24,7 @@
     "dev": "vite build --watch"
   },
   "dependencies": {
-    "@animal-island-components-sa2kit/shared": "workspace:*",
+    "@sa2kit-ui/shared": "workspace:*",
     "@fontsource/noto-sans-sc": "^5.2.9",
     "@fontsource/nunito": "^5.2.7",
     "modern-screenshot": "^4.7.0"
@@ -34,7 +34,8 @@
     "react-dom": ">=18.0.0"
   },
   "devDependencies": {
-    "@animal-island-components-sa2kit/tokens": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
+    "@sa2kit-ui/tokens": "workspace:*",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
