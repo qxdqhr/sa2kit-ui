@@ -1,0 +1,31 @@
+{
+  "name": "@sa2kit-ui/theme-rhine-life",
+  "version": "0.1.0",
+  "description": "Arknights Rhine Life theme for SA2Kit UI",
+  "license": "MIT",
+  "files": [
+    "tailwind.preset.js",
+    "rhine-plugin.js",
+    "rhine-tokens.css",
+    "rhine-overrides.css",
+    "rhine-overrides-ext.css",
+    "rhine-utilities.css",
+    "theme.css",
+    "theme.overlay.css",
+    "theme.mobile.css"
+  ],
+  "exports": {
+    "./tailwind.preset": "./tailwind.preset.js",
+    "./theme.css": "./theme.css",
+    "./theme.overlay.css": "./theme.overlay.css",
+    "./theme.mobile.css": "./theme.mobile.css",
+    "./plugin": "./rhine-plugin.js",
+    "./tokens.css": "./rhine-tokens.css",
+    "./overrides.css": "./rhine-overrides.css",
+    "./utilities.css": "./rhine-utilities.css"
+  },
+  "dependencies": {
+    "@sa2kit-ui/tokens": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*"
+  }
+}

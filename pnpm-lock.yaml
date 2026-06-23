@@ -301,6 +301,9 @@ importers:
       '@sa2kit-ui/theme-jieyuan-garden':
         specifier: workspace:*
         version: link:../../packages/themes/jieyuan-garden
+      '@sa2kit-ui/theme-rhine-life':
+        specifier: workspace:*
+        version: link:../../packages/themes/rhine-life
       '@types/react':
         specifier: ^18.3.18
         version: 18.3.31
@@ -497,6 +500,10 @@ importers:
         version: 5.9.3
 
   packages/theme-runtime:
+    dependencies:
+      '@sa2kit-ui/react':
+        specifier: workspace:*
+        version: link:../react
     devDependencies:
       '@types/react':
         specifier: ^18.3.18
@@ -518,6 +525,15 @@ importers:
         version: link:../../tokens
 
   packages/themes/jieyuan-garden:
+    dependencies:
+      '@sa2kit-ui/theme-animal-island':
+        specifier: workspace:*
+        version: link:../animal-island
+      '@sa2kit-ui/tokens':
+        specifier: workspace:*
+        version: link:../../tokens
+
+  packages/themes/rhine-life:
     dependencies:
       '@sa2kit-ui/theme-animal-island':
         specifier: workspace:*

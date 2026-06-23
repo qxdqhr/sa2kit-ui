@@ -1,0 +1,205 @@
+/**
+ * 莱茵生命 — 设计 token（v1 定稿色板）
+ * 覆盖 --animal-* 与 --sa2-*，供 animal-components.css 中的 .sa2-* 类消费
+ */
+[data-theme='rhine-life'] {
+  --rl-green-700: #007a52;
+  --rl-green-600: #009663;
+  --rl-green-500: #00b37a;
+  --rl-green-200: #b8e8d4;
+  --rl-lab-100: #eef3f1;
+  --rl-lab-white: #f8fbfb;
+  --rl-slate-900: #15201c;
+  --rl-slate-600: #4a5f58;
+  --rl-slate-500: #5f756d;
+  --rl-cyan-500: #2eb8c9;
+  --rl-cyan-700: #1a7a85;
+  --rl-amber-500: #f5a623;
+  --rl-amber-700: #9a6510;
+  --rl-orange-500: #e8873a;
+  --rl-danger: #d94040;
+  --rl-danger-shadow: #a82e2e;
+  --rl-green-shadow: #005a3c;
+
+  /* sed 生成 overrides 的兼容别名 → 莱茵语义色 */
+  --rl-teal-deep: var(--rl-slate-900);
+  --rl-teal-mid: var(--rl-green-700);
+  --rl-teal-shadow: var(--rl-green-shadow);
+  --rl-pink-600: var(--rl-green-600);
+  --rl-pink-500: var(--rl-green-500);
+  --rl-pink-400: var(--rl-green-500);
+  --rl-pink-200: var(--rl-green-200);
+  --rl-pine-600: var(--rl-green-600);
+  --rl-pine-700: var(--rl-green-700);
+  --rl-mint-300: var(--rl-green-200);
+  --rl-mint-400: var(--rl-cyan-500);
+  --rl-gold: var(--rl-amber-500);
+  --rl-gold-light: #f7d774;
+  --rl-rose-400: var(--rl-orange-500);
+  --rl-rose-500: var(--rl-orange-500);
+  --rl-mist-100: var(--rl-lab-100);
+
+  --rl-bg: #e4ece8;
+  --rl-surface: rgba(248, 251, 251, 0.96);
+  --rl-text: var(--rl-slate-900);
+  --rl-text-muted: var(--rl-slate-600);
+  --rl-border: rgba(21, 32, 28, 0.14);
+  --rl-border-strong: rgba(21, 32, 28, 0.28);
+
+  --rl-gradient-green: linear-gradient(135deg, #00b37a 0%, #007a52 100%);
+  --rl-gradient-lab: linear-gradient(180deg, #f8fbfb 0%, #eef3f1 100%);
+  --rl-gradient-cyan: linear-gradient(135deg, #2eb8c9 0%, #1a7a85 100%);
+
+  --rl-radius-sm: 6px;
+  --rl-radius-md: 8px;
+  --rl-radius-lg: 12px;
+
+  --rl-shadow-sm: 0 2px 10px rgba(21, 32, 28, 0.08);
+  --rl-shadow-md: 0 8px 24px rgba(21, 32, 28, 0.12);
+  --rl-shadow-green: 0 4px 16px rgba(0, 150, 99, 0.22);
+  --rl-shadow-focus: 0 0 0 3px rgba(245, 166, 35, 0.45);
+
+  --rl-font-display: 'Noto Sans SC', system-ui, sans-serif;
+  --rl-font-body: 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', sans-serif;
+  --rl-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --rl-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --rl-duration: 180ms;
+
+  --rl-img-filter: saturate(0.95) contrast(1.04) brightness(1.02) hue-rotate(-8deg);
+  --rl-img-overlay: linear-gradient(
+    128deg,
+    rgba(0, 179, 122, 0.35) 0%,
+    rgba(238, 243, 241, 0.2) 52%,
+    rgba(21, 32, 28, 0.12) 100%
+  );
+  --rl-img-glow: linear-gradient(
+    165deg,
+    rgba(46, 184, 201, 0.18) 0%,
+    rgba(248, 251, 251, 0.12) 100%
+  );
+
+  --animal-primary-color: var(--rl-green-600);
+  --animal-primary-color-hover: var(--rl-green-500);
+  --animal-primary-color-active: var(--rl-green-700);
+  --animal-primary-color-bg: rgba(0, 179, 122, 0.12);
+  --animal-success-color: var(--rl-green-600);
+  --animal-success-color-hover: var(--rl-green-500);
+  --animal-success-color-active: var(--rl-green-700);
+  --animal-warning-color: var(--rl-amber-500);
+  --animal-warning-color-hover: #f7b84a;
+  --animal-warning-color-active: var(--rl-amber-700);
+  --animal-error-color: var(--rl-danger);
+  --animal-error-color-hover: #e85555;
+  --animal-error-color-active: var(--rl-danger-shadow);
+  --animal-text-color: var(--rl-slate-900);
+  --animal-text-color-secondary: var(--rl-slate-600);
+  --animal-text-color-muted: var(--rl-slate-500);
+  --animal-text-color-disabled: rgba(74, 95, 88, 0.45);
+  --animal-border-color: var(--rl-border-strong);
+  --animal-border-color-hover: var(--rl-green-600);
+  --animal-border-color-light: var(--rl-border);
+  --animal-bg-color: var(--rl-surface);
+  --animal-bg-color-secondary: rgba(238, 243, 241, 0.85);
+  --animal-bg-color-disabled: rgba(238, 243, 241, 0.55);
+  --animal-font-family: var(--rl-font-body) !important;
+  --animal-font-size-sm: 12px;
+  --animal-font-size-base: 14px;
+  --animal-font-size-lg: 16px;
+  --animal-line-height-base: 1.5715;
+  --animal-spacing-xs: 4px;
+  --animal-spacing-sm: 8px;
+  --animal-spacing-md: 12px;
+  --animal-spacing-lg: 16px;
+  --animal-spacing-xl: 24px;
+  --animal-border-radius-sm: var(--rl-radius-sm);
+  --animal-border-radius-base: var(--rl-radius-md);
+  --animal-border-radius-lg: var(--rl-radius-lg);
+  --animal-border-width: 1px;
+  --animal-shadow-sm: var(--rl-shadow-sm);
+  --animal-shadow-base: var(--rl-shadow-md);
+  --animal-shadow-lg: 0 12px 36px rgba(21, 32, 28, 0.16);
+  --animal-motion-duration-fast: 0.12s;
+  --animal-motion-duration-base: var(--rl-duration);
+  --animal-motion-duration-slow: 0.28s;
+  --animal-motion-ease: var(--rl-ease);
+  --animal-height-sm: 34px;
+  --animal-height-base: 40px;
+  --animal-height-lg: 48px;
+
+  --sa2-primary: var(--rl-green-600);
+  --sa2-primary-hover: var(--rl-green-500);
+  --sa2-primary-active: var(--rl-green-700);
+  --sa2-primary-bg: rgba(0, 179, 122, 0.12);
+
+  --sa2-text: var(--rl-slate-900);
+  --sa2-text-body: var(--rl-slate-900);
+  --sa2-text-secondary: var(--rl-slate-600);
+  --sa2-text-muted: var(--rl-slate-500);
+  --sa2-text-disabled: rgba(74, 95, 88, 0.45);
+  --sa2-text-affix: var(--rl-cyan-700);
+
+  --sa2-bg: var(--rl-bg);
+  --sa2-bg-content: var(--rl-surface);
+  --sa2-bg-secondary: rgba(238, 243, 241, 0.85);
+  --sa2-bg-disabled: rgba(238, 243, 241, 0.55);
+  --sa2-bg-card-alt: rgba(248, 251, 251, 0.92);
+
+  --sa2-border: var(--rl-border-strong);
+  --sa2-border-light: var(--rl-border);
+  --sa2-border-hover: var(--rl-green-600);
+  --sa2-border-input: var(--rl-border-strong);
+  --sa2-border-handle: rgba(21, 32, 28, 0.22);
+  --sa2-border-dashed: rgba(21, 32, 28, 0.16);
+  --sa2-border-dashed-hover: var(--rl-green-600);
+
+  --sa2-shadow-sm: var(--rl-shadow-sm);
+  --sa2-shadow-base: var(--rl-shadow-md);
+  --sa2-shadow-lg: 0 12px 36px rgba(21, 32, 28, 0.16);
+  --sa2-shadow-btn: rgba(0, 90, 60, 0.25);
+  --sa2-shadow-input: rgba(21, 32, 28, 0.08);
+  --sa2-shadow-input-hover: rgba(21, 32, 28, 0.14);
+  --sa2-shadow-focus-input: var(--rl-amber-500);
+
+  --sa2-success: var(--rl-green-600);
+  --sa2-success-active: var(--rl-green-700);
+  --sa2-success-bg: rgba(184, 232, 212, 0.45);
+  --sa2-success-border: var(--rl-green-500);
+  --sa2-warning: var(--rl-amber-500);
+  --sa2-warning-active: var(--rl-amber-700);
+  --sa2-error: var(--rl-danger);
+  --sa2-error-hover: #e85555;
+  --sa2-error-active: var(--rl-danger-shadow);
+
+  --sa2-focus: var(--rl-amber-500);
+  --sa2-focus-dark: var(--rl-amber-700);
+  --sa2-focus-ring: rgba(245, 166, 35, 0.35);
+  --sa2-focus-outline: var(--rl-amber-500);
+
+  --sa2-radius: var(--rl-radius-md);
+  --sa2-radius-sm: var(--rl-radius-sm);
+  --sa2-radius-lg: var(--rl-radius-lg);
+  --sa2-radius-pill: 999px;
+  --sa2-radius-card: var(--rl-radius-lg);
+
+  --sa2-font: var(--rl-font-body);
+
+  --sa2-btn-loading-bg: var(--rl-green-500);
+  --sa2-btn-loading-stripe: var(--rl-green-700);
+  --sa2-btn-loading-border: var(--rl-green-600);
+
+  --sa2-switch-bg: rgba(21, 32, 28, 0.18);
+  --sa2-switch-inset: inset 0 1px 3px rgba(21, 32, 28, 0.12);
+
+  --sa2-card-pink: #7ec8b8;
+  --sa2-card-purple: #7a9eb8;
+  --sa2-card-blue: var(--rl-cyan-500);
+  --sa2-card-yellow: #f7d774;
+  --sa2-card-orange: var(--rl-orange-500);
+  --sa2-card-teal: var(--rl-green-500);
+  --sa2-card-green: var(--rl-green-600);
+  --sa2-card-red: var(--rl-danger);
+  --sa2-card-lime: #a8c878;
+  --sa2-card-yellow-green: #c4d84a;
+  --sa2-card-brown: #4a5f58;
+  --sa2-card-peach: #8ecfb8;
+}

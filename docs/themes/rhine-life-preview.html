@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="rhine-life">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>莱茵生命主题预览 · Rhine Life Theme Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --rl-green-700: #007a52;
+      --rl-green-600: #009663;
+      --rl-green-500: #00b37a;
+      --rl-green-200: #b8e8d4;
+      --rl-lab-100: #eef3f1;
+      --rl-lab-white: #f8fbfb;
+      --rl-slate-900: #15201c;
+      --rl-slate-600: #4a5f58;
+      --rl-cyan-500: #2eb8c9;
+      --rl-amber-500: #f5a623;
+      --rl-orange-500: #e8873a;
+      --rl-danger: #d94040;
+      --rl-bg: #e4ece8;
+      --rl-surface: rgba(248, 251, 251, 0.96);
+      --rl-border: rgba(21, 32, 28, 0.14);
+      --rl-border-strong: rgba(21, 32, 28, 0.28);
+      --rl-gradient-green: linear-gradient(135deg, #00b37a 0%, #007a52 100%);
+      --rl-gradient-lab: linear-gradient(180deg, #f8fbfb 0%, #eef3f1 100%);
+      --rl-radius-sm: 6px;
+      --rl-radius-md: 8px;
+      --rl-radius-lg: 12px;
+      --rl-shadow-sm: 0 2px 10px rgba(21, 32, 28, 0.08);
+      --rl-shadow-md: 0 8px 24px rgba(21, 32, 28, 0.12);
+      --rl-shadow-focus: 0 0 0 3px rgba(245, 166, 35, 0.45);
+      --rl-font-body: 'Noto Sans SC', system-ui, sans-serif;
+      --rl-font-mono: 'JetBrains Mono', monospace;
+      --rl-max: 76rem;
+      --rl-nav-h: 3.75rem;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+    body {
+      font-family: var(--rl-font-body);
+      color: var(--rl-slate-900);
+      background:
+        linear-gradient(rgba(0, 150, 99, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 150, 99, 0.04) 1px, transparent 1px),
+        radial-gradient(ellipse 90% 50% at 10% -10%, rgba(0, 179, 122, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(46, 184, 201, 0.12), transparent 50%),
+        var(--rl-bg);
+      background-size: 24px 24px, 24px 24px, auto, auto, auto;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      height: var(--rl-nav-h);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 1.5rem;
+      background: rgba(248, 251, 251, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rl-border);
+    }
+    .nav__brand {
+      display: flex; align-items: center; gap: 0.65rem;
+      font-weight: 700; letter-spacing: 0.08em; font-size: 0.95rem;
+    }
+    .nav__logo {
+      width: 2rem; height: 2rem; border-radius: 6px;
+      background: var(--rl-gradient-green);
+      display: grid; place-items: center;
+      color: #fff; font-family: var(--rl-font-mono); font-size: 0.65rem; font-weight: 600;
+    }
+    .nav__theme { display: flex; gap: 0.5rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 2.25rem; padding: 0 1rem;
+      border-radius: var(--rl-radius-md); border: 1px solid transparent;
+      font-family: inherit; font-size: 0.875rem; font-weight: 600;
+      cursor: pointer; transition: all 0.18s ease;
+    }
+    .btn--primary {
+      color: #fff; background: var(--rl-gradient-green);
+      border-color: var(--rl-green-700);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), var(--rl-shadow-sm);
+    }
+    .btn--primary:hover { filter: brightness(1.06); box-shadow: var(--rl-shadow-md); }
+    .btn--default {
+      color: var(--rl-slate-900); background: rgba(255,255,255,0.7);
+      border-color: var(--rl-border-strong);
+    }
+    .btn--default.is-active {
+      color: var(--rl-green-700); border-color: var(--rl-green-600);
+      background: rgba(0, 179, 122, 0.1);
+    }
+
+    .wrap { max-width: var(--rl-max); margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+
+    .hero {
+      display: grid; gap: 1.5rem; margin-bottom: 2.5rem;
+      grid-template-columns: 1fr; align-items: center;
+    }
+    @media (min-width: 768px) { .hero { grid-template-columns: 1.2fr 0.8fr; } }
+
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.25rem 0.65rem; border-radius: 999px;
+      background: rgba(0, 179, 122, 0.12); border: 1px solid rgba(0, 150, 99, 0.35);
+      color: var(--rl-green-700); font-family: var(--rl-font-mono); font-size: 0.72rem;
+      margin-bottom: 0.75rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 700;
+      letter-spacing: 0.02em; line-height: 1.2; margin-bottom: 0.75rem;
+    }
+    .hero p { color: var(--rl-slate-600); max-width: 36rem; margin-bottom: 1.25rem; }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+    .panel {
+      background: var(--rl-surface);
+      border: 1px solid var(--rl-border);
+      border-radius: var(--rl-radius-lg);
+      box-shadow: var(--rl-shadow-sm);
+      padding: 1.25rem;
+      position: relative; overflow: hidden;
+    }
+    .panel::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      background: var(--rl-gradient-green);
+    }
+    .panel__title {
+      font-family: var(--rl-font-mono); font-size: 0.75rem;
+      color: var(--rl-green-600); letter-spacing: 0.12em; margin-bottom: 0.5rem;
+    }
+    .panel__stat { font-size: 2rem; font-weight: 700; color: var(--rl-slate-900); }
+    .panel__meta { font-size: 0.8rem; color: var(--rl-slate-600); margin-top: 0.25rem; }
+
+    .section-title {
+      font-size: 1.125rem; font-weight: 700; margin: 2rem 0 1rem;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
+    .section-title::before {
+      content: ''; width: 8px; height: 8px; border-radius: 2px;
+      background: var(--rl-green-500); transform: rotate(45deg);
+    }
+
+    .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+    .card {
+      background: var(--rl-lab-white);
+      border: 1px solid var(--rl-border);
+      border-radius: var(--rl-radius-md);
+      padding: 1rem; box-shadow: var(--rl-shadow-sm);
+    }
+    .card--green { border-top: 3px solid var(--rl-green-500); }
+    .card--cyan { border-top: 3px solid var(--rl-cyan-500); }
+    .card--amber { border-top: 3px solid var(--rl-amber-500); }
+    .card h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .card p { font-size: 0.82rem; color: var(--rl-slate-600); }
+
+    .form-row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-top: 1rem; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .field label { display: block; font-size: 0.78rem; color: var(--rl-slate-600); margin-bottom: 0.35rem; }
+    .field input {
+      width: 100%; min-height: 2.5rem; padding: 0 0.75rem;
+      border: 1px solid var(--rl-border-strong); border-radius: var(--rl-radius-md);
+      background: #fff; font-family: inherit; font-size: 0.875rem;
+    }
+    .field input:focus { outline: none; box-shadow: var(--rl-shadow-focus); border-color: var(--rl-amber-500); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .tag {
+      padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.72rem; font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .tag--exp { background: rgba(0,179,122,0.12); color: var(--rl-green-700); border-color: rgba(0,150,99,0.35); }
+    .tag--data { background: rgba(46,184,201,0.12); color: #1a7a85; border-color: rgba(46,184,201,0.35); }
+    .tag--warn { background: rgba(245,166,35,0.15); color: #9a6510; border-color: rgba(245,166,35,0.4); }
+
+    .tabs { display: flex; gap: 0.25rem; border-bottom: 1px solid var(--rl-border); margin-top: 1rem; }
+    .tab {
+      padding: 0.5rem 1rem; font-size: 0.85rem; font-weight: 600;
+      color: var(--rl-slate-600); border-bottom: 2px solid transparent; cursor: pointer;
+    }
+    .tab.is-active { color: var(--rl-green-700); border-bottom-color: var(--rl-green-600); }
+
+    .modal-mock {
+      margin-top: 1.5rem; padding: 1.25rem;
+      background: var(--rl-gradient-lab);
+      border: 1px solid var(--rl-border);
+      border-radius: var(--rl-radius-lg);
+      box-shadow: var(--rl-shadow-md);
+    }
+    .modal-mock__head {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 0.75rem; padding-bottom: 0.75rem;
+      border-bottom: 1px dashed var(--rl-border);
+    }
+    .modal-mock__head h4 { font-size: 1rem; }
+    .modal-mock__code {
+      font-family: var(--rl-font-mono); font-size: 0.75rem;
+      color: var(--rl-cyan-500); background: rgba(46,184,201,0.08);
+      padding: 0.65rem; border-radius: var(--rl-radius-sm); margin-top: 0.75rem;
+    }
+
+    .divider {
+      height: 1px; background: var(--rl-border); margin: 2rem 0;
+      position: relative;
+    }
+    .divider::after {
+      content: 'RHINE LIFE · PRTS'; position: absolute; left: 50%; top: 50%;
+      transform: translate(-50%, -50%); background: var(--rl-bg);
+      padding: 0 0.75rem; font-family: var(--rl-font-mono);
+      font-size: 0.65rem; color: var(--rl-slate-600); letter-spacing: 0.15em;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__brand">
+      <div class="nav__logo">RL</div>
+      <span>RHINE LIFE · 莱茵生命</span>
+    </div>
+    <div class="nav__theme">
+      <button class="btn btn--default is-active" type="button">莱茵生命</button>
+      <button class="btn btn--default" type="button">动森岛</button>
+      <button class="btn btn--default" type="button">界园</button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <div class="hero__badge">LAB-07 · STATUS ONLINE</div>
+        <h1>欢迎接入莱茵生命<br />科研终端</h1>
+        <p>洁净白绿实验室风格，延续明日方舟「舟味」卡片层级与数据可读性，适用于 sa2Kit-UI 组件库 overlay 主题。</p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" type="button">进入实验台</button>
+          <button class="btn btn--default" type="button">查看数据日志</button>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel__title">SAMPLE-0421</div>
+        <div class="panel__stat">98.7%</div>
+        <div class="panel__meta">源石技艺稳定度 · 最后同步 12:04:33</div>
+      </div>
+    </section>
+
+    <h2 class="section-title">研究模块</h2>
+    <div class="cards">
+      <article class="card card--green">
+        <h3>生态模拟</h3>
+        <p>生命体征监测与样本培养记录。</p>
+      </article>
+      <article class="card card--cyan">
+        <h3>源石分析</h3>
+        <p>能量谱线与结构解析终端。</p>
+      </article>
+      <article class="card card--amber">
+        <h3>安全协议</h3>
+        <p>异常事件告警与权限分级。</p>
+      </article>
+    </div>
+
+    <h2 class="section-title">终端表单</h2>
+    <div class="form-row">
+      <div class="field">
+        <label>研究员 ID</label>
+        <input type="text" placeholder="RL-2026-001" value="RL-2026-001" />
+      </div>
+      <div class="field">
+        <label>项目代号</label>
+        <input type="text" placeholder="输入项目代号" />
+      </div>
+    </div>
+    <div class="tags">
+      <span class="tag tag--exp">实验进行中</span>
+      <span class="tag tag--data">数据已归档</span>
+      <span class="tag tag--warn">需复核</span>
+    </div>
+
+    <div class="tabs">
+      <span class="tab is-active">概览</span>
+      <span class="tab">样本</span>
+      <span class="tab">日志</span>
+      <span class="tab">权限</span>
+    </div>
+
+    <div class="modal-mock">
+      <div class="modal-mock__head">
+        <h4>实验确认 · Modal Mock</h4>
+        <button class="btn btn--default" type="button" style="min-height:1.75rem;padding:0 0.65rem;font-size:0.75rem;">关闭</button>
+      </div>
+      <p style="font-size:0.875rem;color:var(--rl-slate-600);">确认提交本次源石技艺读数？操作将写入 PRTS 审计链。</p>
+      <div class="modal-mock__code">$ rhine-cli submit --sample 0421 --force</div>
+      <div style="margin-top:1rem;display:flex;gap:0.5rem;">
+        <button class="btn btn--primary" type="button">确认提交</button>
+        <button class="btn btn--default" type="button">取消</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <p style="text-align:center;font-size:0.78rem;color:var(--rl-slate-600);">
+      sa2Kit-UI · rhine-life theme preview v1 · 2026-06-23
+    </p>
+  </main>
+</body>
+</html>

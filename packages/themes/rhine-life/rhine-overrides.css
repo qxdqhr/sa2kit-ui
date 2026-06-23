@@ -1,0 +1,401 @@
+/**
+ * 界园 — 组件样式覆盖
+ * 在 animal-components.css 硬编码动森风格之上，按 v3 预览差异化
+ */
+@import './rhine-overrides-ext.css';
+
+[data-theme='rhine-life'] [class^='sa2-'] {
+  font-family: var(--animal-font-family);
+  color: var(--animal-text-color);
+}
+
+/* ── Button ── */
+[data-theme='rhine-life'] .sa2-btn {
+  border-radius: var(--rl-radius-md);
+  box-shadow: var(--rl-shadow-sm);
+  letter-spacing: 0.03em;
+  border-width: 1px;
+}
+
+[data-theme='rhine-life'] .sa2-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--rl-shadow-focus);
+}
+
+[data-theme='rhine-life'] .sa2-btn-primary {
+  color: #fff;
+  background: var(--rl-gradient-green);
+  border-color: var(--rl-green-shadow);
+  box-shadow: var(--rl-shadow-sm), var(--rl-shadow-green);
+}
+
+[data-theme='rhine-life'] .sa2-btn-primary:hover:not(:disabled) {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: var(--rl-shadow-md), var(--rl-shadow-green);
+}
+
+[data-theme='rhine-life'] .sa2-btn-primary:active:not(:disabled) {
+  filter: brightness(0.98);
+  transform: translateY(0);
+  box-shadow: var(--rl-shadow-sm);
+}
+
+[data-theme='rhine-life'] .sa2-btn-default {
+  color: var(--rl-slate-900);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--rl-border-strong);
+}
+
+[data-theme='rhine-life'] .sa2-btn-default:hover:not(:disabled) {
+  border-color: var(--rl-green-600);
+  background: rgba(0, 179, 122, 0.06);
+}
+
+[data-theme='rhine-life'] .sa2-btn-dashed {
+  background: rgba(201, 123, 126, 0.12);
+  border-color: var(--rl-rose-500);
+  border-style: dashed;
+}
+
+[data-theme='rhine-life'] .sa2-btn-dashed:hover:not(:disabled) {
+  color: var(--rl-teal-deep);
+  border-color: var(--rl-pink-600);
+  background: rgba(232, 90, 122, 0.12);
+}
+
+[data-theme='rhine-life'] .sa2-btn-text:hover:not(:disabled) {
+  background: rgba(22, 58, 57, 0.08);
+}
+
+[data-theme='rhine-life'] .sa2-btn-text:active:not(:disabled) {
+  background: rgba(22, 58, 57, 0.14);
+}
+
+[data-theme='rhine-life'] .sa2-btn-ghost.sa2-btn-primary:hover:not(:disabled) {
+  background: rgba(22, 58, 57, 0.08);
+}
+
+[data-theme='rhine-life'] .sa2-btn-danger.sa2-btn-primary {
+  background: var(--rl-danger);
+  border-color: var(--rl-danger-shadow);
+  box-shadow: 0 4px 0 var(--rl-danger-shadow);
+}
+
+[data-theme='rhine-life'] .sa2-btn-danger.sa2-btn-primary:hover:not(:disabled) {
+  box-shadow: 0 5px 0 var(--rl-danger-shadow);
+}
+
+[data-theme='rhine-life'] .sa2-btn-danger.sa2-btn-primary:active:not(:disabled) {
+  transform: scale(0.97);
+  box-shadow: 0 2px 0 var(--rl-danger-shadow);
+}
+
+/* ── Input ── */
+[data-theme='rhine-life'] .sa2-input-wrap {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--rl-border-strong);
+  border-radius: var(--rl-radius-md);
+  box-shadow: none;
+}
+
+[data-theme='rhine-life'] .sa2-input-wrap:hover:not(.sa2-input-disabled) {
+  border-color: var(--rl-pine-600);
+  box-shadow: none;
+}
+
+[data-theme='rhine-life'] .sa2-input-wrap:focus-within:not(.sa2-input-disabled) {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow-focus);
+}
+
+[data-theme='rhine-life'] .sa2-input-wrap-sm,
+[data-theme='rhine-life'] .sa2-input-wrap-md,
+[data-theme='rhine-life'] .sa2-input-wrap-lg {
+  border-radius: var(--rl-radius-md);
+  box-shadow: none;
+}
+
+[data-theme='rhine-life'] .sa2-input-field {
+  color: var(--rl-teal-deep);
+  font-weight: 500;
+}
+
+[data-theme='rhine-life'] .sa2-input-field::placeholder {
+  color: rgba(74, 115, 102, 0.55);
+}
+
+[data-theme='rhine-life'] .sa2-input-disabled {
+  background: rgba(230, 216, 220, 0.45);
+  border-color: var(--rl-border);
+}
+
+[data-theme='rhine-life'] .sa2-input-error {
+  border-color: var(--rl-danger);
+  box-shadow: 0 0 0 2px rgba(184, 56, 56, 0.2);
+}
+
+[data-theme='rhine-life'] .sa2-input-warning {
+  border-color: var(--rl-gold);
+  box-shadow: 0 0 0 2px rgba(212, 154, 58, 0.2);
+}
+
+/* ── Card ── */
+[data-theme='rhine-life'] .sa2-card {
+  border-radius: var(--rl-radius-lg);
+  background: var(--rl-surface);
+  border: 1.5px solid var(--rl-border);
+  color: var(--rl-teal-deep);
+  box-shadow: var(--rl-shadow-sm);
+}
+
+[data-theme='rhine-life'] .sa2-card:hover {
+  box-shadow: var(--rl-shadow-md);
+}
+
+[data-theme='rhine-life'] .sa2-card-dashed {
+  background: rgba(255, 252, 253, 0.72);
+  border: 2px dashed var(--rl-border-strong);
+}
+
+[data-theme='rhine-life'] .sa2-card-dashed:hover {
+  border-color: var(--rl-pine-600);
+}
+
+[data-theme='rhine-life'] .sa2-card-app-pink {
+  background: linear-gradient(145deg, rgba(239, 109, 143, 0.35), var(--rl-pink-500));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-app-teal {
+  background: linear-gradient(145deg, var(--rl-mint-300), var(--rl-pine-600));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-default {
+  background:
+    radial-gradient(circle, rgba(22, 58, 57, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 90, 122, 0.06) 1px, transparent 1px),
+    var(--rl-surface);
+  background-size: 28px 28px, 14px 14px;
+  background-position: 0 0, 7px 7px;
+  border: 1.5px solid var(--rl-border);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-pink {
+  background:
+    radial-gradient(circle, rgba(232, 90, 122, 0.15) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 160, 184, 0.1) 1px, transparent 1px),
+    rgba(255, 240, 244, 0.95);
+  border-color: rgba(212, 74, 106, 0.35);
+  color: var(--rl-pink-600);
+}
+
+/* ── Modal ── */
+[data-theme='rhine-life'] .sa2-modal-mask {
+  background: rgba(22, 58, 57, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme='rhine-life'] .sa2-modal-clipped {
+  background: var(--rl-surface);
+  color: var(--rl-teal-deep);
+  font-family: var(--rl-font-body);
+}
+
+[data-theme='rhine-life'] .sa2-modal-title {
+  font-family: var(--rl-font-display);
+  color: var(--rl-teal-deep);
+  letter-spacing: 0.06em;
+}
+
+[data-theme='rhine-life'] .sa2-modal-body {
+  color: var(--rl-text-muted);
+}
+
+[data-theme='rhine-life'] .sa2-modal-close {
+  color: rgba(22, 58, 57, 0.55);
+}
+
+[data-theme='rhine-life'] .sa2-modal-close:hover {
+  background: rgba(22, 58, 57, 0.08);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-modal-footer-btn {
+  border-radius: var(--rl-radius-md);
+  color: var(--rl-teal-deep);
+  border: 2px solid var(--rl-border-strong);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme='rhine-life'] .sa2-modal-footer-btn-primary {
+  color: #fff;
+  background: var(--rl-gradient-teal);
+  border-color: var(--rl-teal-shadow);
+  box-shadow: 0 3px 0 var(--rl-teal-shadow);
+}
+
+[data-theme='rhine-life'] .sa2-modal-footer-btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+/* ── Title ── */
+[data-theme='rhine-life'] .sa2-title {
+  font-family: var(--rl-font-display);
+  color: var(--rl-teal-deep);
+  letter-spacing: 0.06em;
+}
+
+[data-theme='rhine-life'] .sa2-title-ribbon-front {
+  background: var(--rl-gradient-gold);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-title-ribbon-back {
+  background: var(--rl-pink-600);
+}
+
+/* ── Tabs ── */
+[data-theme='rhine-life'] .sa2-tabs-list {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1.5px solid var(--rl-border);
+  border-radius: var(--rl-radius-md);
+  padding: 4px;
+}
+
+[data-theme='rhine-life'] .sa2-tabs-item {
+  border-radius: var(--rl-radius-sm);
+  color: var(--rl-text-muted);
+  font-weight: 600;
+}
+
+[data-theme='rhine-life'] .sa2-tabs-item:hover {
+  color: var(--rl-teal-deep);
+  background: rgba(22, 58, 57, 0.06);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-item.sa2-tabs-item-active {
+  color: #fff;
+  background: var(--rl-gradient-teal);
+  box-shadow: var(--rl-shadow-sm);
+}
+
+/* ── Switch ── */
+[data-theme='rhine-life'] .sa2-switch {
+  background: rgba(22, 58, 57, 0.25);
+  border: 2px solid var(--rl-border-strong);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+[data-theme='rhine-life'] .sa2-switch.sa2-switch-checked {
+  background: var(--rl-pink-500);
+  border-color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-switch:hover:not(.sa2-switch-disabled) {
+  box-shadow: none;
+}
+
+/* ── Checkbox / Radio ── */
+[data-theme='rhine-life'] .sa2-checkbox-box,
+[data-theme='rhine-life'] .sa2-radio-circle {
+  border-color: var(--rl-border-strong);
+  border-radius: var(--rl-radius-sm);
+}
+
+[data-theme='rhine-life'] .sa2-checkbox-checked .sa2-checkbox-box,
+[data-theme='rhine-life'] .sa2-radio-checked .sa2-radio-circle {
+  background: var(--rl-pink-600);
+  border-color: var(--rl-pink-600);
+}
+
+/* ── Select ── */
+[data-theme='rhine-life'] .sa2-select-trigger {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--rl-border-strong);
+  border-radius: var(--rl-radius-md);
+  color: var(--rl-teal-deep);
+  box-shadow: none;
+}
+
+[data-theme='rhine-life'] .sa2-select-trigger:hover:not(.sa2-select-disabled) {
+  border-color: var(--rl-pine-600);
+}
+
+[data-theme='rhine-life'] .sa2-select-dropdown {
+  background: var(--rl-surface);
+  border: 1.5px solid var(--rl-border);
+  border-radius: var(--rl-radius-md);
+  box-shadow: var(--rl-shadow-md);
+}
+
+[data-theme='rhine-life'] .sa2-select-option.active,
+[data-theme='rhine-life'] .sa2-select-option.hovered {
+  background: rgba(22, 58, 57, 0.06);
+}
+
+[data-theme='rhine-life'] .sa2-select-option.active {
+  color: var(--rl-pink-600);
+}
+
+/* ── Table ── */
+[data-theme='rhine-life'] .sa2-table-wrap {
+  border-radius: var(--rl-radius-lg);
+  border: 1.5px solid var(--rl-border);
+  overflow: hidden;
+}
+
+[data-theme='rhine-life'] .sa2-table-header-cell {
+  background: rgba(22, 58, 57, 0.08);
+  color: var(--rl-teal-deep);
+  font-weight: 700;
+}
+
+[data-theme='rhine-life'] .sa2-table-cell {
+  border-color: var(--rl-border);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-table-row:hover {
+  background: rgba(143, 196, 173, 0.12);
+}
+
+/* ── Tooltip ── */
+[data-theme='rhine-life'] .sa2-tooltip {
+  background: var(--rl-teal-deep);
+  border-radius: var(--rl-radius-sm);
+  font-weight: 600;
+}
+
+[data-theme='rhine-life'] .sa2-tooltip-content {
+  color: #fff;
+}
+
+/* ── Divider ── */
+[data-theme='rhine-life'] .sa2-divider-line-teal {
+  background: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-divider-dashed-teal {
+  border-color: var(--rl-pine-600);
+}
+
+/* ── Collapse ── */
+[data-theme='rhine-life'] .sa2-collapse {
+  border: 1.5px solid var(--rl-border);
+  border-radius: var(--rl-radius-lg);
+  background: var(--rl-surface);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-header {
+  color: var(--rl-teal-deep);
+  font-weight: 700;
+}
+
+/* ── Loading ── */
+[data-theme='rhine-life'] .sa2-table-loading-spinner {
+  color: var(--rl-teal-deep);
+}

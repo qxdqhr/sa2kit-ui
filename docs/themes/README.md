@@ -15,3 +15,6 @@ Agent 执行细则见：`~/.agents/skills/animal-island-sa2kit-ui-library/THEME-
 - 界园调研：`jieyuan-garden-ui-research.md`
 - 界园预览定稿：`jieyuan-garden-preview-v3.html`
 - 界园主题包：`packages/themes/jieyuan-garden/`
+- 莱茵调研：`rhine-life-ui-research.md`
+- 莱茵预览：`rhine-life-preview.html`
+- 莱茵主题包：`packages/themes/rhine-life/`

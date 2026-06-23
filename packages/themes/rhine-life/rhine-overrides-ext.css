@@ -1,0 +1,791 @@
+/**
+ * 界园 — 全组件适配扩展（24 组件完整覆盖）
+ */
+
+/* ── Button 补充 ── */
+[data-theme='rhine-life'] .sa2-btn-link {
+  color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-btn-link:hover:not(:disabled) {
+  color: var(--rl-pink-500);
+}
+
+[data-theme='rhine-life'] .sa2-btn-loading {
+  background: var(--rl-teal-mid);
+  border-color: var(--rl-mint-300);
+  color: #fff;
+  box-shadow: none;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--rl-teal-mid),
+    var(--rl-teal-mid) 10px,
+    var(--rl-teal-deep) 10px,
+    var(--rl-teal-deep) 20px
+  );
+}
+
+[data-theme='rhine-life'] .sa2-btn-ghost.sa2-btn-default {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* ── Input 补充 ── */
+[data-theme='rhine-life'] .sa2-input-prefix,
+[data-theme='rhine-life'] .sa2-input-suffix {
+  color: var(--rl-text-muted);
+}
+
+[data-theme='rhine-life'] .sa2-input-clear {
+  color: var(--rl-text-muted);
+}
+
+[data-theme='rhine-life'] .sa2-input-clear:hover {
+  color: var(--rl-pink-600);
+  background: rgba(232, 90, 122, 0.12);
+}
+
+/* ── Switch 完整 ── */
+[data-theme='rhine-life'] .sa2-switch:focus-visible {
+  outline: none;
+  box-shadow: var(--rl-shadow-focus);
+}
+
+[data-theme='rhine-life'] .sa2-switch-checked:hover:not(.sa2-switch-disabled) {
+  background: var(--rl-pink-400);
+  border-color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-switch-handle {
+  background: #fff;
+  border-color: var(--rl-border-strong);
+}
+
+[data-theme='rhine-life'] .sa2-switch-checked .sa2-switch-handle {
+  border-color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-switch-spinner {
+  border-color: var(--rl-pink-600);
+  border-right-color: transparent;
+}
+
+/* ── Card 全色板 ── */
+[data-theme='rhine-life'] .sa2-card-purple {
+  background: linear-gradient(145deg, #b08ac8, #9a6ab8);
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-app-blue {
+  background: linear-gradient(145deg, #8aa8b8, #6a8a9a);
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-app-yellow {
+  background: linear-gradient(145deg, var(--rl-gold-light), var(--rl-gold));
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-card-app-orange {
+  background: linear-gradient(145deg, var(--rl-rose-400), var(--rl-rose-500));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-app-green {
+  background: linear-gradient(145deg, var(--rl-mint-400), var(--rl-pine-600));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-app-red {
+  background: linear-gradient(145deg, #c94a4a, var(--rl-danger));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-lime-green {
+  background: linear-gradient(145deg, #c4d08a, #a8b86a);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-card-yellow-green {
+  background: linear-gradient(145deg, #e8dc6a, #c4b84a);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-card-brown {
+  background: linear-gradient(145deg, var(--rl-pine-700), var(--rl-teal-deep));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-card-warm-peach-pink {
+  background: linear-gradient(145deg, var(--rl-pink-400), var(--rl-pink-500));
+  color: #fff;
+}
+
+[data-theme='rhine-life'] [class*='sa2-card-pattern-'] {
+  background-size: 28px 28px, 14px 14px;
+  background-position: 0 0, 7px 7px;
+  border-width: 1.5px;
+  border-style: solid;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-purple {
+  background-image:
+    radial-gradient(circle, rgba(154, 106, 184, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(176, 138, 200, 0.1) 1px, transparent 1px);
+  background-color: rgba(248, 242, 252, 0.95);
+  border-color: rgba(154, 106, 184, 0.35);
+  color: #6a4088;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-blue {
+  background-image:
+    radial-gradient(circle, rgba(106, 138, 154, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(138, 168, 184, 0.1) 1px, transparent 1px);
+  background-color: rgba(240, 246, 248, 0.95);
+  border-color: rgba(106, 138, 154, 0.35);
+  color: #3a5868;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-yellow {
+  background-image:
+    radial-gradient(circle, rgba(212, 154, 58, 0.18) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(236, 201, 120, 0.12) 1px, transparent 1px);
+  background-color: rgba(255, 248, 232, 0.95);
+  border-color: rgba(212, 154, 58, 0.4);
+  color: #7a5518;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-orange {
+  background-image:
+    radial-gradient(circle, rgba(201, 123, 126, 0.16) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 160, 184, 0.1) 1px, transparent 1px);
+  background-color: rgba(255, 240, 242, 0.95);
+  border-color: rgba(184, 90, 94, 0.35);
+  color: #8a4048;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-teal {
+  background-image:
+    radial-gradient(circle, rgba(74, 115, 102, 0.14) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(143, 196, 173, 0.1) 1px, transparent 1px);
+  background-color: rgba(240, 250, 246, 0.95);
+  border-color: rgba(74, 115, 102, 0.35);
+  color: var(--rl-pine-700);
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-green {
+  background-image:
+    radial-gradient(circle, rgba(74, 115, 102, 0.14) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(127, 184, 158, 0.1) 1px, transparent 1px);
+  background-color: rgba(242, 250, 244, 0.95);
+  border-color: rgba(74, 115, 102, 0.32);
+  color: var(--rl-pine-700);
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-app-red {
+  background-image:
+    radial-gradient(circle, rgba(184, 56, 56, 0.14) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 90, 122, 0.1) 1px, transparent 1px);
+  background-color: rgba(255, 240, 240, 0.95);
+  border-color: rgba(184, 56, 56, 0.35);
+  color: #8a3030;
+}
+
+[data-theme='rhine-life'] .sa2-card-pattern-lime-green,
+[data-theme='rhine-life'] .sa2-card-pattern-yellow-green,
+[data-theme='rhine-life'] .sa2-card-pattern-brown,
+[data-theme='rhine-life'] .sa2-card-pattern-warm-peach-pink {
+  background-image:
+    radial-gradient(circle, rgba(22, 58, 57, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 90, 122, 0.06) 1px, transparent 1px);
+  background-color: var(--rl-surface);
+  border-color: var(--rl-border);
+  color: var(--rl-teal-deep);
+}
+
+/* ── Title 彩带全色板 ── */
+[data-theme='rhine-life'] .sa2-title-ribbon {
+  --rf: var(--rl-gold-light);
+  --rb: var(--rl-gold);
+  --rk: #7a5518;
+  --rt: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-pink {
+  --rf: var(--rl-pink-400);
+  --rb: var(--rl-pink-600);
+  --rk: #9a2d48;
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-purple {
+  --rf: #b08ac8;
+  --rb: #9a6ab8;
+  --rk: #5a3878;
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-blue {
+  --rf: #8aa8b8;
+  --rb: #6a8a9a;
+  --rk: #3a5868;
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-yellow {
+  --rf: var(--rl-gold-light);
+  --rb: var(--rl-gold);
+  --rk: #7a5518;
+  --rt: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-orange {
+  --rf: var(--rl-rose-400);
+  --rb: var(--rl-rose-500);
+  --rk: #8a4048;
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-teal {
+  --rf: var(--rl-mint-300);
+  --rb: var(--rl-pine-600);
+  --rk: var(--rl-teal-deep);
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-green {
+  --rf: var(--rl-mint-400);
+  --rb: var(--rl-pine-600);
+  --rk: var(--rl-teal-deep);
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-app-red {
+  --rf: #d06060;
+  --rb: var(--rl-danger);
+  --rk: #8a3030;
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-lime-green {
+  --rf: #c4d08a;
+  --rb: #a8b86a;
+  --rk: #5a6838;
+  --rt: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-title-color-yellow-green {
+  --rf: #e8dc6a;
+  --rb: #c4b84a;
+  --rk: #7a6830;
+  --rt: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-title-color-brown {
+  --rf: var(--rl-pine-600);
+  --rb: var(--rl-pine-700);
+  --rk: var(--rl-teal-deep);
+  --rt: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-title-color-warm-peach-pink {
+  --rf: var(--rl-pink-400);
+  --rb: var(--rl-pink-600);
+  --rk: #9a2d48;
+  --rt: #fff;
+}
+
+/* ── Tabs 完整 ── */
+[data-theme='rhine-life'] .sa2-tabs {
+  background: var(--rl-surface);
+  border-radius: var(--rl-radius-lg);
+  border: 1.5px solid var(--rl-border);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-list {
+  border-bottom: 1.5px solid var(--rl-border);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-item.sa2-tabs-item-active-shadow {
+  box-shadow: var(--rl-shadow-sm);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-item-active .sa2-tabs-label,
+[data-theme='rhine-life'] .sa2-tabs-item-active .sa2-tabs-icon {
+  color: #fff;
+}
+
+[data-theme='rhine-life'] .sa2-tabs-leaf {
+  color: var(--rl-gold-light);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-content {
+  background: rgba(255, 252, 253, 0.72);
+}
+
+[data-theme='rhine-life'] .sa2-tabs-content-inner {
+  color: var(--rl-text-muted);
+}
+
+/* ── Collapse 完整 ── */
+[data-theme='rhine-life'] .sa2-collapse-icon {
+  background: var(--rl-gradient-teal);
+  box-shadow: var(--rl-shadow-sm);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-expanded .sa2-collapse-icon {
+  background: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-question {
+  font-family: var(--rl-font-display);
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-leaf {
+  color: var(--rl-pink-500);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-answer {
+  color: var(--rl-text-muted);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-answer a {
+  color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-collapse-answer a:hover {
+  color: var(--rl-pink-500);
+}
+
+/* ── Checkbox / Radio 完整 ── */
+[data-theme='rhine-life'] .sa2-checkbox-box,
+[data-theme='rhine-life'] .sa2-radio-circle {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme='rhine-life'] .sa2-checkbox-box:focus-visible,
+[data-theme='rhine-life'] .sa2-radio-circle:focus-visible {
+  outline: none;
+  box-shadow: var(--rl-shadow-focus);
+}
+
+[data-theme='rhine-life'] .sa2-checkbox-label,
+[data-theme='rhine-life'] .sa2-radio-label {
+  color: var(--rl-teal-deep);
+  font-weight: 600;
+}
+
+[data-theme='rhine-life'] .sa2-radio-checked .sa2-radio-label {
+  color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-checkbox-disabled .sa2-checkbox-box,
+[data-theme='rhine-life'] .sa2-radio-disabled .sa2-radio-circle {
+  background: rgba(230, 216, 220, 0.45);
+  border-color: var(--rl-border);
+}
+
+/* ── Select 完整 ── */
+[data-theme='rhine-life'] .sa2-select-value {
+  color: var(--rl-teal-deep);
+  font-weight: 600;
+}
+
+[data-theme='rhine-life'] .sa2-select-placeholder {
+  color: rgba(74, 115, 102, 0.55);
+}
+
+[data-theme='rhine-life'] .sa2-select-trigger.open {
+  border-color: var(--rl-gold);
+  box-shadow: var(--rl-shadow-focus);
+}
+
+[data-theme='rhine-life'] .sa2-select-trigger.open .sa2-select-arrow {
+  color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-select-pill-bar {
+  background: var(--rl-gold);
+  opacity: 0.35;
+}
+
+[data-theme='rhine-life'] .sa2-select-disabled .sa2-select-trigger {
+  background: rgba(230, 216, 220, 0.45);
+}
+
+/* ── Loading ── */
+[data-theme='rhine-life'] .sa2-loading {
+  background: rgba(22, 58, 57, 0.82);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme='rhine-life'] .sa2-loading-spinner {
+  width: 48px;
+  height: 48px;
+  animation: sa2-spin 1s linear infinite;
+}
+
+[data-theme='rhine-life'] .sa2-loading-track {
+  stroke: rgba(232, 90, 122, 0.22);
+}
+
+[data-theme='rhine-life'] .sa2-loading-dash {
+  stroke: var(--rl-pink-500);
+  stroke-linecap: round;
+}
+
+[data-theme='rhine-life'] .sa2-loading-container {
+  background: rgba(22, 58, 57, 0.88);
+}
+
+/* ── Divider 全变体 ── */
+[data-theme='rhine-life'] .sa2-divider {
+  height: 4px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--rl-teal-deep),
+    var(--rl-teal-deep) 5px,
+    var(--rl-pink-500) 5px,
+    var(--rl-pink-500) 10px
+  );
+  background-size: auto;
+  opacity: 0.45;
+  border-radius: 2px;
+}
+
+[data-theme='rhine-life'] .sa2-divider-line-teal,
+[data-theme='rhine-life'] .sa2-divider-line-white,
+[data-theme='rhine-life'] .sa2-divider-line-yellow,
+[data-theme='rhine-life'] .sa2-divider-wave-yellow {
+  background-image: none;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--rl-teal-deep),
+    var(--rl-teal-deep) 5px,
+    var(--rl-pink-500) 5px,
+    var(--rl-pink-500) 10px
+  );
+  opacity: 0.45;
+}
+
+[data-theme='rhine-life'] .sa2-divider-dashed-brown {
+  background: linear-gradient(to right, var(--rl-border-strong) 50%, transparent 50%) center / 12px 2px
+    repeat-x;
+}
+
+[data-theme='rhine-life'] .sa2-divider-dashed-teal {
+  background: linear-gradient(to right, var(--rl-pine-600) 50%, transparent 50%) center / 12px 2px repeat-x;
+}
+
+[data-theme='rhine-life'] .sa2-divider-dashed-white {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.85) 50%, transparent 50%) center / 12px 2px
+    repeat-x;
+}
+
+[data-theme='rhine-life'] .sa2-divider-dashed-yellow {
+  background: linear-gradient(to right, var(--rl-gold) 50%, transparent 50%) center / 12px 2px repeat-x;
+}
+
+/* ── Time ── */
+[data-theme='rhine-life'] .sa2-time {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, var(--rl-surface) 100%);
+  border: 2px solid var(--rl-border-strong);
+  border-radius: var(--rl-radius-lg);
+  box-shadow: var(--rl-shadow-sm);
+  font-family: var(--rl-font-body);
+}
+
+[data-theme='rhine-life'] .sa2-time-date {
+  border-right-color: var(--rl-border);
+}
+
+[data-theme='rhine-life'] .sa2-time-weekday {
+  color: var(--rl-pink-600);
+  font-family: var(--rl-font-display);
+  letter-spacing: 0.12em;
+}
+
+[data-theme='rhine-life'] .sa2-time-monthday {
+  color: var(--rl-teal-deep);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-time-clock,
+[data-theme='rhine-life'] .sa2-time-colon {
+  color: var(--rl-teal-deep);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── CodeBlock ── */
+[data-theme='rhine-life'] .sa2-codeblock {
+  background: linear-gradient(165deg, #1a3332 0%, #122826 100%);
+  border: 1.5px solid rgba(143, 196, 173, 0.28);
+  border-radius: var(--rl-radius-lg);
+  box-shadow: var(--rl-shadow-md);
+  color: #e8d4da;
+}
+
+/* ── Table 完整 ── */
+[data-theme='rhine-life'] .sa2-table-wrap {
+  background: var(--rl-surface);
+  padding: 6px;
+}
+
+[data-theme='rhine-life'] .sa2-table-thead,
+[data-theme='rhine-life'] .sa2-table-tbody {
+  background: transparent;
+}
+
+[data-theme='rhine-life'] .sa2-table-header-row::after,
+[data-theme='rhine-life'] .sa2-table-row::after {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--rl-border) 0,
+    var(--rl-border) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
+
+[data-theme='rhine-life'] .sa2-table-row:hover,
+[data-theme='rhine-life'] .sa2-table-row-striped:hover {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(232, 90, 122, 0.18),
+    rgba(232, 90, 122, 0.18) 10px,
+    rgba(143, 196, 173, 0.22) 10px,
+    rgba(143, 196, 173, 0.22) 20px
+  );
+  background-size: 28.28px 28.28px;
+  clip-path: inset(0 0 0 0 round 20px);
+}
+
+[data-theme='rhine-life'] .sa2-table-row:hover .sa2-table-cell,
+[data-theme='rhine-life'] .sa2-table-row-striped:hover .sa2-table-cell {
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-table-row-striped {
+  background: rgba(230, 216, 220, 0.25);
+}
+
+[data-theme='rhine-life'] .sa2-table-empty-content,
+[data-theme='rhine-life'] .sa2-table-empty-icon {
+  color: var(--rl-text-muted);
+}
+
+[data-theme='rhine-life'] .sa2-table-loading-overlay {
+  background: rgba(255, 252, 253, 0.82);
+}
+
+/* ── Icon ── */
+[data-theme='rhine-life'] .sa2-icon-list-item {
+  background: rgba(255, 255, 255, 0.55);
+  border: 1.5px solid var(--rl-border);
+  border-radius: var(--rl-radius-md);
+}
+
+[data-theme='rhine-life'] .sa2-icon-list-label {
+  color: var(--rl-teal-deep);
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+[data-theme='rhine-life'] .sa2-footer.sa2-footer-sea {
+  background-image: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(143, 196, 173, 0.35) 45%,
+      rgba(22, 58, 57, 0.28) 100%
+    ),
+    radial-gradient(ellipse 120% 80% at 50% 100%, rgba(232, 90, 122, 0.22), transparent 70%) !important;
+  background-size: cover !important;
+  background-position: bottom center !important;
+  border-top: 1.5px solid var(--rl-border);
+}
+
+[data-theme='rhine-life'] .sa2-footer-tree {
+  background-image: linear-gradient(to top, var(--rl-pine-600) 0%, var(--rl-mint-300) 38%, transparent 38%),
+    radial-gradient(ellipse 18px 28px at 8% 100%, var(--rl-teal-deep) 70%, transparent 71%),
+    radial-gradient(ellipse 22px 34px at 22% 100%, var(--rl-pine-700) 70%, transparent 71%),
+    radial-gradient(ellipse 26px 40px at 40% 100%, var(--rl-pine-600) 70%, transparent 71%),
+    radial-gradient(ellipse 20px 32px at 58% 100%, var(--rl-teal-deep) 70%, transparent 71%),
+    radial-gradient(ellipse 24px 38px at 76% 100%, var(--rl-pine-700) 70%, transparent 71%),
+    radial-gradient(ellipse 18px 28px at 92% 100%, var(--rl-pine-600) 70%, transparent 71%) !important;
+}
+
+/* ── Phone ── */
+[data-theme='rhine-life'] .sa2-phone {
+  background: var(--rl-surface);
+  border: 3px solid var(--rl-border-strong);
+  box-shadow: var(--rl-shadow-md);
+}
+
+[data-theme='rhine-life'] .sa2-phone-status-bar {
+  color: var(--rl-teal-deep);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, transparent 100%);
+}
+
+[data-theme='rhine-life'] .sa2-phone-home-screen {
+  background: var(--rl-gradient-sky);
+  background-size: 100% 200%;
+}
+
+[data-theme='rhine-life'] .sa2-phone-date-header,
+[data-theme='rhine-life'] .sa2-phone-blink {
+  color: rgba(22, 58, 57, 0.35);
+}
+
+[data-theme='rhine-life'] .sa2-phone-day-text {
+  color: var(--rl-teal-deep);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-phone-badge {
+  background-color: var(--rl-pink-600);
+  border-color: var(--rl-surface);
+}
+
+/* ── Wallet ── */
+[data-theme='rhine-life'] .sa2-wallet-pill {
+  background: linear-gradient(180deg, var(--rl-gold-light), var(--rl-gold));
+  box-shadow:
+    inset 0 -4px 0 rgba(122, 85, 24, 0.22),
+    inset 0 0 0 2px rgba(122, 85, 24, 0.12),
+    0 0 0 var(--wallet-halo) rgba(255, 252, 245, 0.95),
+    0 6px 14px rgba(22, 58, 57, 0.18);
+}
+
+[data-theme='rhine-life'] .sa2-wallet-value {
+  color: var(--rl-teal-deep);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-wallet-bag-slot {
+  filter: drop-shadow(0 4px 6px rgba(22, 58, 57, 0.18));
+}
+
+/* ── Tooltip 完整 ── */
+[data-theme='rhine-life'] .sa2-tooltip:not(.sa2-tooltip-island) {
+  background: var(--rl-teal-deep);
+  color: #fff;
+  border-radius: var(--rl-radius-sm);
+  box-shadow: var(--rl-shadow-sm);
+}
+
+[data-theme='rhine-life'] .sa2-tooltip:not(.sa2-tooltip-island)::after {
+  background: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-tooltip-bordered:not(.sa2-tooltip-island) {
+  border: 1.5px solid var(--rl-pine-600);
+}
+
+[data-theme='rhine-life'] .sa2-tooltip-island-content .sa2-tooltip-content {
+  color: var(--rl-teal-deep);
+  font-weight: 600;
+}
+
+[data-theme='rhine-life'] .sa2-tooltip-island.sa2-tooltip-bordered .sa2-tooltip-island-content {
+  color: var(--rl-teal-deep);
+}
+
+/* ── WeddingInvitation ── */
+[data-theme='rhine-life'] .sa2-wedding-envelope {
+  background: radial-gradient(circle at 20% 10%, rgba(232, 90, 122, 0.28), transparent 42%),
+    radial-gradient(circle at 80% 90%, rgba(143, 196, 173, 0.32), transparent 42%),
+    var(--rl-gradient-sky) !important;
+  color: var(--rl-teal-deep);
+  border-radius: var(--rl-radius-lg);
+  box-shadow: var(--rl-shadow-md);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-envelope::before {
+  background: radial-gradient(circle, rgba(22, 58, 57, 0.07) 1px, transparent 1.5px) 0 0 / 14px 14px;
+}
+
+[data-theme='rhine-life'] .sa2-wedding-envelope::after {
+  border-color: rgba(22, 58, 57, 0.28);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-title-en {
+  color: var(--rl-rose-500);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-title-zh {
+  color: var(--rl-teal-deep);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-name {
+  color: var(--rl-teal-deep);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-date-card {
+  background: var(--rl-surface);
+  box-shadow: var(--rl-shadow-sm);
+  border-radius: var(--rl-radius-lg);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-date-label {
+  color: var(--rl-rose-500);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-date-value {
+  color: var(--rl-teal-deep);
+  font-family: var(--rl-font-display);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-date-meta,
+[data-theme='rhine-life'] .sa2-wedding-message,
+[data-theme='rhine-life'] .sa2-wedding-venue-name {
+  color: var(--rl-teal-deep);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-dot,
+[data-theme='rhine-life'] .sa2-wedding-signature-lottery-no {
+  color: var(--rl-pink-600);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-venue-card {
+  background: rgba(255, 252, 253, 0.72);
+  border-color: var(--rl-border-strong);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-lottery {
+  background-color: var(--rl-mist-100);
+  background-image: radial-gradient(circle, rgba(22, 58, 57, 0.45) 1.6px, transparent 2px);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-export-btn {
+  background: var(--rl-gradient-teal);
+  color: #fff;
+  border-color: var(--rl-teal-shadow);
+  border-radius: var(--rl-radius-md);
+  box-shadow: 0 3px 0 var(--rl-teal-shadow);
+}
+
+[data-theme='rhine-life'] .sa2-wedding-export-btn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+/* ── Modal 打字机文本（Typewriter 无独立类，继承 Modal body） ── */
+[data-theme='rhine-life'] .sa2-modal-body strong {
+  color: var(--rl-teal-deep);
+}
+
+/* ── Cursor 界园指针（SVG 粉青） ── */
+[data-theme='rhine-life'] .sa2-cursor--force,
+[data-theme='rhine-life'] .sa2-cursor--force *,
+[data-theme='rhine-life'] .sa2-cursor.sa2-cursor--scoped {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23163a39' stroke='%23e85a7a' stroke-width='1.2' d='M4 3l14 8-6 1 3 7-3 1-3-7-5 0z'/%3E%3C/svg%3E")
+      4 2,
+    default !important;
+}
