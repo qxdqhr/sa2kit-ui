@@ -44,12 +44,12 @@ export function Phone({ className }: PhoneProps) {
   return (
     <div className={cn('sa2-phone-container', className)}>
       <div className="sa2-phone">
-        <div className="sa2-phone-screen">
-          <div className="sa2-phone-home">
-            <div className="sa2-phone-date">
+        <div className="sa2-phone-screen-content">
+          <div className="sa2-phone-home-screen">
+            <div className="sa2-phone-date-display">
               <div className="sa2-phone-date-header">
                 <span
-                  className="sa2-phone-wifi"
+                  className="sa2-phone-icon-wifi"
                   style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.wifi})` }}
                 />
                 <div>
@@ -59,17 +59,17 @@ export function Phone({ className }: PhoneProps) {
                   {ampm}
                 </div>
                 <span
-                  className="sa2-phone-location"
+                  className="sa2-phone-icon-location"
                   style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.location})` }}
                 />
               </div>
-              <div className="sa2-phone-day">Welcome!</div>
+              <div className="sa2-phone-day-text">Welcome!</div>
             </div>
-            <div className="sa2-phone-apps">
+            <div className="sa2-phone-apps-grid">
               {apps.map((app) => (
                 <div
                   key={app.id}
-                  className={cn('sa2-phone-app', app.offset && 'sa2-phone-app-offset')}
+                  className={cn('sa2-phone-app-item', app.offset && 'sa2-phone-app-item-offset')}
                   style={{ backgroundColor: app.color }}
                 >
                   {app.hasNewMessage ? <span className="sa2-phone-badge" /> : null}
@@ -87,7 +87,7 @@ export function Phone({ className }: PhoneProps) {
             </div>
             <div className="sa2-phone-page-indicator">
               <span
-                className="sa2-phone-page"
+                className="sa2-phone-icon-page"
                 style={{ backgroundImage: `url(${PHONE_STATUS_ICONS.page})` }}
               />
             </div>

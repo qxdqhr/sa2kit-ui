@@ -14,8 +14,9 @@ import {
 } from 'react';
 
 import { Icon } from '../Icon';
+import brideAndGroomImg from './img/brideandgroom.PNG';
+import weddingTitleImg from './img/wedding.PNG';
 import { injectWeddingFonts, prepareWeddingFontsForExport } from './weddingFonts';
-import './weddingInvitation.css';
 
 injectWeddingFonts();
 
@@ -36,6 +37,20 @@ function Leaf({ className }: { className?: string }) {
         d="M14 50 C 26 40, 40 26, 56 12"
         stroke="#3d5a1a"
         strokeWidth="2"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M22 42 C 28 38, 32 34, 36 30"
+        stroke="#3d5a1a"
+        strokeWidth="1.4"
+        fill="none"
+        strokeLinecap="round"
+      />
+      <path
+        d="M30 48 C 34 44, 38 40, 42 36"
+        stroke="#3d5a1a"
+        strokeWidth="1.4"
         fill="none"
         strokeLinecap="round"
       />
@@ -82,6 +97,7 @@ function Heart({ size = 64 }: { size?: number }) {
         strokeWidth="2.5"
         strokeLinejoin="round"
       />
+      <ellipse cx="22" cy="22" rx="3.5" ry="5" fill="#fff" opacity="0.7" transform="rotate(-25 22 22)" />
     </svg>
   );
 }
@@ -108,25 +124,6 @@ function ScissorsIcon() {
         <circle cx="6" cy="18" r="2.4" />
         <path d="M8 7.5 L21 17 M8 16.5 L21 7" />
       </g>
-    </svg>
-  );
-}
-
-function BrideGroomIllustration() {
-  return (
-    <svg className="sa2-wedding-couple-svg" viewBox="0 0 280 120" aria-hidden>
-      <ellipse cx="90" cy="95" rx="55" ry="18" fill="rgba(114,93,66,0.12)" />
-      <ellipse cx="190" cy="95" rx="55" ry="18" fill="rgba(114,93,66,0.12)" />
-      <circle cx="90" cy="52" r="28" fill="#f8a6b2" stroke="#725d42" strokeWidth="2.5" />
-      <circle cx="190" cy="52" r="28" fill="#82d5bb" stroke="#725d42" strokeWidth="2.5" />
-      <ellipse cx="90" cy="88" rx="22" ry="26" fill="#fdfdf5" stroke="#725d42" strokeWidth="2" />
-      <ellipse cx="190" cy="88" rx="22" ry="26" fill="#fdfdf5" stroke="#725d42" strokeWidth="2" />
-      <circle cx="82" cy="48" r="3" fill="#725d42" />
-      <circle cx="98" cy="48" r="3" fill="#725d42" />
-      <circle cx="182" cy="48" r="3" fill="#725d42" />
-      <circle cx="198" cy="48" r="3" fill="#725d42" />
-      <path d="M82 58 Q90 64 98 58" stroke="#725d42" strokeWidth="2" fill="none" strokeLinecap="round" />
-      <path d="M182 58 Q190 64 198 58" stroke="#725d42" strokeWidth="2" fill="none" strokeLinecap="round" />
     </svg>
   );
 }
@@ -208,7 +205,7 @@ export const WeddingInvitation = forwardRef<WeddingInvitationRef, WeddingInvitat
       venue = '彩虹岛 · 樱花广场',
       address = '动物之森 · 无人岛 · K.K. 演奏台前',
       title = 'Wedding Invitation',
-      subtitle = <span className="sa2-wedding-subtitle-text">集合啦 婚礼森友会</span>,
+      subtitle = <img src={weddingTitleImg} alt="集合啦 婚礼森友会" />,
       message = '哎呀，恭喜恭喜！我们要在小岛上举办婚礼啦~ 诚挚邀请您一同前来见证这个被花瓣和音符包围的日子！',
       showLotteryNumber = true,
       lotteryNumber = '0001',
@@ -272,7 +269,7 @@ export const WeddingInvitation = forwardRef<WeddingInvitationRef, WeddingInvitat
         <div className="sa2-wedding-title-zh">{subtitle}</div>
 
         <div className="sa2-wedding-couple-img">
-          <BrideGroomIllustration />
+          <img src={brideAndGroomImg} alt="bride and groom" />
         </div>
 
         <div className="sa2-wedding-couple-row">

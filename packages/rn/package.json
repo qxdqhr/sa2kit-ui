@@ -10,7 +10,8 @@
     ".": {
       "types": "./src/index.ts",
       "default": "./src/index.ts"
-    }
+    },
+    "./style.css": "./style.css"
   },
   "scripts": {
     "build": "pnpm typecheck",
@@ -20,11 +21,13 @@
     "@sa2kit-ui/shared": "workspace:*"
   },
   "peerDependencies": {
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
     "nativewind": "^4.0.0",
     "react": ">=18.0.0",
     "react-native": ">=0.76.0"
   },
   "devDependencies": {
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
     "@sa2kit-ui/tokens": "workspace:*",
     "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^18.3.18",

@@ -6,17 +6,21 @@
   "files": [
     "tailwind.preset.js",
     "animal-plugin.js",
-    "animal-plugin-batch2.js",
+    "animal-plugin-extras.js",
     "animal-plugin-batch3.js",
     "animal-plugin-batch4.js",
-    "animal-plugin-batch5.js",
-    "animal-plugin-batch6.js",
-    "theme.css"
+    "animal-components.css",
+    "animal-sa2-bridge.css",
+    "theme.css",
+    "theme.mobile.css",
+    "assets/**"
   ],
   "exports": {
     "./tailwind.preset": "./tailwind.preset.js",
     "./theme.css": "./theme.css",
-    "./plugin": "./animal-plugin.js"
+    "./theme.mobile.css": "./theme.mobile.css",
+    "./plugin": "./animal-plugin.js",
+    "./components.css": "./animal-components.css"
   },
   "dependencies": {
     "@sa2kit-ui/tokens": "workspace:*"

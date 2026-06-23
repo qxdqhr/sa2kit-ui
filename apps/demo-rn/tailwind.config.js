@@ -5,7 +5,7 @@ module.exports = {
     '../../packages/rn/src/**/*.{ts,tsx}',
   ],
   presets: [
-    require('@sa2kit-ui/tokens/tailwind.preset'),
+    require('@sa2kit-ui/theme-animal-island/tailwind.preset'),
     require('nativewind/preset'),
   ],
 };

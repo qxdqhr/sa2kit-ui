@@ -1,0 +1,30 @@
+:root,
+[data-theme='animal-island'] {
+  --sa2-primary: var(--animal-primary-color);
+  --sa2-primary-hover: var(--animal-primary-color-hover);
+  --sa2-primary-active: var(--animal-primary-color-active);
+  --sa2-primary-bg: var(--animal-primary-color-bg);
+  --sa2-success: var(--animal-success-color);
+  --sa2-success-active: var(--animal-success-color-active);
+  --sa2-warning: var(--animal-warning-color);
+  --sa2-warning-active: var(--animal-warning-color-active);
+  --sa2-error: var(--animal-error-color);
+  --sa2-error-hover: var(--animal-error-color-hover);
+  --sa2-error-active: var(--animal-error-color-active);
+  --sa2-text: var(--animal-text-color);
+  --sa2-text-secondary: var(--animal-text-color-secondary);
+  --sa2-text-disabled: var(--animal-text-color-disabled);
+  --sa2-border: var(--animal-border-color);
+  --sa2-border-light: var(--animal-border-color-light);
+  --sa2-border-hover: var(--animal-border-color-hover);
+  --sa2-bg: var(--animal-bg-color);
+  --sa2-bg-secondary: var(--animal-bg-color-secondary);
+  --sa2-bg-disabled: var(--animal-bg-color-disabled);
+  --sa2-shadow-sm: var(--animal-shadow-sm);
+  --sa2-shadow-base: var(--animal-shadow-base);
+  --sa2-shadow-lg: var(--animal-shadow-lg);
+  --sa2-radius-sm: var(--animal-border-radius-sm);
+  --sa2-radius: var(--animal-border-radius-base);
+  --sa2-radius-lg: var(--animal-border-radius-lg);
+  --sa2-font: var(--animal-font-family);
+}

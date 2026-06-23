@@ -1,6 +1,5 @@
 import { cn } from '@sa2kit-ui/shared';
 import type { CursorProps } from '@sa2kit-ui/shared';
-import './cursor.css';
 
 export function Cursor({ children, className, style, forceAll = true }: CursorProps) {
   return (

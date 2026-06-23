@@ -1,0 +1,4 @@
+/* RN / Taro / 小程序：不含 Google Fonts 外链，避免移动端加载失败 */
+@import '@sa2kit-ui/tokens/base.css';
+@import './animal-components.css';
+@import './animal-sa2-bridge.css';

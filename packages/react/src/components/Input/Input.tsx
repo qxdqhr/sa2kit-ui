@@ -57,7 +57,7 @@ export function Input({
         className,
       )}
     >
-      {prefix ? <span className="sa2-input-affix mr-1.5">{prefix}</span> : null}
+      {prefix ? <span className="sa2-input-prefix">{prefix}</span> : null}
       <input
         className="sa2-input-field"
         disabled={disabled}
@@ -76,7 +76,7 @@ export function Input({
           ×
         </span>
       ) : null}
-      {suffix ? <span className="sa2-input-affix ml-1.5">{suffix}</span> : null}
+      {suffix ? <span className="sa2-input-suffix">{suffix}</span> : null}
     </span>
   );
 }

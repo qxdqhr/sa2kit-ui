@@ -16,7 +16,10 @@ packages/
 | 包 | 说明 |
 |----|------|
 | `@sa2kit-ui/tokens` | 语义设计 token（`--sa2-*` CSS 变量） |
-| `@sa2kit-ui/theme-animal-island` | 动森岛主题（Tailwind preset + 组件样式层） |
+| `@sa2kit-ui/theme-animal-island` | 动森岛主题（从 animal-island-ui Less 编译的 `animal-components.css`） |
+
+**样式同步**：当上游 `animal-island-ui` 更新时，在本仓库执行 `pnpm sync-styles` 重新编译组件 CSS（保持 sa2Kit 架构不变）。
+
 | `@sa2kit-ui/theme-runtime` | 运行时主题切换（`data-theme`） |
 | `@sa2kit-ui/react` | Web 组件 |
 | `@sa2kit-ui/electron` | Electron 桌面 |

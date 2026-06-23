@@ -54,7 +54,7 @@ export function Input({
         className,
       )}
     >
-      {prefix ? <View className="sa2-input-affix mr-1.5">{prefix}</View> : null}
+      {prefix ? <View className="sa2-input-prefix">{prefix}</View> : null}
       <TextInput
         className="sa2-input-field flex-1 bg-transparent p-0"
         editable={!disabled}
@@ -68,7 +68,7 @@ export function Input({
           <Text className="sa2-input-clear">×</Text>
         </Pressable>
       ) : null}
-      {suffix ? <View className="sa2-input-affix ml-1.5">{suffix}</View> : null}
+      {suffix ? <View className="sa2-input-suffix">{suffix}</View> : null}
     </View>
   );
 }

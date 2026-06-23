@@ -25,6 +25,7 @@ export function Button({
   type = 'default',
   size = 'middle',
   danger = false,
+  ghost = false,
   block = false,
   loading = false,
   disabled = false,
@@ -42,6 +43,7 @@ export function Button({
           sizeClass[size],
           typeClass[type],
           danger && 'sa2-btn-danger',
+          ghost && 'sa2-btn-ghost',
           block && 'sa2-btn-block',
           loading && 'sa2-btn-loading',
         )}

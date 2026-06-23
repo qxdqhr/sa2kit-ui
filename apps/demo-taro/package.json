@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "@sa2kit-ui/taro": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
     "@tarojs/components": "4.1.1",
     "@tarojs/helper": "4.1.1",
     "@tarojs/plugin-framework-react": "4.1.1",
@@ -32,6 +33,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@sa2kit-ui/theme-animal-island": "workspace:*",
     "@sa2kit-ui/tokens": "workspace:*",
     "@babel/core": "^7.26.0",
     "@babel/preset-react": "^7.26.0",

@@ -55,7 +55,7 @@ export function Input({
         className,
       )}
     >
-      {prefix ? <View className="sa2-input-affix mr-1.5">{prefix}</View> : null}
+      {prefix ? <View className="sa2-input-prefix">{prefix}</View> : null}
       <TaroInput
         className="sa2-input-field flex-1"
         disabled={disabled}
@@ -69,7 +69,7 @@ export function Input({
           ×
         </Text>
       ) : null}
-      {suffix ? <View className="sa2-input-affix ml-1.5">{suffix}</View> : null}
+      {suffix ? <View className="sa2-input-suffix">{suffix}</View> : null}
     </View>
   );
 }

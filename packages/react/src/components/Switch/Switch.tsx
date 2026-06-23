@@ -42,7 +42,7 @@ export function Switch({
       <span className="sa2-switch-handle">
         {loading ? (
           <span
-            className="block h-2.5 w-2.5 animate-sa2-spin rounded-full border-2 border-animal-success border-r-transparent"
+            className="block h-2.5 w-2.5 animate-sa2-spin rounded-full border-2 border-sa2-success border-r-transparent"
             aria-hidden
           />
         ) : null}

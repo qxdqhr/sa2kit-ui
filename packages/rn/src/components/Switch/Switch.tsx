@@ -41,7 +41,7 @@ export function Switch({
     >
       <View className="sa2-switch-handle">
         {loading ? (
-          <View className="h-2.5 w-2.5 animate-sa2-spin rounded-full border-2 border-animal-success border-r-transparent" />
+          <View className="h-2.5 w-2.5 animate-sa2-spin rounded-full border-2 border-sa2-success border-r-transparent" />
         ) : null}
       </View>
       {(checkedChildren || unCheckedChildren) && (
