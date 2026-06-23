@@ -16,8 +16,11 @@
   },
   "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react --clean",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react --external @sa2kit-ui/react --clean",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sa2kit-ui/react": "workspace:*"
   },
   "peerDependencies": {
     "react": ">=18.0.0"

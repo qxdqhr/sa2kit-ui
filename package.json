@@ -11,7 +11,8 @@
     "docs": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs... build",
     "docs:build:pages": "LADLE_BASE=/sa2kit-ui/ pnpm --filter docs... build",
-    "sync-styles": "node scripts/sync-animal-island-styles.mjs"
+    "sync-styles": "node scripts/sync-animal-island-styles.mjs",
+    "publish:react": "node scripts/publish-react-single.mjs"
   },
   "devDependencies": {
     "less": "^4.6.6",

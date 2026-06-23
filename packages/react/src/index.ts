@@ -25,6 +25,15 @@ export { Cursor } from './components/Cursor';
 export { Wallet } from './components/Wallet';
 export { WeddingInvitation, WeddingInvitationExportButton } from './components/WeddingInvitation';
 
+export {
+  ThemeProvider,
+  useTheme,
+  SA2_THEMES,
+  type Sa2ThemeId,
+  type ThemeContextValue,
+  type ThemeProviderProps,
+} from './theme';
+
 export type {
   ButtonProps,
   ButtonType,

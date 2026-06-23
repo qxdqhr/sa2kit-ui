@@ -1,7 +1,7 @@
 {
   "name": "@sa2kit-ui/react",
-  "version": "0.0.1",
-  "description": "React Web components for sa2kit-ui",
+  "version": "0.1.1",
+  "description": "React Web components for sa2kit-ui (components + themes + ThemeProvider)",
   "license": "MIT",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -13,13 +13,13 @@
       "import": "./dist/es/index.js",
       "require": "./dist/cjs/index.cjs"
     },
-    "./style": "./dist/index.css"
+    "./style": "./dist/style.css"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly",
+    "build": "vite build && tsc --project tsconfig.build.json --emitDeclarationOnly && node ../../scripts/build-react-style.mjs",
     "typecheck": "tsc --noEmit",
     "dev": "vite build --watch"
   },
