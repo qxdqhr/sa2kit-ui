@@ -246,6 +246,9 @@ importers:
       '@sa2kit-ui/theme-animal-island':
         specifier: workspace:*
         version: link:../../packages/themes/animal-island
+      '@sa2kit-ui/theme-jieyuan-garden':
+        specifier: workspace:*
+        version: link:../../packages/themes/jieyuan-garden
       '@sa2kit-ui/tokens':
         specifier: workspace:*
         version: link:../../packages/tokens
@@ -295,6 +298,9 @@ importers:
       '@sa2kit-ui/theme-animal-island':
         specifier: workspace:*
         version: link:../../packages/themes/animal-island
+      '@sa2kit-ui/theme-jieyuan-garden':
+        specifier: workspace:*
+        version: link:../../packages/themes/jieyuan-garden
       '@types/react':
         specifier: ^18.3.18
         version: 18.3.31
@@ -507,6 +513,15 @@ importers:
 
   packages/themes/animal-island:
     dependencies:
+      '@sa2kit-ui/tokens':
+        specifier: workspace:*
+        version: link:../../tokens
+
+  packages/themes/jieyuan-garden:
+    dependencies:
+      '@sa2kit-ui/theme-animal-island':
+        specifier: workspace:*
+        version: link:../animal-island
       '@sa2kit-ui/tokens':
         specifier: workspace:*
         version: link:../../tokens

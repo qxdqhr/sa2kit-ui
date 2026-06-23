@@ -1,0 +1,31 @@
+{
+  "name": "@sa2kit-ui/theme-jieyuan-garden",
+  "version": "0.2.0",
+  "description": "Arknights Jieyuan Garden theme for SA2Kit UI",
+  "license": "MIT",
+  "files": [
+    "tailwind.preset.js",
+    "jieyuan-plugin.js",
+    "jieyuan-tokens.css",
+    "jieyuan-overrides.css",
+    "jieyuan-overrides-ext.css",
+    "jieyuan-utilities.css",
+    "theme.css",
+    "theme.overlay.css",
+    "theme.mobile.css"
+  ],
+  "exports": {
+    "./tailwind.preset": "./tailwind.preset.js",
+    "./theme.css": "./theme.css",
+    "./theme.overlay.css": "./theme.overlay.css",
+    "./theme.mobile.css": "./theme.mobile.css",
+    "./plugin": "./jieyuan-plugin.js",
+    "./tokens.css": "./jieyuan-tokens.css",
+    "./overrides.css": "./jieyuan-overrides.css",
+    "./utilities.css": "./jieyuan-utilities.css"
+  },
+  "dependencies": {
+    "@sa2kit-ui/tokens": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*"
+  }
+}

@@ -1,0 +1,119 @@
+/**
+ * 界园 — 页面级工具类与环境氛围
+ */
+[data-theme='jieyuan-garden'] body {
+  font-family: var(--jy-font-body);
+  color: var(--jy-teal-deep);
+  background:
+    radial-gradient(ellipse 100% 60% at 20% -5%, rgba(232, 90, 122, 0.55), transparent 55%),
+    radial-gradient(ellipse 80% 50% at 95% 20%, rgba(183, 215, 201, 0.28), transparent 50%),
+    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(33, 78, 77, 0.15), transparent 55%),
+    var(--jy-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='jieyuan-garden'] .jy-font-display {
+  font-family: var(--jy-font-display);
+}
+
+[data-theme='jieyuan-garden'] .jy-divider-stripe {
+  height: 4px;
+  margin-block: 1rem;
+  border-radius: 2px;
+  border: none;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--jy-teal-deep),
+    var(--jy-teal-deep) 5px,
+    var(--jy-pink-500) 5px,
+    var(--jy-pink-500) 10px
+  );
+  opacity: 0.45;
+}
+
+/* v3 · 粉青统一图片滤镜 */
+[data-theme='jieyuan-garden'] .jy-img-tone {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(145deg, var(--jy-pink-200), var(--jy-mist-100));
+}
+
+[data-theme='jieyuan-garden'] .jy-img-tone > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--jy-img-filter);
+  transform: scale(1.04);
+  transition:
+    transform 0.45s var(--jy-ease),
+    filter 0.35s var(--jy-ease);
+}
+
+[data-theme='jieyuan-garden'] .jy-img-tone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--jy-img-glow);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme='jieyuan-garden'] .jy-img-tone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--jy-img-overlay);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 2;
+}
+
+[data-theme='jieyuan-garden'] .jy-img-tone:hover > img {
+  transform: scale(1.07);
+  filter: saturate(1.22) contrast(1.08) brightness(0.93) hue-rotate(4deg);
+}
+
+[data-theme='jieyuan-garden'] .jy-surface {
+  background: var(--jy-surface);
+  border: 1.5px solid var(--jy-border);
+  border-radius: var(--jy-radius-lg);
+  box-shadow: var(--jy-shadow-sm);
+}
+
+[data-theme='jieyuan-garden'] .jy-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1.5px solid transparent;
+}
+
+[data-theme='jieyuan-garden'] .jy-tag--hua {
+  background: rgba(74, 115, 102, 0.28);
+  color: var(--jy-pine-700);
+  border-color: rgba(74, 115, 102, 0.45);
+}
+
+[data-theme='jieyuan-garden'] .jy-tag--heng {
+  background: rgba(212, 154, 58, 0.32);
+  color: #7a5518;
+  border-color: rgba(212, 154, 58, 0.55);
+}
+
+[data-theme='jieyuan-garden'] .jy-tag--li {
+  background: rgba(212, 74, 106, 0.28);
+  color: #9a2d48;
+  border-color: rgba(212, 74, 106, 0.48);
+}
+
+[data-theme='jieyuan-garden'] .jy-tag--muted {
+  background: rgba(22, 58, 57, 0.1);
+  color: var(--jy-teal-deep);
+  border-color: var(--jy-border);
+}

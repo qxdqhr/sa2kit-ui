@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="jieyuan-garden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>界园主题预览 v3 · Jieyuan Garden Theme Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* v2 加深色板 — 提高饱和度与对比 */
+      --jy-pink-600: #d44a6a;
+      --jy-pink-500: #e85a7a;
+      --jy-pink-400: #ef6d8f;
+      --jy-pink-200: #e8a0b8;
+      --jy-mist-100: #e6d8dc;
+      --jy-rose-500: #b85a5e;
+      --jy-rose-400: #c97b7e;
+      --jy-mint-400: #7fb89e;
+      --jy-mint-300: #8fc4ad;
+      --jy-pine-700: #3d5f54;
+      --jy-pine-600: #4a7366;
+      --jy-teal-deep: #163a39;
+      --jy-teal-mid: #214e4d;
+      --jy-gold: #d49a3a;
+      --jy-gold-light: #ecc978;
+      --jy-danger: #b83838;
+
+      --jy-bg: #e8d4da;
+      --jy-surface: rgba(255, 252, 253, 0.96);
+      --jy-text: #163a39;
+      --jy-text-muted: #4a7366;
+      --jy-border: rgba(22, 58, 57, 0.22);
+      --jy-border-strong: rgba(22, 58, 57, 0.38);
+
+      --jy-gradient-sky: linear-gradient(155deg, #e8a0b8 0%, #e6d8dc 38%, #8fc4ad 100%);
+      --jy-gradient-pink: linear-gradient(135deg, #ef6d8f 0%, #d44a6a 100%);
+      --jy-gradient-teal: linear-gradient(135deg, #214e4d 0%, #163a39 100%);
+      --jy-gradient-gold: linear-gradient(180deg, #ecc978, #d49a3a);
+
+      --jy-radius-sm: 8px;
+      --jy-radius-md: 14px;
+      --jy-radius-lg: 20px;
+
+      --jy-shadow-sm: 0 3px 14px rgba(22, 58, 57, 0.12);
+      --jy-shadow-md: 0 10px 32px rgba(22, 58, 57, 0.18);
+      --jy-shadow-pink: 0 8px 28px rgba(212, 74, 106, 0.28);
+      --jy-shadow-focus: 0 0 0 3px rgba(212, 154, 58, 0.55);
+
+      --jy-font-display: 'Noto Serif SC', serif;
+      --jy-font-body: 'Noto Sans SC', system-ui, sans-serif;
+      --jy-ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --jy-duration: 220ms;
+      --jy-nav-h: 4rem;
+      --jy-max: 76rem;
+
+      /* v3 统一粉青图片滤镜 */
+      --jy-img-filter: saturate(1.18) contrast(1.06) brightness(0.94) hue-rotate(2deg);
+      --jy-img-overlay: linear-gradient(
+        128deg,
+        rgba(232, 90, 122, 0.5) 0%,
+        rgba(232, 160, 184, 0.28) 52%,
+        rgba(22, 58, 57, 0.22) 100%
+      );
+      --jy-img-glow: linear-gradient(
+        165deg,
+        rgba(239, 109, 143, 0.26) 0%,
+        rgba(240, 235, 236, 0.18) 100%
+      );
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      font-family: var(--jy-font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--jy-text);
+      background:
+        radial-gradient(ellipse 100% 60% at 20% -5%, rgba(232, 90, 122, 0.55), transparent 55%),
+        radial-gradient(ellipse 80% 50% at 95% 20%, rgba(183, 215, 201, 0.28), transparent 50%),
+        radial-gradient(ellipse 70% 40% at 50% 100%, rgba(33, 78, 77, 0.15), transparent 55%),
+        var(--jy-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.06;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .jy-page { padding-top: calc(var(--jy-nav-h) + 1.25rem); padding-bottom: 4rem; }
+    .jy-container { width: min(100% - 2rem, var(--jy-max)); margin-inline: auto; }
+
+    /* v3 · 粉青统一滤镜（所有摄影组件共用） */
+    .jy-img-tone {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: linear-gradient(145deg, var(--jy-pink-200), var(--jy-mist-100));
+    }
+
+    .jy-img-tone > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: var(--jy-img-filter);
+      transform: scale(1.04);
+      transition: transform 0.45s var(--jy-ease), filter 0.35s var(--jy-ease);
+    }
+
+    .jy-img-tone::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--jy-img-glow);
+      mix-blend-mode: soft-light;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .jy-img-tone::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--jy-img-overlay);
+      mix-blend-mode: multiply;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .jy-tile:hover .jy-img-tone > img,
+    .jy-hero__photo:hover .jy-img-tone > img {
+      transform: scale(1.07);
+      filter: saturate(1.22) contrast(1.08) brightness(0.93) hue-rotate(4deg);
+    }
+
+    /* Nav */
+    .jy-nav {
+      position: fixed; inset: 0 0 auto; z-index: 100;
+      height: var(--jy-nav-h);
+      display: flex; align-items: center; padding: 0 1rem;
+      background: linear-gradient(90deg, rgba(232, 160, 184, 0.85), rgba(230, 216, 220, 0.82));
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--jy-border);
+      box-shadow: var(--jy-shadow-sm);
+    }
+
+    .jy-nav__inner {
+      display: flex; align-items: center; justify-content: space-between;
+      width: min(100%, var(--jy-max)); margin: 0 auto; gap: 1rem;
+    }
+
+    .jy-nav__brand {
+      font-family: var(--jy-font-display);
+      font-size: 1.25rem; font-weight: 700;
+      color: var(--jy-teal-deep);
+      letter-spacing: 0.06em;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    }
+
+    .jy-nav__links { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; margin: 0; padding: 0; }
+
+    .jy-nav__link {
+      display: inline-flex; align-items: center;
+      min-height: 2.25rem; padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8125rem; font-weight: 600;
+      color: var(--jy-teal-deep);
+      text-decoration: none;
+      background: rgba(255,255,255,0.35);
+      border: 1px solid rgba(255,255,255,0.5);
+      transition: all var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-nav__link:hover, .jy-nav__link.is-active {
+      background: var(--jy-teal-deep);
+      color: #fff;
+      border-color: var(--jy-teal-deep);
+    }
+
+    /* Hero with photo */
+    .jy-hero {
+      position: relative;
+      margin-bottom: 2.5rem;
+      min-height: 22rem;
+      border-radius: var(--jy-radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--jy-border-strong);
+      box-shadow: var(--jy-shadow-md);
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 768px) {
+      .jy-hero { grid-template-columns: 1.05fr 0.95fr; min-height: 24rem; }
+    }
+
+    .jy-hero__photo {
+      position: relative;
+      min-height: 14rem;
+    }
+
+    .jy-hero__photo.jy-img-tone > img {
+      min-height: 14rem;
+    }
+
+    .jy-hero__panel {
+      position: relative;
+      padding: 2rem 1.75rem;
+      background: var(--jy-gradient-sky);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+
+    .jy-hero__panel::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 6px, rgba(22,58,57,0.04) 6px, rgba(22,58,57,0.04) 12px);
+      pointer-events: none;
+    }
+
+    .jy-hero__content { position: relative; z-index: 1; }
+
+    .jy-hero__eyebrow {
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: var(--jy-gradient-gold);
+      color: var(--jy-teal-deep);
+      font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.1em;
+      box-shadow: var(--jy-shadow-sm);
+    }
+
+    .jy-hero__title {
+      margin: 0 0 0.35rem;
+      font-family: var(--jy-font-display);
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--jy-teal-deep);
+      text-shadow: 0 2px 0 rgba(255,255,255,0.35);
+    }
+
+    .jy-hero__subtitle {
+      margin: 0 0 0.25rem;
+      font-family: var(--jy-font-display);
+      font-size: 1.2rem;
+      color: var(--jy-pink-600);
+      letter-spacing: 0.14em;
+      font-weight: 600;
+    }
+
+    .jy-hero__en {
+      margin: 0 0 1rem;
+      font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--jy-pine-700);
+    }
+
+    .jy-hero__desc { margin: 0; max-width: 28rem; color: var(--jy-teal-deep); font-weight: 500; opacity: 0.88; }
+
+    .jy-hero__meta {
+      display: flex; flex-wrap: wrap; gap: 0.65rem;
+      margin-top: 1.25rem;
+    }
+
+    .jy-hero__meta span {
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--jy-radius-sm);
+      background: rgba(22,58,57,0.12);
+      border: 1px solid var(--jy-border);
+      font-size: 0.6875rem; font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--jy-teal-deep);
+    }
+
+    /* Section */
+    .jy-section { margin-bottom: 2.75rem; }
+
+    .jy-section__head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 1rem; margin-bottom: 1rem;
+    }
+
+    .jy-section__title {
+      margin: 0;
+      font-family: var(--jy-font-display);
+      font-size: 1.625rem; font-weight: 700;
+      color: var(--jy-teal-deep);
+    }
+
+    .jy-section__id {
+      font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.15em; color: var(--jy-rose-500);
+    }
+
+    .jy-divider {
+      height: 4px; margin-bottom: 1.25rem; border-radius: 2px;
+      background: repeating-linear-gradient(-45deg, var(--jy-teal-deep), var(--jy-teal-deep) 5px, var(--jy-pink-500) 5px, var(--jy-pink-500) 10px);
+      opacity: 0.45;
+    }
+
+    .jy-bento { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) {
+      .jy-bento { grid-template-columns: repeat(2, 1fr); }
+      .jy-bento--3 { grid-template-columns: repeat(3, 1fr); }
+      .jy-bento__span-2 { grid-column: span 2; }
+    }
+
+    /* Cards */
+    .jy-card {
+      padding: 1.25rem;
+      border-radius: var(--jy-radius-lg);
+      background: var(--jy-surface);
+      border: 1.5px solid var(--jy-border);
+      box-shadow: var(--jy-shadow-sm);
+      transition: transform var(--jy-duration) var(--jy-ease), box-shadow var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-card:hover { box-shadow: var(--jy-shadow-md); }
+
+    .jy-card--pink {
+      background: linear-gradient(145deg, rgba(239,109,143,0.22), rgba(255,252,253,0.95));
+      border-color: rgba(212,74,106,0.35);
+    }
+
+    .jy-card--mint {
+      background: linear-gradient(145deg, rgba(143,196,173,0.35), rgba(255,252,253,0.92));
+      border-color: rgba(74,115,102,0.35);
+    }
+
+    .jy-card--teal {
+      background: var(--jy-gradient-teal);
+      border-color: #0f2a29;
+      color: #fff;
+    }
+
+    .jy-card--teal .jy-card__label,
+    .jy-card--teal .jy-card__title { color: rgba(255,255,255,0.85); }
+    .jy-card--teal .jy-card__title { color: #fff; }
+
+    .jy-card__label {
+      margin: 0 0 0.75rem;
+      font-size: 0.6875rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--jy-rose-500);
+    }
+
+    .jy-card__title { margin: 0 0 0.5rem; font-size: 1.0625rem; font-weight: 700; color: var(--jy-teal-deep); }
+
+    /* Image tile */
+    .jy-tile {
+      position: relative;
+      border-radius: var(--jy-radius-lg);
+      overflow: hidden;
+      min-height: 11rem;
+      border: 2px solid var(--jy-border-strong);
+      box-shadow: var(--jy-shadow-sm);
+      cursor: pointer;
+      transition: transform var(--jy-duration) var(--jy-ease), box-shadow var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-tile:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--jy-shadow-pink);
+    }
+
+    .jy-tile__media {
+      flex: 1;
+      min-height: 11rem;
+    }
+
+    .jy-tile__media > img {
+      min-height: 11rem;
+    }
+
+    .jy-tile__overlay {
+      position: absolute; inset: 0;
+      z-index: 3;
+      background: linear-gradient(to top, rgba(22,58,57,0.78) 0%, rgba(212,74,106,0.32) 55%, rgba(240,235,236,0.08) 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 1rem 1.1rem;
+      color: #fff;
+    }
+
+    .jy-tile__en {
+      font-size: 0.625rem; font-weight: 700;
+      letter-spacing: 0.18em; opacity: 0.85;
+      text-transform: uppercase;
+    }
+
+    .jy-tile__name {
+      margin: 0.15rem 0 0;
+      font-family: var(--jy-font-display);
+      font-size: 1.35rem; font-weight: 700;
+    }
+
+    /* Media row */
+    .jy-media-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.65rem;
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 640px) { .jy-media-row { grid-template-columns: repeat(4, 1fr); } }
+
+    .jy-media-row__cell {
+      aspect-ratio: 4 / 3;
+      border-radius: var(--jy-radius-md);
+      border: 2px solid var(--jy-border-strong);
+      box-shadow: var(--jy-shadow-sm);
+    }
+
+    .jy-media-row__cell > img {
+      min-height: 100%;
+    }
+
+    .jy-form-split__img {
+      border-radius: var(--jy-radius-md);
+      border: 2px solid var(--jy-border-strong);
+      min-height: 10rem;
+    }
+
+    .jy-form-split__img > img {
+      min-height: 10rem;
+    }
+
+    /* Swatches */
+    .jy-swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(5.25rem, 1fr));
+      gap: 0.65rem;
+    }
+
+    .jy-swatch {
+      border-radius: var(--jy-radius-md);
+      overflow: hidden;
+      border: 2px solid var(--jy-border-strong);
+      box-shadow: var(--jy-shadow-sm);
+    }
+
+    .jy-swatch__color { height: 3.25rem; }
+    .jy-swatch__info {
+      padding: 0.35rem 0.45rem;
+      background: #fff;
+      font-size: 0.625rem; font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.35;
+      color: var(--jy-teal-deep);
+    }
+
+    /* Buttons */
+    .jy-btn-row { display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center; }
+
+    .jy-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 2.75rem; padding: 0.5rem 1.15rem;
+      border: 2px solid transparent;
+      border-radius: var(--jy-radius-md);
+      font: inherit; font-size: 0.875rem; font-weight: 600;
+      cursor: pointer;
+      transition: all var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-btn:active { transform: scale(0.97); }
+    .jy-btn:focus-visible { outline: none; box-shadow: var(--jy-shadow-focus); }
+
+    .jy-btn--primary {
+      background: var(--jy-gradient-teal);
+      color: #fff;
+      border-color: #0f2a29;
+      box-shadow: 0 4px 0 #0f2a29;
+    }
+    .jy-btn--primary:hover { filter: brightness(1.08); }
+
+    .jy-btn--pink {
+      background: var(--jy-gradient-pink);
+      color: #fff;
+      border-color: #b83a58;
+      box-shadow: 0 4px 0 #b83a58;
+    }
+
+    .jy-btn--secondary {
+      background: rgba(201,123,126,0.35);
+      color: var(--jy-teal-deep);
+      border-color: var(--jy-rose-500);
+    }
+
+    .jy-btn--ghost {
+      background: rgba(255,255,255,0.55);
+      color: var(--jy-teal-deep);
+      border-color: var(--jy-border-strong);
+    }
+
+    .jy-btn--gold {
+      background: var(--jy-gradient-gold);
+      color: var(--jy-teal-deep);
+      border-color: #b07828;
+      box-shadow: 0 3px 0 #b07828;
+    }
+
+    .jy-btn--danger { background: var(--jy-danger); color: #fff; border-color: #8f2e2e; }
+    .jy-btn--sm { min-height: 2.25rem; padding: 0.35rem 0.85rem; font-size: 0.8125rem; }
+    .jy-btn:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+
+    /* Form */
+    .jy-field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 0.85rem; }
+    .jy-field label { font-size: 0.8125rem; font-weight: 700; color: var(--jy-teal-deep); }
+
+    .jy-input, .jy-textarea, .jy-select {
+      width: 100%; padding: 0.7rem 0.95rem;
+      border: 2px solid var(--jy-border-strong);
+      border-radius: var(--jy-radius-md);
+      background: rgba(255,255,255,0.92);
+      color: var(--jy-text);
+      font: inherit; font-weight: 500;
+      transition: border-color var(--jy-duration) var(--jy-ease), box-shadow var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-input:focus, .jy-textarea:focus, .jy-select:focus {
+      outline: none;
+      border-color: var(--jy-gold);
+      box-shadow: var(--jy-shadow-focus);
+    }
+
+    .jy-textarea { min-height: 5.5rem; resize: vertical; }
+
+    .jy-form-split {
+      display: grid; gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .jy-form-split { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+    }
+
+    .jy-form-split__img {
+      border-radius: var(--jy-radius-md);
+      border: 2px solid var(--jy-border-strong);
+      min-height: 10rem;
+    }
+
+    .jy-form-split__img > img {
+      min-height: 10rem;
+    }
+
+    /* Tags */
+    .jy-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+
+    .jy-tag {
+      display: inline-flex; align-items: center;
+      min-height: 1.85rem; padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem; font-weight: 700;
+      border: 1.5px solid transparent;
+    }
+
+    .jy-tag--hua { background: rgba(74,115,102,0.28); color: var(--jy-pine-700); border-color: rgba(74,115,102,0.45); }
+    .jy-tag--heng { background: rgba(212,154,58,0.32); color: #7a5518; border-color: rgba(212,154,58,0.55); }
+    .jy-tag--li { background: rgba(212,74,106,0.28); color: #9a2d48; border-color: rgba(212,74,106,0.48); }
+    .jy-tag--muted { background: rgba(22,58,57,0.1); color: var(--jy-teal-deep); border-color: var(--jy-border); }
+
+    /* Coin box */
+    .jy-coinbox { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0.45rem; }
+
+    .jy-coin {
+      aspect-ratio: 1;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.15rem; padding: 0.35rem;
+      border-radius: var(--jy-radius-sm);
+      border: 2px solid var(--jy-border-strong);
+      background: rgba(255,255,255,0.75);
+      font-size: 0.625rem; font-weight: 700;
+      cursor: pointer;
+      transition: all var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-coin:hover { border-color: var(--jy-gold); }
+    .jy-coin.is-active {
+      border-color: var(--jy-gold);
+      background: rgba(212,154,58,0.28);
+      box-shadow: var(--jy-shadow-focus);
+      transform: scale(1.04);
+    }
+
+    .jy-coin__icon { width: 1.25rem; height: 1.25rem; border-radius: 999px; border: 2.5px solid currentColor; }
+    .jy-coin--hua { color: var(--jy-pine-700); background: rgba(143,196,173,0.25); }
+    .jy-coin--heng { color: var(--jy-gold); background: rgba(212,154,58,0.18); }
+    .jy-coin--li { color: var(--jy-pink-600); background: rgba(232,90,122,0.18); }
+
+    /* Tabs */
+    .jy-tabs {
+      display: flex; flex-wrap: wrap; gap: 0.35rem;
+      margin-bottom: 1rem; padding: 0.35rem;
+      border-radius: var(--jy-radius-md);
+      background: rgba(22,58,57,0.1);
+      border: 1px solid var(--jy-border);
+    }
+
+    .jy-tab {
+      flex: 1; min-width: 5rem; min-height: 2.5rem;
+      padding: 0.45rem 0.75rem;
+      border: 0; border-radius: var(--jy-radius-sm);
+      background: transparent;
+      font: inherit; font-size: 0.8125rem; font-weight: 600;
+      color: var(--jy-text-muted);
+      cursor: pointer;
+      transition: all var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-tab.is-active {
+      background: var(--jy-gradient-pink);
+      color: #fff;
+      box-shadow: var(--jy-shadow-sm);
+    }
+
+    .jy-tab-panel { display: none; }
+    .jy-tab-panel.is-active { display: block; }
+
+    .jy-tree { display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center; }
+
+    .jy-tree-node {
+      min-width: 5.5rem; padding: 0.65rem 0.85rem;
+      border-radius: var(--jy-radius-md);
+      border: 2px solid var(--jy-border-strong);
+      background: rgba(255,255,255,0.85);
+      text-align: center; font-size: 0.8125rem; font-weight: 600;
+      cursor: pointer;
+      transition: all var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-tree-node.is-lit {
+      border-color: var(--jy-gold);
+      background: rgba(212,154,58,0.28);
+      color: var(--jy-teal-deep);
+      box-shadow: var(--jy-shadow-focus);
+    }
+
+    .jy-tree-arrow { color: var(--jy-rose-500); font-weight: 700; }
+
+    /* Table */
+    .jy-table-wrap {
+      overflow-x: auto;
+      border-radius: var(--jy-radius-md);
+      border: 2px solid var(--jy-border-strong);
+    }
+
+    .jy-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+
+    .jy-table th, .jy-table td {
+      padding: 0.65rem 0.85rem;
+      text-align: left;
+      border-bottom: 1px solid var(--jy-border);
+    }
+
+    .jy-table th {
+      background: var(--jy-gradient-teal);
+      color: #fff;
+      font-weight: 700; font-size: 0.75rem;
+      letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
+    .jy-table tr:last-child td { border-bottom: 0; }
+    .jy-table tr:hover td { background: rgba(232,160,184,0.2); }
+
+    /* Switch */
+    .jy-switch-row { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; }
+
+    .jy-switch {
+      position: relative; width: 2.75rem; height: 1.5rem;
+      border-radius: 999px;
+      background: rgba(22,58,57,0.25);
+      border: 2px solid var(--jy-border-strong);
+      cursor: pointer;
+      transition: background var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-switch::after {
+      content: ''; position: absolute; top: 2px; left: 2px;
+      width: 1rem; height: 1rem; border-radius: 999px;
+      background: #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      transition: transform var(--jy-duration) var(--jy-ease);
+    }
+
+    .jy-switch.is-on { background: var(--jy-pink-500); border-color: var(--jy-pink-600); }
+    .jy-switch.is-on::after { transform: translateX(1.2rem); }
+
+    .jy-check { display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; font-weight: 600; }
+    .jy-check input { width: 1.125rem; height: 1.125rem; accent-color: var(--jy-pink-600); }
+
+    .jy-vertical {
+      writing-mode: vertical-rl;
+      font-family: var(--jy-font-display);
+      font-size: 1.2rem; font-weight: 600;
+      letter-spacing: 0.18em;
+      color: var(--jy-teal-deep);
+      padding: 1rem 0.5rem;
+      border-left: 3px solid var(--jy-gold);
+      background: rgba(212,154,58,0.12);
+      border-radius: 0 var(--jy-radius-sm) var(--jy-radius-sm) 0;
+    }
+
+    .jy-progress-label {
+      display: flex; justify-content: space-between;
+      margin-bottom: 0.35rem;
+      font-size: 0.75rem; font-weight: 700;
+      color: var(--jy-teal-deep);
+    }
+
+    .jy-progress {
+      height: 8px; border-radius: 999px;
+      background: rgba(22,58,57,0.15);
+      border: 1px solid var(--jy-border);
+      overflow: hidden;
+    }
+
+    .jy-progress__bar {
+      height: 100%; width: 62%;
+      background: linear-gradient(90deg, var(--jy-gold), var(--jy-pink-500), var(--jy-mint-400));
+      box-shadow: 0 0 10px rgba(212,154,58,0.65);
+    }
+
+    /* Modal */
+    .jy-modal-backdrop {
+      position: fixed; inset: 0; z-index: 200;
+      display: none; align-items: center; justify-content: center;
+      padding: 1rem;
+      background: rgba(22,58,57,0.55);
+      backdrop-filter: blur(8px);
+    }
+
+    .jy-modal-backdrop.is-open { display: flex; }
+
+    .jy-modal {
+      width: min(100%, 26rem);
+      border-radius: var(--jy-radius-lg);
+      overflow: hidden;
+      border: 2px solid var(--jy-border-strong);
+      box-shadow: var(--jy-shadow-md);
+      animation: jy-modal-in 0.28s var(--jy-ease);
+    }
+
+    @keyframes jy-modal-in {
+      from { opacity: 0; transform: translateY(10px) scale(0.98); }
+      to { opacity: 1; transform: none; }
+    }
+
+    .jy-modal__banner {
+      height: 8rem;
+    }
+
+    .jy-modal__banner > img {
+      min-height: 8rem;
+    }
+
+    .jy-modal__body { padding: 1.25rem 1.5rem 1.5rem; background: var(--jy-gradient-sky); }
+
+    .jy-modal__title {
+      margin: 0 0 0.5rem;
+      font-family: var(--jy-font-display);
+      font-size: 1.35rem;
+      color: var(--jy-teal-deep);
+    }
+
+    .jy-modal__actions {
+      display: flex; justify-content: flex-end; gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .jy-note {
+      margin-top: 2rem; padding: 1rem 1.25rem;
+      border-radius: var(--jy-radius-md);
+      border: 2px dashed var(--jy-rose-500);
+      background: rgba(232,160,184,0.25);
+      font-size: 0.8125rem; color: var(--jy-teal-deep);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+      html { scroll-behavior: auto; }
+      .jy-img-tone > img { transform: none !important; }
+    }
+
+    @media (max-width: 640px) {
+      .jy-nav__links { display: none; }
+      .jy-coinbox { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="jy-nav" id="nav">
+    <div class="jy-nav__inner">
+      <span class="jy-nav__brand">界园 · 主题预览 v3</span>
+      <ul class="jy-nav__links">
+        <li><a class="jy-nav__link is-active" href="#gates">门楼</a></li>
+        <li><a class="jy-nav__link" href="#colors">配色</a></li>
+        <li><a class="jy-nav__link" href="#components">组件</a></li>
+        <li><a class="jy-nav__link" href="#modules">模块</a></li>
+      </ul>
+      <button type="button" class="jy-btn jy-btn--primary jy-btn--sm" id="openModal">进入</button>
+    </div>
+  </header>
+
+  <main class="jy-page">
+    <div class="jy-container">
+      <section class="jy-hero" aria-labelledby="hero-title">
+        <div class="jy-hero__photo jy-img-tone">
+          <img src="jieyuan-garden/assets/hero-pavilion.jpg" alt="中式亭台水景" width="800" height="600" />
+        </div>
+        <div class="jy-hero__panel">
+          <div class="jy-hero__content">
+            <span class="jy-hero__eyebrow">v3 · 粉青滤镜（轻绿）</span>
+            <h1 class="jy-hero__title" id="hero-title">界园志异</h1>
+            <p class="jy-hero__subtitle">岁的界园志异</p>
+            <p class="jy-hero__en">A Garden of Grotesqueries</p>
+            <p class="jy-hero__desc">
+              全部摄影组件套用 <code>.jy-img-tone</code> 粉青滤镜（CSS filter + multiply/soft-light 叠层），与 v2 色板一致。
+            </p>
+            <div class="jy-hero__meta">
+              <span>NO.001010123</span>
+              <span>集成战略 #6</span>
+              <span>粉青 · 剪纸 · 志怪</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Official-style gates -->
+      <section class="jy-section" id="gates">
+        <div class="jy-section__head">
+          <h2 class="jy-section__title">主题门楼</h2>
+          <span class="jy-section__id">§ GATES</span>
+        </div>
+        <div class="jy-divider"></div>
+        <div class="jy-bento jy-bento--3">
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-lantern.jpg" alt="听运亭 · 灯笼园林" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">TINGYUNTING</span>
+              <h3 class="jy-tile__name">听运亭</h3>
+            </div>
+          </article>
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-garden.jpg" alt="录籍塔 · 豫园" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">LUJITA</span>
+              <h3 class="jy-tile__name">录籍塔</h3>
+            </div>
+          </article>
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-cherry.jpg" alt="藏宝阁 · 樱园" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">CANGBAOGE</span>
+              <h3 class="jy-tile__name">藏宝阁</h3>
+            </div>
+          </article>
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-pavilion.jpg" alt="迎客楼 · 亭台" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">YINGKELOU</span>
+              <h3 class="jy-tile__name">迎客楼</h3>
+            </div>
+          </article>
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-bridge.jpg" alt="回望门 · 曲桥" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">HUIWANGMEN</span>
+              <h3 class="jy-tile__name">回望门</h3>
+            </div>
+          </article>
+          <article class="jy-tile">
+            <div class="jy-img-tone jy-tile__media">
+              <img src="jieyuan-garden/assets/module-lanterns-night.jpg" alt="留影祠 · 夜灯" loading="lazy" />
+            </div>
+            <div class="jy-tile__overlay">
+              <span class="jy-tile__en">LIUYINGCI</span>
+              <h3 class="jy-tile__name">留影祠</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="jy-section" id="colors">
+        <div class="jy-section__head">
+          <h2 class="jy-section__title">配色 Token</h2>
+          <span class="jy-section__id">§ COLORS</span>
+        </div>
+        <div class="jy-divider"></div>
+        <div class="jy-card jy-card--pink">
+          <div class="jy-swatches">
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#d44a6a"></div><div class="jy-swatch__info">pink-600<br>#D44A6A</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#e85a7a"></div><div class="jy-swatch__info">pink-500<br>#E85A7A</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#ef6d8f"></div><div class="jy-swatch__info">pink-400<br>#EF6D8F</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#e8a0b8"></div><div class="jy-swatch__info">pink-200<br>#E8A0B8</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#e6d8dc"></div><div class="jy-swatch__info">mist<br>#E6D8DC</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#8fc4ad"></div><div class="jy-swatch__info">mint<br>#8FC4AD</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#4a7366"></div><div class="jy-swatch__info">pine<br>#4A7366</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#163a39"></div><div class="jy-swatch__info">teal-deep<br>#163A39</div></div>
+            <div class="jy-swatch"><div class="jy-swatch__color" style="background:#d49a3a"></div><div class="jy-swatch__info">gold<br>#D49A3A</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jy-section" id="components">
+        <div class="jy-section__head">
+          <h2 class="jy-section__title">基础组件</h2>
+          <span class="jy-section__id">§ COMPONENTS</span>
+        </div>
+        <div class="jy-divider"></div>
+
+        <div class="jy-bento">
+          <div class="jy-card jy-card--mint">
+            <p class="jy-card__label">Button</p>
+            <div class="jy-btn-row">
+              <button type="button" class="jy-btn jy-btn--primary">进入界园</button>
+              <button type="button" class="jy-btn jy-btn--pink">听运亭</button>
+              <button type="button" class="jy-btn jy-btn--secondary">录籍塔</button>
+              <button type="button" class="jy-btn jy-btn--ghost">藏宝阁</button>
+              <button type="button" class="jy-btn jy-btn--gold">投钱</button>
+              <button type="button" class="jy-btn jy-btn--danger jy-btn--sm">险路</button>
+            </div>
+          </div>
+
+          <div class="jy-card jy-card--pink">
+            <p class="jy-card__label">Tag · 通宝</p>
+            <div class="jy-tags">
+              <span class="jy-tag jy-tag--hua">花钱 · 稳定收益</span>
+              <span class="jy-tag jy-tag--heng">衡钱 · 均衡</span>
+              <span class="jy-tag jy-tag--li">厉钱 · 激进</span>
+              <span class="jy-tag jy-tag--muted">NO.001010123</span>
+            </div>
+          </div>
+
+          <div class="jy-card jy-bento__span-2">
+            <p class="jy-card__label">Form · 带配图</p>
+            <div class="jy-form-split">
+              <div class="jy-form-split__img jy-img-tone">
+                <img src="jieyuan-garden/assets/module-lantern.jpg" alt="登记配图" loading="lazy" />
+              </div>
+              <div>
+                <div class="jy-field">
+                  <label for="name">登记名</label>
+                  <input class="jy-input" id="name" type="text" placeholder="请登记信息" />
+                </div>
+                <div class="jy-field">
+                  <label for="route">游览路线</label>
+                  <select class="jy-select" id="route">
+                    <option>听运亭</option>
+                    <option>藏宝阁</option>
+                    <option>岁兽残识</option>
+                  </select>
+                </div>
+                <div class="jy-field" style="margin-bottom:0">
+                  <label for="msg">见字</label>
+                  <textarea class="jy-textarea" id="msg" placeholder="江山既如画，何人在境中？"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="jy-card jy-card--teal">
+            <p class="jy-card__label">Switch · Checkbox</p>
+            <div class="jy-switch-row">
+              <div class="jy-switch is-on" role="switch" aria-checked="true" tabindex="0" id="demoSwitch"></div>
+              <label class="jy-check"><input type="checkbox" checked /> 留存招募券</label>
+              <label class="jy-check"><input type="checkbox" /> 深入探索</label>
+            </div>
+          </div>
+
+          <div class="jy-card">
+            <p class="jy-card__label">烛火进度</p>
+            <div class="jy-progress-label"><span>残识深度</span><span>62%</span></div>
+            <div class="jy-progress"><div class="jy-progress__bar"></div></div>
+            <div class="jy-media-row" style="margin-top:1rem;margin-bottom:0">
+              <div class="jy-img-tone jy-media-row__cell">
+                <img src="jieyuan-garden/assets/module-pavilion.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="jy-img-tone jy-media-row__cell">
+                <img src="jieyuan-garden/assets/module-bridge.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="jy-img-tone jy-media-row__cell">
+                <img src="jieyuan-garden/assets/module-cherry.jpg" alt="" loading="lazy" />
+              </div>
+              <div class="jy-img-tone jy-media-row__cell">
+                <img src="jieyuan-garden/assets/module-lanterns-night.jpg" alt="" loading="lazy" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="jy-section" id="modules">
+        <div class="jy-section__head">
+          <h2 class="jy-section__title">界园模块示意</h2>
+          <span class="jy-section__id">§ MODULES</span>
+        </div>
+        <div class="jy-divider"></div>
+
+        <div class="jy-bento jy-bento--3">
+          <div class="jy-card jy-card--mint jy-bento__span-2">
+            <p class="jy-card__label">钱盒 · Coin Box</p>
+            <p class="jy-card__title">7 枚通宝槽位</p>
+            <div class="jy-coinbox" id="coinbox">
+              <button type="button" class="jy-coin jy-coin--hua is-active"><span class="jy-coin__icon"></span>花钱</button>
+              <button type="button" class="jy-coin jy-coin--heng"><span class="jy-coin__icon"></span>衡钱</button>
+              <button type="button" class="jy-coin jy-coin--li"><span class="jy-coin__icon"></span>厉钱</button>
+              <button type="button" class="jy-coin jy-coin--hua"><span class="jy-coin__icon"></span>花钱</button>
+              <button type="button" class="jy-coin jy-coin--heng"><span class="jy-coin__icon"></span>衡钱</button>
+              <button type="button" class="jy-coin jy-coin--li"><span class="jy-coin__icon"></span>厉钱</button>
+              <button type="button" class="jy-coin jy-coin--heng"><span class="jy-coin__icon"></span>衡钱</button>
+            </div>
+          </div>
+
+          <div class="jy-card jy-card--pink">
+            <p class="jy-card__label">见字</p>
+            <p class="jy-vertical">江山既如画<br>何人在境中</p>
+          </div>
+
+          <div class="jy-card jy-bento__span-2">
+            <p class="jy-card__label">古今学识 · Tabs</p>
+            <div class="jy-tabs" role="tablist">
+              <button type="button" class="jy-tab is-active" data-tab="wei">伟业篇</button>
+              <button type="button" class="jy-tab" data-tab="lun">论道篇</button>
+              <button type="button" class="jy-tab" data-tab="liu">留钱</button>
+            </div>
+            <div class="jy-tab-panel is-active" data-panel="wei">
+              <div class="jy-tree">
+                <span class="jy-tree-node is-lit">明烛试炼</span>
+                <span class="jy-tree-arrow">→</span>
+                <span class="jy-tree-node is-lit">留存券+1</span>
+                <span class="jy-tree-arrow">→</span>
+                <span class="jy-tree-node">狭路相逢</span>
+              </div>
+            </div>
+            <div class="jy-tab-panel" data-panel="lun">
+              <div class="jy-tree">
+                <span class="jy-tree-node">擂台伺烛</span>
+                <span class="jy-tree-arrow">→</span>
+                <span class="jy-tree-node is-lit">指点迷津</span>
+              </div>
+            </div>
+            <div class="jy-tab-panel" data-panel="liu">
+              <p style="margin:0;font-size:0.875rem;font-weight:600;color:var(--jy-teal-deep)">首次再投免费，之后每次消耗 1 票券。</p>
+            </div>
+          </div>
+
+          <div class="jy-card">
+            <p class="jy-card__label">录籍塔 · Table</p>
+            <div class="jy-table-wrap">
+              <table class="jy-table">
+                <thead><tr><th>单位</th><th>类型</th><th>威胁</th></tr></thead>
+                <tbody>
+                  <tr><td>矩兽</td><td>精英</td><td>高</td></tr>
+                  <tr><td>后兽</td><td>首领</td><td>极高</td></tr>
+                  <tr><td>岁影</td><td>装置</td><td>—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <p class="jy-note">
+        预览 v3：v2 色板 + 全图 <code>.jy-img-tone</code> 粉青滤镜。资源见
+        <code>jieyuan-garden/assets/ATTRIBUTION.md</code>。请从 <code>docs/themes/</code> 启动 HTTP 服务。
+      </p>
+    </div>
+  </main>
+
+  <div class="jy-modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="jy-modal">
+      <div class="jy-modal__banner jy-img-tone">
+        <img src="jieyuan-garden/assets/hero-pavilion.jpg" alt="" />
+      </div>
+      <div class="jy-modal__body">
+        <h3 class="jy-modal__title" id="modal-title">进入界园</h3>
+        <p style="margin:0;font-size:0.875rem;font-weight:500;color:var(--jy-teal-deep)">
+          带横幅图的毛玻璃弹窗 — 更接近官方主题站「进入」交互。
+        </p>
+        <div class="jy-modal__actions">
+          <button type="button" class="jy-btn jy-btn--ghost jy-btn--sm" id="closeModal">取消</button>
+          <button type="button" class="jy-btn jy-btn--primary jy-btn--sm" id="confirmModal">确认进入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('is-scrolled', window.scrollY > 8), { passive: true });
+
+    const modal = document.getElementById('modal');
+    document.getElementById('openModal').addEventListener('click', () => modal.classList.add('is-open'));
+    document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('is-open'));
+    document.getElementById('confirmModal').addEventListener('click', () => modal.classList.remove('is-open'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('is-open'); });
+
+    document.querySelectorAll('.jy-tab').forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.tab;
+        document.querySelectorAll('.jy-tab').forEach((t) => t.classList.toggle('is-active', t === tab));
+        document.querySelectorAll('.jy-tab-panel').forEach((p) => p.classList.toggle('is-active', p.dataset.panel === id));
+      });
+    });
+
+    document.querySelectorAll('#coinbox .jy-coin').forEach((coin) => {
+      coin.addEventListener('click', () => {
+        document.querySelectorAll('#coinbox .jy-coin').forEach((c) => c.classList.remove('is-active'));
+        coin.classList.add('is-active');
+      });
+    });
+
+    const sw = document.getElementById('demoSwitch');
+    sw.addEventListener('click', () => {
+      const on = sw.classList.toggle('is-on');
+      sw.setAttribute('aria-checked', on ? 'true' : 'false');
+    });
+    sw.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); sw.click(); }
+    });
+
+    document.querySelectorAll('.jy-nav__link').forEach((link) => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('.jy-nav__link').forEach((l) => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+      });
+    });
+  </script>
+</body>
+</html>

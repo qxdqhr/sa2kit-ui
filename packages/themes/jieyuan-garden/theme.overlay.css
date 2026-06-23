@@ -1,0 +1,9 @@
+/**
+ * 界园主题叠加层 — 与 theme-animal-island 联用，供文档站 / demo 多主题切换
+ * 使用前需已加载 animal-island 的 components.css
+ */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700&display=swap');
+
+@import './jieyuan-tokens.css';
+@import './jieyuan-overrides.css';
+@import './jieyuan-utilities.css';

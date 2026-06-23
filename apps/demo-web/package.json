@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@sa2kit-ui/theme-animal-island": "workspace:*",
+    "@sa2kit-ui/theme-jieyuan-garden": "workspace:*",
     "@sa2kit-ui/tokens": "workspace:*",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

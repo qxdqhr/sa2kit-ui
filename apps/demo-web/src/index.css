@@ -1,4 +1,5 @@
 @import '@sa2kit-ui/theme-animal-island/theme.css';
+@import '@sa2kit-ui/theme-jieyuan-garden/theme.overlay.css';
 
 @tailwind base;
 @tailwind components;

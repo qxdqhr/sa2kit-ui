@@ -1,0 +1,195 @@
+/**
+ * 界园志异 — 设计 token（v3 定稿色板）
+ * 覆盖 --animal-* 与 --sa2-*，供 animal-components.css 中的 .sa2-* 类消费
+ */
+[data-theme='jieyuan-garden'] {
+  /* 界园原始色板 */
+  --jy-pink-600: #d44a6a;
+  --jy-pink-500: #e85a7a;
+  --jy-pink-400: #ef6d8f;
+  --jy-pink-200: #e8a0b8;
+  --jy-mist-100: #e6d8dc;
+  --jy-rose-500: #b85a5e;
+  --jy-rose-400: #c97b7e;
+  --jy-mint-400: #7fb89e;
+  --jy-mint-300: #8fc4ad;
+  --jy-pine-700: #3d5f54;
+  --jy-pine-600: #4a7366;
+  --jy-teal-deep: #163a39;
+  --jy-teal-mid: #214e4d;
+  --jy-teal-shadow: #0f2a29;
+  --jy-gold: #d49a3a;
+  --jy-gold-light: #ecc978;
+  --jy-gold-shadow: #b07828;
+  --jy-danger: #b83838;
+  --jy-danger-shadow: #8f2e2e;
+  --jy-pink-shadow: #b83a58;
+
+  --jy-bg: #e8d4da;
+  --jy-surface: rgba(255, 252, 253, 0.96);
+  --jy-text: #163a39;
+  --jy-text-muted: #4a7366;
+  --jy-border: rgba(22, 58, 57, 0.22);
+  --jy-border-strong: rgba(22, 58, 57, 0.38);
+
+  --jy-gradient-sky: linear-gradient(155deg, #e8a0b8 0%, #e6d8dc 38%, #8fc4ad 100%);
+  --jy-gradient-pink: linear-gradient(135deg, #ef6d8f 0%, #d44a6a 100%);
+  --jy-gradient-teal: linear-gradient(135deg, #214e4d 0%, #163a39 100%);
+  --jy-gradient-gold: linear-gradient(180deg, #ecc978, #d49a3a);
+
+  --jy-radius-sm: 8px;
+  --jy-radius-md: 14px;
+  --jy-radius-lg: 20px;
+
+  --jy-shadow-sm: 0 3px 14px rgba(22, 58, 57, 0.12);
+  --jy-shadow-md: 0 10px 32px rgba(22, 58, 57, 0.18);
+  --jy-shadow-pink: 0 8px 28px rgba(212, 74, 106, 0.28);
+  --jy-shadow-focus: 0 0 0 3px rgba(212, 154, 58, 0.55);
+
+  --jy-font-display: 'Noto Serif SC', serif;
+  --jy-font-body: 'Noto Sans SC', system-ui, sans-serif;
+  --jy-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --jy-duration: 220ms;
+
+  --jy-img-filter: saturate(1.18) contrast(1.06) brightness(0.94) hue-rotate(2deg);
+  --jy-img-overlay: linear-gradient(
+    128deg,
+    rgba(232, 90, 122, 0.5) 0%,
+    rgba(232, 160, 184, 0.28) 52%,
+    rgba(22, 58, 57, 0.22) 100%
+  );
+  --jy-img-glow: linear-gradient(
+    165deg,
+    rgba(239, 109, 143, 0.26) 0%,
+    rgba(240, 235, 236, 0.18) 100%
+  );
+
+  /* animal-components 变量映射 */
+  --animal-primary-color: var(--jy-teal-deep);
+  --animal-primary-color-hover: var(--jy-pine-600);
+  --animal-primary-color-active: var(--jy-teal-mid);
+  --animal-primary-color-bg: rgba(143, 196, 173, 0.22);
+  --animal-success-color: var(--jy-pine-600);
+  --animal-success-color-hover: var(--jy-mint-400);
+  --animal-success-color-active: var(--jy-pine-700);
+  --animal-warning-color: var(--jy-gold);
+  --animal-warning-color-hover: var(--jy-gold-light);
+  --animal-warning-color-active: #b07828;
+  --animal-error-color: var(--jy-danger);
+  --animal-error-color-hover: #c94a4a;
+  --animal-error-color-active: var(--jy-danger-shadow);
+  --animal-text-color: var(--jy-teal-deep);
+  --animal-text-color-secondary: var(--jy-text-muted);
+  --animal-text-color-muted: var(--jy-pine-700);
+  --animal-text-color-disabled: rgba(74, 115, 102, 0.45);
+  --animal-border-color: var(--jy-border-strong);
+  --animal-border-color-hover: var(--jy-teal-deep);
+  --animal-border-color-light: var(--jy-border);
+  --animal-bg-color: var(--jy-surface);
+  --animal-bg-color-secondary: rgba(230, 216, 220, 0.65);
+  --animal-bg-color-disabled: rgba(230, 216, 220, 0.45);
+  --animal-font-family: 'Noto Sans SC', system-ui, -apple-system, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif !important;
+  --animal-font-size-sm: 12px;
+  --animal-font-size-base: 14px;
+  --animal-font-size-lg: 16px;
+  --animal-line-height-base: 1.5715;
+  --animal-spacing-xs: 4px;
+  --animal-spacing-sm: 8px;
+  --animal-spacing-md: 12px;
+  --animal-spacing-lg: 16px;
+  --animal-spacing-xl: 24px;
+  --animal-border-radius-sm: var(--jy-radius-sm);
+  --animal-border-radius-base: var(--jy-radius-md);
+  --animal-border-radius-lg: var(--jy-radius-lg);
+  --animal-border-width: 2px;
+  --animal-shadow-sm: var(--jy-shadow-sm);
+  --animal-shadow-base: var(--jy-shadow-md);
+  --animal-shadow-lg: 0 14px 40px rgba(22, 58, 57, 0.22);
+  --animal-motion-duration-fast: 0.15s;
+  --animal-motion-duration-base: var(--jy-duration);
+  --animal-motion-duration-slow: 0.35s;
+  --animal-motion-ease: var(--jy-ease);
+  --animal-height-sm: 36px;
+  --animal-height-base: 44px;
+  --animal-height-lg: 52px;
+
+  /* SA2 语义 token */
+  --sa2-primary: var(--jy-teal-deep);
+  --sa2-primary-hover: var(--jy-pine-600);
+  --sa2-primary-active: var(--jy-teal-mid);
+  --sa2-primary-bg: rgba(143, 196, 173, 0.22);
+
+  --sa2-text: var(--jy-teal-deep);
+  --sa2-text-body: var(--jy-teal-deep);
+  --sa2-text-secondary: var(--jy-text-muted);
+  --sa2-text-muted: var(--jy-pine-700);
+  --sa2-text-disabled: rgba(74, 115, 102, 0.45);
+  --sa2-text-affix: var(--jy-rose-500);
+
+  --sa2-bg: var(--jy-bg);
+  --sa2-bg-content: var(--jy-surface);
+  --sa2-bg-secondary: rgba(230, 216, 220, 0.65);
+  --sa2-bg-disabled: rgba(230, 216, 220, 0.45);
+  --sa2-bg-card-alt: rgba(255, 252, 253, 0.88);
+
+  --sa2-border: var(--jy-border-strong);
+  --sa2-border-light: var(--jy-border);
+  --sa2-border-hover: var(--jy-teal-deep);
+  --sa2-border-input: var(--jy-border-strong);
+  --sa2-border-handle: rgba(22, 58, 57, 0.28);
+  --sa2-border-dashed: rgba(22, 58, 57, 0.18);
+  --sa2-border-dashed-hover: var(--jy-pine-600);
+
+  --sa2-shadow-sm: var(--jy-shadow-sm);
+  --sa2-shadow-base: var(--jy-shadow-md);
+  --sa2-shadow-lg: 0 14px 40px rgba(22, 58, 57, 0.22);
+  --sa2-shadow-btn: var(--jy-teal-shadow);
+  --sa2-shadow-input: rgba(22, 58, 57, 0.12);
+  --sa2-shadow-input-hover: rgba(22, 58, 57, 0.18);
+  --sa2-shadow-focus-input: var(--jy-gold);
+
+  --sa2-success: var(--jy-pine-600);
+  --sa2-success-active: var(--jy-pine-700);
+  --sa2-success-bg: rgba(143, 196, 173, 0.35);
+  --sa2-success-border: var(--jy-mint-400);
+  --sa2-warning: var(--jy-gold);
+  --sa2-warning-active: #b07828;
+  --sa2-error: var(--jy-danger);
+  --sa2-error-hover: #c94a4a;
+  --sa2-error-active: var(--jy-danger-shadow);
+
+  --sa2-focus: var(--jy-gold);
+  --sa2-focus-dark: #b07828;
+  --sa2-focus-ring: rgba(212, 154, 58, 0.35);
+  --sa2-focus-outline: var(--jy-gold);
+
+  --sa2-radius: var(--jy-radius-md);
+  --sa2-radius-sm: var(--jy-radius-sm);
+  --sa2-radius-lg: var(--jy-radius-lg);
+  --sa2-radius-pill: var(--jy-radius-md);
+  --sa2-radius-card: var(--jy-radius-lg);
+
+  --sa2-font: var(--jy-font-body);
+
+  --sa2-btn-loading-bg: var(--jy-teal-mid);
+  --sa2-btn-loading-stripe: var(--jy-teal-deep);
+  --sa2-btn-loading-border: var(--jy-pine-600);
+
+  --sa2-switch-bg: rgba(22, 58, 57, 0.25);
+  --sa2-switch-inset: inset 0 2px 4px rgba(22, 58, 57, 0.15);
+
+  /* 卡片色板 — 界园粉青调 */
+  --sa2-card-pink: var(--jy-pink-500);
+  --sa2-card-purple: #9a6ab8;
+  --sa2-card-blue: #6a8a9a;
+  --sa2-card-yellow: var(--jy-gold-light);
+  --sa2-card-orange: var(--jy-rose-400);
+  --sa2-card-teal: var(--jy-mint-300);
+  --sa2-card-green: var(--jy-pine-600);
+  --sa2-card-red: var(--jy-danger);
+  --sa2-card-lime: #a8b86a;
+  --sa2-card-yellow-green: #c4b84a;
+  --sa2-card-brown: var(--jy-pine-700);
+  --sa2-card-peach: var(--jy-pink-400);
+}

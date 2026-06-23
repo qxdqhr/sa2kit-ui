@@ -1,0 +1,415 @@
+/**
+ * 界园 — 组件样式覆盖
+ * 在 animal-components.css 硬编码动森风格之上，按 v3 预览差异化
+ */
+@import './jieyuan-overrides-ext.css';
+
+[data-theme='jieyuan-garden'] [class^='sa2-'] {
+  font-family: var(--animal-font-family);
+  color: var(--animal-text-color);
+}
+
+/* ── Button ── */
+[data-theme='jieyuan-garden'] .sa2-btn {
+  border-radius: var(--jy-radius-md);
+  box-shadow: var(--jy-shadow-sm);
+  letter-spacing: 0.04em;
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--jy-shadow-focus);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-sm {
+  border-radius: var(--jy-radius-sm);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-lg {
+  border-radius: var(--jy-radius-lg);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-default {
+  color: var(--jy-teal-deep);
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--jy-border-strong);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-default:hover:not(:disabled) {
+  color: var(--jy-teal-deep);
+  border-color: var(--jy-teal-deep);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--jy-shadow-sm);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-primary {
+  color: #fff;
+  background: var(--jy-gradient-teal);
+  border-color: var(--jy-teal-shadow);
+  box-shadow: 0 4px 0 var(--jy-teal-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-primary:hover:not(:disabled) {
+  color: #fff;
+  background: var(--jy-gradient-teal);
+  border-color: var(--jy-teal-shadow);
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 0 var(--jy-teal-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-primary:active:not(:disabled) {
+  color: #fff;
+  background: var(--jy-gradient-teal);
+  filter: none;
+  transform: scale(0.97);
+  box-shadow: 0 2px 0 var(--jy-teal-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-dashed {
+  background: rgba(201, 123, 126, 0.12);
+  border-color: var(--jy-rose-500);
+  border-style: dashed;
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-dashed:hover:not(:disabled) {
+  color: var(--jy-teal-deep);
+  border-color: var(--jy-pink-600);
+  background: rgba(232, 90, 122, 0.12);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-text:hover:not(:disabled) {
+  background: rgba(22, 58, 57, 0.08);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-text:active:not(:disabled) {
+  background: rgba(22, 58, 57, 0.14);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-ghost.sa2-btn-primary:hover:not(:disabled) {
+  background: rgba(22, 58, 57, 0.08);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-danger.sa2-btn-primary {
+  background: var(--jy-danger);
+  border-color: var(--jy-danger-shadow);
+  box-shadow: 0 4px 0 var(--jy-danger-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-danger.sa2-btn-primary:hover:not(:disabled) {
+  box-shadow: 0 5px 0 var(--jy-danger-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-btn-danger.sa2-btn-primary:active:not(:disabled) {
+  transform: scale(0.97);
+  box-shadow: 0 2px 0 var(--jy-danger-shadow);
+}
+
+/* ── Input ── */
+[data-theme='jieyuan-garden'] .sa2-input-wrap {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--jy-border-strong);
+  border-radius: var(--jy-radius-md);
+  box-shadow: none;
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-wrap:hover:not(.sa2-input-disabled) {
+  border-color: var(--jy-pine-600);
+  box-shadow: none;
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-wrap:focus-within:not(.sa2-input-disabled) {
+  border-color: var(--jy-gold);
+  box-shadow: var(--jy-shadow-focus);
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-wrap-sm,
+[data-theme='jieyuan-garden'] .sa2-input-wrap-md,
+[data-theme='jieyuan-garden'] .sa2-input-wrap-lg {
+  border-radius: var(--jy-radius-md);
+  box-shadow: none;
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-field {
+  color: var(--jy-teal-deep);
+  font-weight: 500;
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-field::placeholder {
+  color: rgba(74, 115, 102, 0.55);
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-disabled {
+  background: rgba(230, 216, 220, 0.45);
+  border-color: var(--jy-border);
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-error {
+  border-color: var(--jy-danger);
+  box-shadow: 0 0 0 2px rgba(184, 56, 56, 0.2);
+}
+
+[data-theme='jieyuan-garden'] .sa2-input-warning {
+  border-color: var(--jy-gold);
+  box-shadow: 0 0 0 2px rgba(212, 154, 58, 0.2);
+}
+
+/* ── Card ── */
+[data-theme='jieyuan-garden'] .sa2-card {
+  border-radius: var(--jy-radius-lg);
+  background: var(--jy-surface);
+  border: 1.5px solid var(--jy-border);
+  color: var(--jy-teal-deep);
+  box-shadow: var(--jy-shadow-sm);
+}
+
+[data-theme='jieyuan-garden'] .sa2-card:hover {
+  box-shadow: var(--jy-shadow-md);
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-dashed {
+  background: rgba(255, 252, 253, 0.72);
+  border: 2px dashed var(--jy-border-strong);
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-dashed:hover {
+  border-color: var(--jy-pine-600);
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-app-pink {
+  background: linear-gradient(145deg, rgba(239, 109, 143, 0.35), var(--jy-pink-500));
+  color: #fff;
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-app-teal {
+  background: linear-gradient(145deg, var(--jy-mint-300), var(--jy-pine-600));
+  color: #fff;
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-pattern-default {
+  background:
+    radial-gradient(circle, rgba(22, 58, 57, 0.08) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 90, 122, 0.06) 1px, transparent 1px),
+    var(--jy-surface);
+  background-size: 28px 28px, 14px 14px;
+  background-position: 0 0, 7px 7px;
+  border: 1.5px solid var(--jy-border);
+  color: var(--jy-teal-deep);
+}
+
+[data-theme='jieyuan-garden'] .sa2-card-pattern-app-pink {
+  background:
+    radial-gradient(circle, rgba(232, 90, 122, 0.15) 1.5px, transparent 1.5px),
+    radial-gradient(circle, rgba(232, 160, 184, 0.1) 1px, transparent 1px),
+    rgba(255, 240, 244, 0.95);
+  border-color: rgba(212, 74, 106, 0.35);
+  color: var(--jy-pink-600);
+}
+
+/* ── Modal ── */
+[data-theme='jieyuan-garden'] .sa2-modal-mask {
+  background: rgba(22, 58, 57, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-clipped {
+  background: var(--jy-surface);
+  color: var(--jy-teal-deep);
+  font-family: var(--jy-font-body);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-title {
+  font-family: var(--jy-font-display);
+  color: var(--jy-teal-deep);
+  letter-spacing: 0.06em;
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-body {
+  color: var(--jy-text-muted);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-close {
+  color: rgba(22, 58, 57, 0.55);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-close:hover {
+  background: rgba(22, 58, 57, 0.08);
+  color: var(--jy-teal-deep);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-footer-btn {
+  border-radius: var(--jy-radius-md);
+  color: var(--jy-teal-deep);
+  border: 2px solid var(--jy-border-strong);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-footer-btn-primary {
+  color: #fff;
+  background: var(--jy-gradient-teal);
+  border-color: var(--jy-teal-shadow);
+  box-shadow: 0 3px 0 var(--jy-teal-shadow);
+}
+
+[data-theme='jieyuan-garden'] .sa2-modal-footer-btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+/* ── Title ── */
+[data-theme='jieyuan-garden'] .sa2-title {
+  font-family: var(--jy-font-display);
+  color: var(--jy-teal-deep);
+  letter-spacing: 0.06em;
+}
+
+[data-theme='jieyuan-garden'] .sa2-title-ribbon-front {
+  background: var(--jy-gradient-gold);
+  color: var(--jy-teal-deep);
+}
+
+[data-theme='jieyuan-garden'] .sa2-title-ribbon-back {
+  background: var(--jy-pink-600);
+}
+
+/* ── Tabs ── */
+[data-theme='jieyuan-garden'] .sa2-tabs-list {
+  background: rgba(255, 255, 255, 0.45);
+  border: 1.5px solid var(--jy-border);
+  border-radius: var(--jy-radius-md);
+  padding: 4px;
+}
+
+[data-theme='jieyuan-garden'] .sa2-tabs-item {
+  border-radius: var(--jy-radius-sm);
+  color: var(--jy-text-muted);
+  font-weight: 600;
+}
+
+[data-theme='jieyuan-garden'] .sa2-tabs-item:hover {
+  color: var(--jy-teal-deep);
+  background: rgba(22, 58, 57, 0.06);
+}
+
+[data-theme='jieyuan-garden'] .sa2-tabs-item.sa2-tabs-item-active {
+  color: #fff;
+  background: var(--jy-gradient-teal);
+  box-shadow: var(--jy-shadow-sm);
+}
+
+/* ── Switch ── */
+[data-theme='jieyuan-garden'] .sa2-switch {
+  background: rgba(22, 58, 57, 0.25);
+  border: 2px solid var(--jy-border-strong);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
+[data-theme='jieyuan-garden'] .sa2-switch.sa2-switch-checked {
+  background: var(--jy-pink-500);
+  border-color: var(--jy-pink-600);
+}
+
+[data-theme='jieyuan-garden'] .sa2-switch:hover:not(.sa2-switch-disabled) {
+  box-shadow: none;
+}
+
+/* ── Checkbox / Radio ── */
+[data-theme='jieyuan-garden'] .sa2-checkbox-box,
+[data-theme='jieyuan-garden'] .sa2-radio-circle {
+  border-color: var(--jy-border-strong);
+  border-radius: var(--jy-radius-sm);
+}
+
+[data-theme='jieyuan-garden'] .sa2-checkbox-checked .sa2-checkbox-box,
+[data-theme='jieyuan-garden'] .sa2-radio-checked .sa2-radio-circle {
+  background: var(--jy-pink-600);
+  border-color: var(--jy-pink-600);
+}
+
+/* ── Select ── */
+[data-theme='jieyuan-garden'] .sa2-select-trigger {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: var(--jy-border-strong);
+  border-radius: var(--jy-radius-md);
+  color: var(--jy-teal-deep);
+  box-shadow: none;
+}
+
+[data-theme='jieyuan-garden'] .sa2-select-trigger:hover:not(.sa2-select-disabled) {
+  border-color: var(--jy-pine-600);
+}
+
+[data-theme='jieyuan-garden'] .sa2-select-dropdown {
+  background: var(--jy-surface);
+  border: 1.5px solid var(--jy-border);
+  border-radius: var(--jy-radius-md);
+  box-shadow: var(--jy-shadow-md);
+}
+
+[data-theme='jieyuan-garden'] .sa2-select-option.active,
+[data-theme='jieyuan-garden'] .sa2-select-option.hovered {
+  background: rgba(22, 58, 57, 0.06);
+}
+
+[data-theme='jieyuan-garden'] .sa2-select-option.active {
+  color: var(--jy-pink-600);
+}
+
+/* ── Table ── */
+[data-theme='jieyuan-garden'] .sa2-table-wrap {
+  border-radius: var(--jy-radius-lg);
+  border: 1.5px solid var(--jy-border);
+  overflow: hidden;
+}
+
+[data-theme='jieyuan-garden'] .sa2-table-header-cell {
+  background: rgba(22, 58, 57, 0.08);
+  color: var(--jy-teal-deep);
+  font-weight: 700;
+}
+
+[data-theme='jieyuan-garden'] .sa2-table-cell {
+  border-color: var(--jy-border);
+  color: var(--jy-teal-deep);
+}
+
+[data-theme='jieyuan-garden'] .sa2-table-row:hover {
+  background: rgba(143, 196, 173, 0.12);
+}
+
+/* ── Tooltip ── */
+[data-theme='jieyuan-garden'] .sa2-tooltip {
+  background: var(--jy-teal-deep);
+  border-radius: var(--jy-radius-sm);
+  font-weight: 600;
+}
+
+[data-theme='jieyuan-garden'] .sa2-tooltip-content {
+  color: #fff;
+}
+
+/* ── Divider ── */
+[data-theme='jieyuan-garden'] .sa2-divider-line-teal {
+  background: var(--jy-teal-deep);
+}
+
+[data-theme='jieyuan-garden'] .sa2-divider-dashed-teal {
+  border-color: var(--jy-pine-600);
+}
+
+/* ── Collapse ── */
+[data-theme='jieyuan-garden'] .sa2-collapse {
+  border: 1.5px solid var(--jy-border);
+  border-radius: var(--jy-radius-lg);
+  background: var(--jy-surface);
+}
+
+[data-theme='jieyuan-garden'] .sa2-collapse-header {
+  color: var(--jy-teal-deep);
+  font-weight: 700;
+}
+
+/* ── Loading ── */
+[data-theme='jieyuan-garden'] .sa2-table-loading-spinner {
+  color: var(--jy-teal-deep);
+}

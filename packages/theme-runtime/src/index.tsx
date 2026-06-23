@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from 'react';
 
-export type Sa2ThemeId = 'animal-island' | 'tech';
+export type Sa2ThemeId = 'animal-island' | 'tech' | 'jieyuan-garden';
 
 export interface ThemeContextValue {
   theme: Sa2ThemeId;
@@ -68,5 +68,6 @@ export function useTheme(): ThemeContextValue {
 
 export const SA2_THEMES: { id: Sa2ThemeId; label: string }[] = [
   { id: 'animal-island', label: '动森岛' },
+  { id: 'jieyuan-garden', label: '界园' },
   { id: 'tech', label: '科技风' },
 ];
