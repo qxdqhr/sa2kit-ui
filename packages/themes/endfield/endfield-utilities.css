@@ -1,0 +1,125 @@
+/**
+ * 终末地 — 页面级工具类与工业氛围
+ */
+[data-theme='endfield'] body {
+  font-family: var(--ef-font-body);
+  color: var(--ef-gray-950);
+  background:
+    linear-gradient(rgba(26, 26, 30, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 26, 30, 0.04) 1px, transparent 1px),
+    radial-gradient(ellipse 90% 50% at 10% -10%, rgba(255, 208, 0, 0.1), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 100% 0%, rgba(0, 212, 232, 0.06), transparent 50%),
+    var(--ef-bg);
+  background-size: 20px 20px, 20px 20px, auto, auto, auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='endfield'] .ef-font-display {
+  font-family: var(--ef-font-display);
+}
+
+[data-theme='endfield'] .ef-divider-stripe {
+  height: 4px;
+  margin-block: 1rem;
+  border-radius: 0;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    var(--ef-cyan-500) 0%,
+    var(--ef-cyan-500) 25%,
+    var(--ef-magenta-500) 25%,
+    var(--ef-magenta-500) 50%,
+    var(--ef-yellow-500) 50%,
+    var(--ef-yellow-500) 75%,
+    var(--ef-gray-950) 75%,
+    var(--ef-gray-950) 100%
+  );
+  opacity: 0.55;
+}
+
+[data-theme='endfield'] .ef-img-tone {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(145deg, var(--ef-gray-200), var(--ef-gray-100));
+}
+
+[data-theme='endfield'] .ef-img-tone > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--ef-img-filter);
+  transform: scale(1.04);
+  transition:
+    transform 0.45s var(--ef-ease),
+    filter 0.35s var(--ef-ease);
+}
+
+[data-theme='endfield'] .ef-img-tone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ef-img-glow);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme='endfield'] .ef-img-tone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--ef-img-overlay);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 2;
+}
+
+[data-theme='endfield'] .ef-img-tone:hover > img {
+  transform: scale(1.07);
+  filter: saturate(0.95) contrast(1.1) brightness(0.95);
+}
+
+[data-theme='endfield'] .ef-surface {
+  background: var(--ef-surface);
+  border: 1.5px solid var(--ef-border);
+  border-radius: var(--ef-radius-lg);
+  box-shadow: var(--ef-shadow-sm);
+}
+
+[data-theme='endfield'] .ef-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--ef-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1.5px solid transparent;
+  letter-spacing: 0.04em;
+}
+
+[data-theme='endfield'] .ef-tag--warn {
+  background: rgba(255, 208, 0, 0.28);
+  color: var(--ef-gray-950);
+  border-color: rgba(255, 208, 0, 0.55);
+}
+
+[data-theme='endfield'] .ef-tag--data {
+  background: rgba(0, 212, 232, 0.18);
+  color: var(--ef-cyan-700);
+  border-color: rgba(0, 212, 232, 0.45);
+}
+
+[data-theme='endfield'] .ef-tag--alert {
+  background: rgba(232, 64, 160, 0.18);
+  color: var(--ef-magenta-700);
+  border-color: rgba(232, 64, 160, 0.45);
+}
+
+[data-theme='endfield'] .ef-tag--muted {
+  background: rgba(26, 26, 30, 0.08);
+  color: var(--ef-gray-900);
+  border-color: var(--ef-border);
+}

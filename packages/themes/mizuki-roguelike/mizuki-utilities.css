@@ -1,0 +1,121 @@
+/**
+ * 水月肉鸽 — 页面级工具类与深海氛围
+ */
+[data-theme='mizuki-roguelike'] body {
+  font-family: var(--mr-font-body);
+  color: var(--mr-pearl-100);
+  background:
+    radial-gradient(1px 1px at 12% 18%, rgba(255, 255, 255, 0.35), transparent),
+    radial-gradient(1px 1px at 78% 42%, rgba(255, 255, 255, 0.28), transparent),
+    radial-gradient(1.5px 1.5px at 45% 68%, rgba(92, 239, 255, 0.45), transparent),
+    radial-gradient(ellipse 85% 55% at 50% -8%, rgba(61, 232, 208, 0.12), transparent 58%),
+    radial-gradient(ellipse 55% 45% at 100% 85%, rgba(157, 122, 255, 0.14), transparent 52%),
+    var(--mr-bg);
+  background-size: 100% 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='mizuki-roguelike'] .mr-font-display {
+  font-family: var(--mr-font-display);
+}
+
+[data-theme='mizuki-roguelike'] .mr-divider-glow {
+  height: 2px;
+  margin-block: 1rem;
+  border: none;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--mr-glow-cyan),
+    var(--mr-glow-purple),
+    transparent
+  );
+  box-shadow: 0 0 12px rgba(61, 232, 208, 0.45);
+}
+
+[data-theme='mizuki-roguelike'] .mr-img-tone {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(145deg, var(--mr-abyss-800), var(--mr-abyss-900));
+}
+
+[data-theme='mizuki-roguelike'] .mr-img-tone > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: var(--mr-img-filter);
+  transform: scale(1.04);
+  transition:
+    transform 0.45s var(--mr-ease),
+    filter 0.35s var(--mr-ease);
+}
+
+[data-theme='mizuki-roguelike'] .mr-img-tone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--mr-img-glow);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme='mizuki-roguelike'] .mr-img-tone::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--mr-img-overlay);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 2;
+}
+
+[data-theme='mizuki-roguelike'] .mr-img-tone:hover > img {
+  transform: scale(1.07);
+  filter: saturate(1.15) contrast(1.1) brightness(0.95) hue-rotate(8deg);
+}
+
+[data-theme='mizuki-roguelike'] .mr-surface {
+  background: var(--mr-surface);
+  border: 1.5px solid var(--mr-border);
+  border-radius: var(--mr-radius-lg);
+  box-shadow: var(--mr-shadow-sm), var(--mr-shadow-green);
+}
+
+[data-theme='mizuki-roguelike'] .mr-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.85rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--mr-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1.5px solid transparent;
+  letter-spacing: 0.04em;
+}
+
+[data-theme='mizuki-roguelike'] .mr-tag--glow {
+  background: rgba(61, 232, 208, 0.15);
+  color: var(--mr-glow-cyan);
+  border-color: rgba(61, 232, 208, 0.38);
+}
+
+[data-theme='mizuki-roguelike'] .mr-tag--purple {
+  background: rgba(157, 122, 255, 0.15);
+  color: var(--mr-glow-purple);
+  border-color: rgba(157, 122, 255, 0.38);
+}
+
+[data-theme='mizuki-roguelike'] .mr-tag--pearl {
+  background: rgba(232, 244, 255, 0.08);
+  color: var(--mr-pearl-100);
+  border-color: rgba(232, 244, 255, 0.2);
+}
+
+[data-theme='mizuki-roguelike'] .mr-tag--muted {
+  background: rgba(18, 36, 64, 0.55);
+  color: var(--mr-mist-400);
+  border-color: var(--mr-border);
+}

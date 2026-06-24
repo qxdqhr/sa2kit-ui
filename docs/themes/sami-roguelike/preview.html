@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="sami-roguelike">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>萨米肉鸽主题预览 · SA2Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --sr-frost-900: #1a2838;
+      --sr-frost-cyan: #7ec8e8;
+      --sr-snow-100: #eaf4fc;
+      --sr-board-red: #c45a5a;
+      --sr-board-green: #5ab878;
+      --sr-board-blue: #5a8ec8;
+      --sr-board-gray: #8a9aa8;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Noto Sans SC', system-ui, sans-serif;
+      color: var(--sr-snow-100);
+      background:
+        radial-gradient(ellipse 70% 50% at 20% 0%, rgba(168, 223, 245, 0.12), transparent 55%),
+        radial-gradient(ellipse 60% 45% at 90% 90%, rgba(90, 142, 200, 0.1), transparent 50%),
+        linear-gradient(180deg, #1a2838 0%, #0f1a24 100%);
+      min-height: 100vh;
+    }
+    .nav { display: flex; justify-content: space-between; padding: 1rem 2rem; border-bottom: 1px solid rgba(126,200,232,.2); background: rgba(15,26,36,.8); backdrop-filter: blur(10px); }
+    .nav h1 { font-size: .85rem; letter-spacing: .16em; color: var(--sr-frost-cyan); }
+    .hero { max-width: 960px; margin: 3rem auto; padding: 0 1.5rem; }
+    .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--sr-board-gray); letter-spacing: .2em; margin-bottom: .75rem; }
+    .hero h2 { font-size: 2.3rem; margin-bottom: .5rem; }
+    .hero p { color: #9ab4c8; line-height: 1.75; max-width: 36rem; }
+    .boards { display: flex; gap: .5rem; margin: 1.5rem 0; }
+    .board { width: 3rem; height: .5rem; border-radius: 2px; }
+    .btn { display: inline-block; margin-top: 1rem; padding: .65rem 1.4rem; background: linear-gradient(135deg, #7ec8e8, #4a9ec4); color: #0f1a24; font-weight: 700; border-radius: 8px; text-decoration: none; box-shadow: 0 0 20px rgba(126,200,232,.3); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 1rem; max-width: 960px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .card { background: rgba(36,54,72,.65); border: 1px solid rgba(126,200,232,.22); border-radius: 10px; padding: 1.25rem; }
+    .card h3 { color: var(--sr-frost-cyan); font-size: .9rem; margin-bottom: .35rem; }
+    .card span { font-size: .8rem; color: #9ab4c8; }
+  </style>
+</head>
+<body>
+  <nav class="nav"><h1>SAMI · 银凇止境</h1><span>SA2Kit Theme Preview</span></nav>
+  <section class="hero">
+    <p class="eyebrow">INTEGRATED STRATEGIES</p>
+    <h2>萨米冰原 · 密文宣告</h2>
+    <p>银凇雪雾、冰青高亮与密文板四色（族群/灵魂/自然/世相），复现集成战略第四期的凛冽探索气质。</p>
+    <div class="boards">
+      <span class="board" style="background:#c45a5a"></span>
+      <span class="board" style="background:#5ab878"></span>
+      <span class="board" style="background:#5a8ec8"></span>
+      <span class="board" style="background:#8a9aa8"></span>
+    </div>
+    <a class="btn" href="#">密文宣告</a>
+  </section>
+  <div class="grid">
+    <div class="card"><h3>配色</h3><span>#7EC8E8 / #1A2838 / 密文四色</span></div>
+    <div class="card"><h3>形状</h3><span>霜角 8–12px · 雾面玻璃</span></div>
+    <div class="card"><h3>装饰</h3><span>银凇纹理 · 密文板条</span></div>
+  </div>
+</body>
+</html>

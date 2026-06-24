@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="mizuki-roguelike">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>水月肉鸽主题预览 · SA2Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --mr-abyss-900: #0c1830;
+      --mr-abyss-800: #122548;
+      --mr-glow-cyan: #3de8d0;
+      --mr-glow-purple: #9d7aff;
+      --mr-pearl-100: #e8f4ff;
+      --mr-mist-400: #7a9cb8;
+      --mr-radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: 'Noto Sans SC', system-ui, sans-serif;
+      color: var(--mr-pearl-100);
+      background:
+        radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,.45), transparent),
+        radial-gradient(1px 1px at 80% 40%, rgba(255,255,255,.35), transparent),
+        radial-gradient(1px 1px at 40% 70%, rgba(92,239,255,.5), transparent),
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(61,232,208,.12), transparent 60%),
+        radial-gradient(ellipse 60% 40% at 100% 80%, rgba(157,122,255,.15), transparent 55%),
+        var(--mr-abyss-900);
+      background-size: 100% 100%;
+      min-height: 100vh;
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 2rem; border-bottom: 1px solid rgba(61,232,208,.18);
+      background: rgba(12,24,48,.75); backdrop-filter: blur(12px);
+    }
+    .nav h1 { font-size: .9rem; letter-spacing: .18em; color: var(--mr-glow-cyan); }
+    .hero { max-width: 960px; margin: 3rem auto; padding: 0 1.5rem; }
+    .hero .eyebrow {
+      font-family: 'JetBrains Mono', monospace; font-size: .72rem;
+      color: var(--mr-glow-purple); letter-spacing: .22em; margin-bottom: .75rem;
+    }
+    .hero h2 { font-size: 2.4rem; font-weight: 700; margin-bottom: .5rem; }
+    .hero p { color: var(--mr-mist-400); max-width: 38rem; line-height: 1.75; }
+    .glow-line {
+      height: 2px; margin: 2rem 0;
+      background: linear-gradient(90deg, transparent, var(--mr-glow-cyan), var(--mr-glow-purple), transparent);
+      box-shadow: 0 0 12px rgba(61,232,208,.5);
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 960px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .card {
+      background: rgba(18,36,64,.72); border: 1px solid rgba(61,232,208,.22);
+      border-radius: var(--mr-radius); padding: 1.25rem;
+      box-shadow: 0 0 24px rgba(61,232,208,.08);
+    }
+    .card h3 { font-size: .9rem; color: var(--mr-glow-cyan); margin-bottom: .35rem; }
+    .card span { font-size: .8rem; color: var(--mr-mist-400); }
+    .btn {
+      display: inline-block; margin-top: 1.5rem; padding: .65rem 1.4rem;
+      background: linear-gradient(135deg, #3de8d0, #6b4fd4);
+      color: #070d1a; font-weight: 700; border: 1px solid rgba(92,239,255,.5);
+      border-radius: var(--mr-radius); text-decoration: none;
+      box-shadow: 0 0 20px rgba(61,232,208,.35);
+    }
+    .tags { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: 1rem; }
+    .tag { font-size: .7rem; font-weight: 700; padding: .25rem .55rem; border-radius: 6px; }
+    .tag--c { background: rgba(61,232,208,.18); color: var(--mr-glow-cyan); border: 1px solid rgba(61,232,208,.35); }
+    .tag--p { background: rgba(157,122,255,.18); color: var(--mr-glow-purple); border: 1px solid rgba(157,122,255,.35); }
+    .tag--w { background: rgba(232,244,255,.1); color: var(--mr-pearl-100); border: 1px solid rgba(232,244,255,.2); }
+  </style>
+</head>
+<body>
+  <nav class="nav"><h1>CAERULA ARBOR · 深蓝之树</h1><span>SA2Kit Theme Preview</span></nav>
+  <section class="hero">
+    <p class="eyebrow">INTEGRATED STRATEGIES</p>
+    <h2>阿戈尔深海 · 荧光星空</h2>
+    <p>幽蓝深渊、生物荧光青与水月紫，复现集成战略「水月与深蓝之树」的空灵深海气质。骰子随机、溟痕蔓延、大群低语。</p>
+    <div class="glow-line"></div>
+    <a class="btn" href="#">掷骰进入</a>
+    <div class="tags">
+      <span class="tag tag--c">荧光青</span>
+      <span class="tag tag--p">水月紫</span>
+      <span class="tag tag--w">星空深渊</span>
+    </div>
+  </section>
+  <div class="grid">
+    <div class="card"><h3>配色</h3><span>#3DE8D0 / #9D7AFF / #0C1830</span></div>
+    <div class="card"><h3>形状</h3><span>中等圆角 · 外发光描边</span></div>
+    <div class="card"><h3>装饰</h3><span>星点 · 溟痕曲线 · 骰子</span></div>
+  </div>
+</body>
+</html>

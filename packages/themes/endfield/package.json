@@ -1,0 +1,31 @@
+{
+  "name": "@sa2kit-ui/theme-endfield",
+  "version": "0.1.0",
+  "description": "Arknights Endfield theme for SA2Kit UI",
+  "license": "MIT",
+  "files": [
+    "tailwind.preset.js",
+    "endfield-plugin.js",
+    "endfield-tokens.css",
+    "endfield-overrides.css",
+    "endfield-overrides-ext.css",
+    "endfield-utilities.css",
+    "theme.css",
+    "theme.overlay.css",
+    "theme.mobile.css"
+  ],
+  "exports": {
+    "./tailwind.preset": "./tailwind.preset.js",
+    "./theme.css": "./theme.css",
+    "./theme.overlay.css": "./theme.overlay.css",
+    "./theme.mobile.css": "./theme.mobile.css",
+    "./plugin": "./endfield-plugin.js",
+    "./tokens.css": "./endfield-tokens.css",
+    "./overrides.css": "./endfield-overrides.css",
+    "./utilities.css": "./endfield-utilities.css"
+  },
+  "dependencies": {
+    "@sa2kit-ui/tokens": "workspace:*",
+    "@sa2kit-ui/theme-animal-island": "workspace:*"
+  }
+}

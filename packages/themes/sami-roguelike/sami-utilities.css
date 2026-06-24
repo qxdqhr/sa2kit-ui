@@ -1,0 +1,60 @@
+/**
+ * 萨米肉鸽 — 页面级工具类与银凇氛围
+ */
+[data-theme='sami-roguelike'] body {
+  font-family: var(--sr-font-body);
+  color: var(--sr-snow-100);
+  background:
+    radial-gradient(ellipse 75% 55% at 15% 0%, rgba(168, 223, 245, 0.1), transparent 58%),
+    radial-gradient(ellipse 55% 45% at 95% 85%, rgba(90, 142, 200, 0.08), transparent 52%),
+    linear-gradient(rgba(126, 200, 232, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 200, 232, 0.03) 1px, transparent 1px),
+    var(--sr-bg);
+  background-size: auto, auto, 24px 24px, 24px 24px, auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='sami-roguelike'] .sr-font-display { font-family: var(--sr-font-display); }
+
+[data-theme='sami-roguelike'] .sr-divider-boards {
+  height: 4px; margin-block: 1rem; border: none; border-radius: 2px;
+  background: linear-gradient(90deg, var(--sr-board-red), var(--sr-board-green), var(--sr-board-blue), var(--sr-board-gray));
+  opacity: 0.65;
+}
+
+[data-theme='sami-roguelike'] .sr-img-tone {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: linear-gradient(145deg, var(--sr-frost-800), var(--sr-frost-900));
+}
+[data-theme='sami-roguelike'] .sr-img-tone > img {
+  display: block; width: 100%; height: 100%; object-fit: cover;
+  filter: var(--sr-img-filter); transform: scale(1.04);
+  transition: transform 0.45s var(--sr-ease), filter 0.35s var(--sr-ease);
+}
+[data-theme='sami-roguelike'] .sr-img-tone::before {
+  content: ''; position: absolute; inset: 0; background: var(--sr-img-glow);
+  mix-blend-mode: soft-light; pointer-events: none; z-index: 1;
+}
+[data-theme='sami-roguelike'] .sr-img-tone::after {
+  content: ''; position: absolute; inset: 0; background: var(--sr-img-overlay);
+  mix-blend-mode: multiply; pointer-events: none; z-index: 2;
+}
+[data-theme='sami-roguelike'] .sr-img-tone:hover > img {
+  transform: scale(1.07);
+  filter: saturate(1.02) contrast(1.08) brightness(1.02) hue-rotate(-4deg);
+}
+
+[data-theme='sami-roguelike'] .sr-surface {
+  background: var(--sr-surface); border: 1.5px solid var(--sr-border);
+  border-radius: var(--sr-radius-lg); box-shadow: var(--sr-shadow-sm), var(--sr-shadow-green);
+}
+
+[data-theme='sami-roguelike'] .sr-tag {
+  display: inline-flex; align-items: center; min-height: 1.85rem;
+  padding: 0.2rem 0.65rem; border-radius: var(--sr-radius-sm);
+  font-size: 0.75rem; font-weight: 700; border: 1.5px solid transparent; letter-spacing: 0.04em;
+}
+[data-theme='sami-roguelike'] .sr-tag--tribe { background: rgba(196,90,90,.18); color: var(--sr-board-red); border-color: rgba(196,90,90,.4); }
+[data-theme='sami-roguelike'] .sr-tag--soul { background: rgba(90,184,120,.15); color: var(--sr-board-green); border-color: rgba(90,184,120,.38); }
+[data-theme='sami-roguelike'] .sr-tag--nature { background: rgba(90,142,200,.15); color: var(--sr-board-blue); border-color: rgba(90,142,200,.38); }
+[data-theme='sami-roguelike'] .sr-tag--world { background: rgba(138,154,168,.15); color: var(--sr-board-gray); border-color: rgba(138,154,168,.38); }

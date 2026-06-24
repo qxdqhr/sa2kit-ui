@@ -1,6 +1,6 @@
 {
   "name": "@sa2kit-ui/react",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "React Web components for sa2kit-ui (components + themes + ThemeProvider)",
   "license": "MIT",
   "type": "module",

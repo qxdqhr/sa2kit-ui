@@ -326,7 +326,7 @@
 |---|---|---|
 | 7 张园林摄影 | `docs/themes/jieyuan-garden/assets/*.jpg` | Hero、六门楼、表单配图、Modal 横幅 |
 | 归属说明 | `docs/themes/jieyuan-garden/assets/ATTRIBUTION.md` | Unsplash/Pexels 许可与链接 |
-| HTML 预览 | `docs/themes/jieyuan-garden-preview.html` | 独立验收页 **v3**（粉青滤镜） |
+| HTML 预览 | `docs/themes/jieyuan-garden/preview-v3.html` | 独立验收页 **v3**（粉青滤镜） |
 
 ### 9.2 仍待自研
 
