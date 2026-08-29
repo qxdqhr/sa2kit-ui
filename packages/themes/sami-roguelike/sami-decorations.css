@@ -1,0 +1,27 @@
+/**
+ * 萨米肉鸽 — 组件点缀（Lucide ISC）
+ */
+[data-theme='sami-roguelike'] .sa2-card { position: relative; overflow: hidden; }
+[data-theme='sami-roguelike'] .sa2-card::after {
+  content: ''; position: absolute; top: 0.5rem; right: 0.5rem;
+  width: 2.6rem; height: 2.6rem; opacity: 0.17; pointer-events: none;
+  background-color: var(--sr-frost-cyan);
+  mask-image: url('./assets/icons/snowflake.svg'); mask-size: contain; mask-repeat: no-repeat;
+  -webkit-mask-image: url('./assets/icons/snowflake.svg'); -webkit-mask-size: contain;
+}
+[data-theme='sami-roguelike'] .sa2-modal-clipped::before {
+  content: ''; position: absolute; top: 0.7rem; left: 0.7rem;
+  width: 1.3rem; height: 1.3rem; opacity: 0.22; pointer-events: none;
+  background-color: var(--sr-board-blue);
+  mask-image: url('./assets/icons/scroll.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/scroll.svg'); -webkit-mask-size: contain;
+}
+[data-theme='sami-roguelike'] .sa2-modal-clipped { position: relative; overflow: hidden; }
+[data-theme='sami-roguelike'] .sr-ornament { position: relative; isolation: isolate; }
+[data-theme='sami-roguelike'] .sr-ornament::before {
+  content: ''; position: absolute; bottom: -0.5rem; right: -0.25rem;
+  width: 5rem; height: 3rem; opacity: 0.11; pointer-events: none;
+  background-color: var(--sr-board-gray);
+  mask-image: url('./assets/icons/mountain.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/mountain.svg'); -webkit-mask-size: contain;
+}

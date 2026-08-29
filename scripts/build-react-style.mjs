@@ -23,6 +23,26 @@ function readIfExists(filePath) {
   return fs.readFileSync(filePath, 'utf8');
 }
 
+/** 将 decorations.css 中的相对 SVG url 内联为 data URI，避免消费侧路径失效 */
+function inlineThemeSvgUrls(css, themeDir) {
+  if (!css) return css;
+  return css.replace(
+    /url\(\s*['"]?\.\/assets\/icons\/([^'")\s]+)['"]?\s*\)/g,
+    (_, fileName) => {
+      const iconPath = path.join(themeDir, 'assets/icons', fileName);
+      if (!fs.existsSync(iconPath)) {
+        console.warn(`  ! missing icon for inline: ${iconPath}`);
+        return 'url("")';
+      }
+      const svg = fs.readFileSync(iconPath, 'utf8').trim().replace(/\s+/g, ' ');
+      const encoded = encodeURIComponent(svg)
+        .replace(/'/g, '%27')
+        .replace(/"/g, '%22');
+      return `url("data:image/svg+xml,${encoded}")`;
+    },
+  );
+}
+
 function overlayThemeCss(themeDir, themeId) {
   const prefix = themeId.split('-')[0];
   const candidates = {
@@ -30,6 +50,7 @@ function overlayThemeCss(themeDir, themeId) {
     overridesExt: [`${prefix}-overrides-ext.css`, 'overrides-ext.css'],
     overrides: [`${prefix}-overrides.css`, 'overrides.css'],
     utilities: [`${prefix}-utilities.css`, 'utilities.css'],
+    decorations: [`${prefix}-decorations.css`, 'decorations.css'],
   };
 
   function pick(key) {
@@ -44,8 +65,9 @@ function overlayThemeCss(themeDir, themeId) {
   const overridesExt = pick('overridesExt');
   const overrides = pick('overrides');
   const utilities = pick('utilities');
+  const decorations = pick('decorations');
 
-  if (!tokens && !overrides && !overridesExt && !utilities) {
+  if (!tokens && !overrides && !overridesExt && !utilities && !decorations) {
     return [];
   }
 
@@ -54,6 +76,7 @@ function overlayThemeCss(themeDir, themeId) {
   if (overridesExt) parts.push(overridesExt);
   if (overrides) parts.push(stripCssImports(overrides));
   if (utilities) parts.push(utilities);
+  if (decorations) parts.push(inlineThemeSvgUrls(decorations, themeDir));
   return parts;
 }
 

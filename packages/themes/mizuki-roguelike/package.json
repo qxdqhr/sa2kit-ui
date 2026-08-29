@@ -10,6 +10,8 @@
     "mizuki-overrides.css",
     "mizuki-overrides-ext.css",
     "mizuki-utilities.css",
+    "mizuki-decorations.css",
+    "assets/**",
     "theme.css",
     "theme.overlay.css",
     "theme.mobile.css"

@@ -1,0 +1,27 @@
+/**
+ * 界园 — 组件点缀（Lucide ISC + 自研简化）
+ */
+[data-theme='jieyuan-garden'] .sa2-card { position: relative; overflow: hidden; }
+[data-theme='jieyuan-garden'] .sa2-card::after {
+  content: ''; position: absolute; top: 0.5rem; right: 0.5rem;
+  width: 2.6rem; height: 2.6rem; opacity: 0.16; pointer-events: none;
+  background-color: var(--jy-pink-500);
+  mask-image: url('./assets/icons/flower.svg'); mask-size: contain; mask-repeat: no-repeat;
+  -webkit-mask-image: url('./assets/icons/flower.svg'); -webkit-mask-size: contain;
+}
+[data-theme='jieyuan-garden'] .sa2-modal-clipped { position: relative; overflow: hidden; }
+[data-theme='jieyuan-garden'] .sa2-modal-clipped::before {
+  content: ''; position: absolute; top: 0.7rem; left: 0.7rem;
+  width: 1.2rem; height: 1.2rem; opacity: 0.22; pointer-events: none;
+  background-color: var(--jy-pine-600);
+  mask-image: url('./assets/icons/lantern.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/lantern.svg'); -webkit-mask-size: contain;
+}
+[data-theme='jieyuan-garden'] .jy-ornament { position: relative; isolation: isolate; }
+[data-theme='jieyuan-garden'] .jy-ornament::before {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 5rem; height: 2.5rem; opacity: 0.12; pointer-events: none;
+  background-color: var(--jy-teal-mid);
+  mask-image: url('./assets/icons/bridge.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/bridge.svg'); -webkit-mask-size: contain;
+}

@@ -105,3 +105,9 @@
 1. 不打包官方 Logo、水月立绘、游戏字体  
 2. `--animal-*` / `--sa2-*` 映射到 `--mr-*` token  
 3. overlay 主题，不修改组件 TSX
+
+---
+
+## 8. 点缀资源
+
+详见 `assets-catalog.md`。Lucide ISC：waves / sparkles / shell → Card、Modal、`mr-ornament`。

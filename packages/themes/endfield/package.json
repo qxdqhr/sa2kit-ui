@@ -10,6 +10,8 @@
     "endfield-overrides.css",
     "endfield-overrides-ext.css",
     "endfield-utilities.css",
+    "endfield-decorations.css",
+    "assets/**",
     "theme.css",
     "theme.overlay.css",
     "theme.mobile.css"

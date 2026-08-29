@@ -442,6 +442,18 @@
 
 ---
 
+## 附录 A：点缀图标（Phase 1.5）
+
+| 文件 | 来源 | 用途 |
+|------|------|------|
+| flower.svg | Lucide ISC | Card 水印 |
+| lantern.svg | 自研 MIT | Modal 角标 |
+| bridge.svg | 自研 MIT | `jy-ornament` |
+
+完整目录：`assets-catalog.md` · 实现：`packages/themes/jieyuan-garden/jieyuan-decorations.css`
+
+---
+
 ## 附录 B：来源链接汇总
 
 - https://ak.hypergryph.com/is/gardenofgrotesqueries  

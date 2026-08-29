@@ -10,6 +10,8 @@
     "jieyuan-overrides.css",
     "jieyuan-overrides-ext.css",
     "jieyuan-utilities.css",
+    "jieyuan-decorations.css",
+    "assets/**",
     "theme.css",
     "theme.overlay.css",
     "theme.mobile.css"

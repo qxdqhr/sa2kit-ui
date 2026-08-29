@@ -103,3 +103,15 @@
 1. 不打包官方 Logo、角色立绘、游戏字体文件  
 2. `--animal-*` / `--sa2-*` 映射到终末地 token，复用 `.sa2-*` 结构  
 3. overlay 主题，不修改 `packages/react` 组件 TSX
+
+---
+
+## 8. 点缀资源
+
+详见 `assets-catalog.md` 与 [DECORATION-WORKFLOW.md](../DECORATION-WORKFLOW.md)。
+
+| 图标 | 来源 | 组件挂载 |
+|------|------|----------|
+| triangle-alert | Lucide ISC | Card 水印 |
+| factory | Lucide ISC | Modal 角标 |
+| cog | Lucide ISC | Button / Hero ornament |

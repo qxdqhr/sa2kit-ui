@@ -61,6 +61,27 @@
     .tag--y { background: rgba(255,208,0,.3); }
     .tag--c { background: rgba(0,212,232,.2); color: #009aab; }
     .tag--m { background: rgba(232,64,160,.18); color: #b8307a; }
+    .preview-ornament { max-width: 960px; margin: 0 auto 3rem; padding: 0 1.5rem; }
+    .preview-ornament h3 { font-size: .85rem; color: var(--ef-gray-600); margin-bottom: .75rem; }
+    .preview-ornament__row { display: flex; gap: 1rem; }
+    .preview-ornament__icon {
+      width: 2.5rem; height: 2.5rem; opacity: .2;
+      background-color: var(--ef-yellow-500);
+      mask-size: contain; mask-repeat: no-repeat; -webkit-mask-size: contain;
+    }
+    .preview-ornament__icon--alert {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 2L2 20h20L12 2zm0 6v6m0 4h.01'/%3E%3C/svg%3E");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 2L2 20h20L12 2zm0 6v6m0 4h.01'/%3E%3C/svg%3E");
+    }
+    .preview-ornament__icon--factory {
+      background-color: var(--ef-cyan-500);
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M2 20V8l4-2v2l4-2v14H2zm8 0V6l4 2v12h-4zm6 0V10l4-2v12h-4z'/%3E%3C/svg%3E");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M2 20V8l4-2v2l4-2v14H2zm8 0V6l4 2v12h-4zm6 0V10l4-2v12h-4z'/%3E%3C/svg%3E");
+    }
+    .preview-ornament__icon--cog {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 8a4 4 0 100 8 4 4 0 000-8zm9 4l-1.5.8.2 1.7-1.6.6-.8 1.5-1.7-.2-.6 1.6-1.5.8-.8-1.5-1.7.2-.6-1.6-1.5-.8.8-1.5 1.7-.2.6-1.6 1.5-.8.8 1.5 1.7.2.6 1.6z'/%3E%3C/svg%3E");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 8a4 4 0 100 8 4 4 0 000-8zm9 4l-1.5.8.2 1.7-1.6.6-.8 1.5-1.7-.2-.6 1.6-1.5.8-.8-1.5-1.7.2-.6-1.6-1.5-.8.8-1.5 1.7-.2.6-1.6 1.5-.8.8 1.5 1.7.2.6 1.6z'/%3E%3C/svg%3E");
+    }
   </style>
 </head>
 <body>
@@ -82,5 +103,13 @@
     <div class="card"><h3>形状</h3><span>小圆角 4–8px · 扁平投影</span></div>
     <div class="card"><h3>装饰</h3><span>CMYK 色带 · CAD 网格</span></div>
   </div>
+  <section class="preview-ornament" aria-label="点缀图标示例">
+    <h3>点缀图标（Lucide ISC）</h3>
+    <div class="preview-ornament__row">
+      <span class="preview-ornament__icon preview-ornament__icon--alert"></span>
+      <span class="preview-ornament__icon preview-ornament__icon--factory"></span>
+      <span class="preview-ornament__icon preview-ornament__icon--cog"></span>
+    </div>
+  </section>
 </body>
 </html>

@@ -1,0 +1,27 @@
+/**
+ * 莱茵生命 — 组件点缀（Lucide ISC）
+ */
+[data-theme='rhine-life'] .sa2-card { position: relative; overflow: hidden; }
+[data-theme='rhine-life'] .sa2-card::after {
+  content: ''; position: absolute; top: 0.5rem; right: 0.5rem;
+  width: 2.5rem; height: 2.5rem; opacity: 0.15; pointer-events: none;
+  background-color: var(--rl-green-500);
+  mask-image: url('./assets/icons/flask.svg'); mask-size: contain; mask-repeat: no-repeat;
+  -webkit-mask-image: url('./assets/icons/flask.svg'); -webkit-mask-size: contain;
+}
+[data-theme='rhine-life'] .sa2-modal-clipped { position: relative; overflow: hidden; }
+[data-theme='rhine-life'] .sa2-modal-clipped::before {
+  content: ''; position: absolute; top: 0.7rem; left: 0.7rem;
+  width: 1.25rem; height: 1.25rem; opacity: 0.2; pointer-events: none;
+  background-color: var(--rl-cyan-500);
+  mask-image: url('./assets/icons/dna.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/dna.svg'); -webkit-mask-size: contain;
+}
+[data-theme='rhine-life'] .rl-ornament { position: relative; isolation: isolate; }
+[data-theme='rhine-life'] .rl-ornament::before {
+  content: ''; position: absolute; top: -0.5rem; right: 0;
+  width: 4rem; height: 4rem; opacity: 0.1; pointer-events: none;
+  background-color: var(--rl-green-600);
+  mask-image: url('./assets/icons/microchip.svg'); mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/microchip.svg'); -webkit-mask-size: contain;
+}

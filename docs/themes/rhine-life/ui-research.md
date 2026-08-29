@@ -103,3 +103,9 @@
 1. 不打包官方 Logo、角色立绘、游戏字体文件  
 2. `--animal-*` / `--sa2-*` 映射到莱茵 token，复用 `.sa2-*` 结构  
 3. overlay 主题，不修改 `packages/react` 组件 TSX
+
+---
+
+## 8. 点缀资源
+
+详见 `assets-catalog.md`。Lucide ISC：flask / dna / microchip → Card、Modal、`rl-ornament`。

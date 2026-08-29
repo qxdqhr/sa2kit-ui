@@ -64,3 +64,9 @@ Noto Sans SC + JetBrains Mono；圆角 8–12px；细边框 + 霜雾外发光。
 ## 5. 版权与实现约束
 
 不打包官方素材；仅 CSS token 与自研纹理。
+
+---
+
+## 6. 点缀资源
+
+详见 `assets-catalog.md`。Lucide ISC：snowflake / mountain / scroll → Card、Modal、`sr-ornament`。

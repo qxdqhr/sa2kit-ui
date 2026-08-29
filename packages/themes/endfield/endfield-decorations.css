@@ -1,0 +1,90 @@
+/**
+ * 终末地 — 组件点缀（Lucide ISC · 构建时内联 SVG）
+ */
+[data-theme='endfield'] .sa2-card {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='endfield'] .sa2-card::after {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  pointer-events: none;
+  opacity: 0.16;
+  background-color: var(--ef-yellow-500);
+  mask-image: url('./assets/icons/triangle-alert.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url('./assets/icons/triangle-alert.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+[data-theme='endfield'] .sa2-modal-clipped {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme='endfield'] .sa2-modal-clipped::before {
+  content: '';
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  pointer-events: none;
+  opacity: 0.22;
+  background-color: var(--ef-cyan-500);
+  mask-image: url('./assets/icons/factory.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: url('./assets/icons/factory.svg');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+}
+
+[data-theme='endfield'] .sa2-btn-primary {
+  position: relative;
+}
+
+[data-theme='endfield'] .sa2-btn-primary::after {
+  content: '';
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  transform: translateY(-50%);
+  opacity: 0.35;
+  background-color: currentColor;
+  mask-image: url('./assets/icons/cog.svg');
+  mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/cog.svg');
+  -webkit-mask-size: contain;
+}
+
+[data-theme='endfield'] .ef-ornament {
+  position: relative;
+  isolation: isolate;
+}
+
+[data-theme='endfield'] .ef-ornament::before {
+  content: '';
+  position: absolute;
+  inset: -1rem -1rem auto auto;
+  width: 5rem;
+  height: 5rem;
+  opacity: 0.1;
+  background-color: var(--ef-yellow-500);
+  mask-image: url('./assets/icons/cog.svg');
+  mask-size: contain;
+  -webkit-mask-image: url('./assets/icons/cog.svg');
+  -webkit-mask-size: contain;
+  pointer-events: none;
+}

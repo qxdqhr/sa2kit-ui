@@ -10,6 +10,8 @@
     "rhine-overrides.css",
     "rhine-overrides-ext.css",
     "rhine-utilities.css",
+    "rhine-decorations.css",
+    "assets/**",
     "theme.css",
     "theme.overlay.css",
     "theme.mobile.css"

@@ -10,6 +10,8 @@
     "sami-overrides.css",
     "sami-overrides-ext.css",
     "sami-utilities.css",
+    "sami-decorations.css",
+    "assets/**",
     "theme.css",
     "theme.overlay.css",
     "theme.mobile.css"
