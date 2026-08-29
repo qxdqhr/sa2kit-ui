@@ -1,13 +1,16 @@
 import { cn } from '@sa2kit-ui/shared';
 import type { MobileInputProps } from '@sa2kit-ui/shared';
 import { useCallback, useState } from 'react';
-import { Pressable, Text, TextInput, View } from 'react-native';
+import { Pressable, Text, TextInput, View, type TextInputProps } from 'react-native';
 
 const sizeClass = {
   small: 'sa2-input-wrap-sm',
   middle: 'sa2-input-wrap-md',
   large: 'sa2-input-wrap-lg',
 } as const;
+
+export type RnInputProps = MobileInputProps &
+  Pick<TextInputProps, 'secureTextEntry' | 'autoCapitalize' | 'keyboardType' | 'autoCorrect'>;
 
 export function Input({
   size = 'middle',
@@ -23,7 +26,11 @@ export function Input({
   placeholder,
   onChange,
   onClear,
-}: MobileInputProps) {
+  secureTextEntry,
+  autoCapitalize,
+  keyboardType,
+  autoCorrect,
+}: RnInputProps) {
   const [innerValue, setInnerValue] = useState(String(defaultValue ?? ''));
   const isControlled = value !== undefined;
   const currentValue = isControlled ? String(value ?? '') : innerValue;
@@ -62,6 +69,10 @@ export function Input({
         placeholder={placeholder}
         placeholderTextColor="#c4b89e"
         onChangeText={handleChangeText}
+        secureTextEntry={secureTextEntry}
+        autoCapitalize={autoCapitalize}
+        keyboardType={keyboardType}
+        autoCorrect={autoCorrect}
       />
       {allowClear && currentValue && !disabled ? (
         <Pressable onPress={handleClear} accessibilityLabel="clear" hitSlop={8}>

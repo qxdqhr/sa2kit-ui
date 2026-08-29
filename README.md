@@ -2,6 +2,13 @@
 
 《集合啦！动物森友会》风格 **sa2Kit-UI** 多平台组件库。样式从 [animal-island-ui](https://github.com/guokaigdg/animal-island-ui) 移植，采用 **方案 2：单仓多主题 + ThemeProvider + CSS 变量**。
 
+## 北极星（与 sa2kit / profile-v1 一体）
+
+> **本库是接单多端项目的唯一通用 UI / 主题实现源。**  
+> 付费客户仓应直接使用本库（或经 `sa2kit/common/ui*` 门面）换主题、复用 Button/Modal 等；**相同功能不重造**。  
+> 后期日常交付：**新主题** + **新功能确缺的新组件**。  
+> 三仓愿景见 profile-v1 蓝图 `BLUEPRINT-multiplatform-sa2kit.md` §0。
+
 ## 架构
 
 ```
