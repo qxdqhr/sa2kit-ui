@@ -7,7 +7,8 @@
 > **本库是接单多端项目的唯一通用 UI / 主题实现源。**  
 > 付费客户仓应直接使用本库（或经 `sa2kit/common/ui*` 门面）换主题、复用 Button/Modal 等；**相同功能不重造**。  
 > 后期日常交付：**新主题** + **新功能确缺的新组件**。  
-> 三仓愿景见 profile-v1 蓝图 `BLUEPRINT-multiplatform-sa2kit.md` §0。
+> 三仓愿景见 profile-v1 蓝图 `docs/code-review/libraries/BLUEPRINT-multiplatform-sa2kit.md` §0。  
+> **新宿主接入**（与 sa2kit 共用流程）：[sa2kit `docs/HOST-ONBOARDING.md`](../sa2kit/docs/HOST-ONBOARDING.md) — Web 侧 `import 'sa2kit/common/ui/style'` + `ThemeProvider`。
 
 ## 架构
 
