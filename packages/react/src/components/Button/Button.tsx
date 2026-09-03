@@ -1,5 +1,5 @@
 import { cn } from '@sa2kit-ui/shared';
-import type { ButtonProps } from '@sa2kit-ui/shared';
+import type { ButtonProps, ButtonType } from '@sa2kit-ui/shared';
 
 const sizeClass = {
   small: 'sa2-btn-sm',
@@ -15,6 +15,10 @@ const typeClass = {
   link: 'sa2-btn-link',
 } as const;
 
+function resolveType(type: ButtonType): keyof typeof typeClass {
+  return type === 'danger-primary' ? 'primary' : type;
+}
+
 export function Button({
   type = 'default',
   size = 'middle',
@@ -29,6 +33,8 @@ export function Button({
   className,
   ...rest
 }: ButtonProps) {
+  const resolvedType = resolveType(type);
+  const resolvedDanger = danger || type === 'danger-primary';
   return (
     <button
       type={htmlType}
@@ -36,8 +42,8 @@ export function Button({
       className={cn(
         'sa2-btn',
         sizeClass[size],
-        typeClass[type],
-        danger && 'sa2-btn-danger',
+        typeClass[resolvedType],
+        resolvedDanger && 'sa2-btn-danger',
         ghost && 'sa2-btn-ghost',
         block && 'sa2-btn-block',
         loading && 'sa2-btn-loading',

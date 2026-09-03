@@ -1,6 +1,13 @@
 import type { ReactNode, ButtonHTMLAttributes } from 'react';
 
-export type ButtonType = 'primary' | 'default' | 'dashed' | 'text' | 'link';
+export type ButtonType =
+  | 'primary'
+  | 'default'
+  | 'dashed'
+  | 'text'
+  | 'link'
+  /** 兼容旧用法：等价于 type="primary" + danger */
+  | 'danger-primary';
 export type ButtonSize = 'small' | 'middle' | 'large';
 export type ButtonHTMLType = 'submit' | 'reset' | 'button';
 

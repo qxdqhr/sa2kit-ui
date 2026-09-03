@@ -1,5 +1,6 @@
 import { cn } from '@sa2kit-ui/shared';
 import type { CardProps } from '@sa2kit-ui/shared';
+import { forwardRef } from 'react';
 
 const colorClass: Record<NonNullable<CardProps['color']>, string> = {
   default: '',
@@ -17,16 +18,20 @@ const colorClass: Record<NonNullable<CardProps['color']>, string> = {
   'warm-peach-pink': 'sa2-card-warm-peach-pink',
 };
 
-export function Card({
-  type = 'default',
-  color = 'default',
-  children,
-  className,
-  style,
-  onClick,
-}: CardProps) {
+export const Card = forwardRef<HTMLDivElement, CardProps>(function Card(
+  {
+    type = 'default',
+    color = 'default',
+    children,
+    className,
+    style,
+    onClick,
+  },
+  ref,
+) {
   return (
     <div
+      ref={ref}
       role={onClick ? 'button' : undefined}
       tabIndex={onClick ? 0 : undefined}
       onClick={onClick}
@@ -48,6 +53,6 @@ export function Card({
       {children}
     </div>
   );
-}
+});
 
 Card.displayName = 'Card';
